@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Azmal Chowdhury</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: black;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding-top: 120px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#experience">Experience</a>
+</nav>
+
+<section class="hero">
+  <h1>Azmal Chowdhury</h1>
+  <p>Process Engineer | Semiconductor | Researcher</p>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p>I am a PhD researcher working on semiconductor devices, thin films, and microfabrication...</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <div class="card">
+      <h3>Cold Spray Graphene Sensor</h3>
+      <p>Developed flexible pressure sensors using cold spray deposition on PDMS.</p>
+    </div>
+
+    <div class="card">
+      <h3>HfSe2 FET Device</h3>
+      <p>Exploring electrochemical exfoliation and FET fabrication.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <p>Graduate Assistant at FIU | Mechanical Engineer at GTCL | AKSML</p>
+</section>
+
+</body>
+</html>
