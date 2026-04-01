@@ -105,6 +105,16 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+  <script>
+  window.addEventListener("load", function () {
+    if (window.location.hash === "#about") {
+      const el = document.querySelector("#about");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  });
+</script>
 
 </body>
 </html>
