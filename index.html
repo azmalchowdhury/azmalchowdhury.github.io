@@ -1,100 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Azmal Chowdhury</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      scroll-behavior: smooth;
-    }
+  <title>Azmal Chowdhury | Semiconductor Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: white;
-      padding: 10px;
-      border-bottom: 1px solid #ddd;
-      text-align: center;
-    }
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: black;
-    }
-
-    section {
-      padding: 80px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .hero {
-      text-align: center;
-      padding-top: 120px;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      border: 1px solid #ddd;
-      padding: 15px;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-  </style>
 </head>
 
-<body>
+<body class="is-preload">
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#experience">Experience</a>
-</nav>
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
 
-<section class="hero">
-  <h1>Azmal Chowdhury</h1>
-  <p>Process Engineer | Semiconductor | Researcher</p>
-</section>
+  <!-- Intro -->
+  <div id="intro">
+    <h1>Azmal Chowdhury</h1>
+    <p>Process Engineer | Semiconductor | Microfabrication</p>
+    <ul class="actions">
+      <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+    </ul>
+  </div>
 
-<section id="about">
-  <h2>About</h2>
-  <p>I am a PhD researcher working on semiconductor devices, thin films, and microfabrication...</p>
-</section>
+  <!-- Header -->
+  <header id="header">
+    <a href="index.html" class="logo">Azmal Chowdhury</a>
+  </header>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="projects">
+  <!-- Nav -->
+  <nav id="nav">
+    <ul class="links">
+      <li class="active"><a href="index.html">Portfolio</a></li>
+    </ul>
+    <ul class="icons">
+      <li><a href="#" class="icon brands fa-linkedin"><span>LinkedIn</span></a></li>
+      <li><a href="#" class="icon brands fa-github"><span>GitHub</span></a></li>
+    </ul>
+  </nav>
 
-    <div class="card">
-      <h3>Cold Spray Graphene Sensor</h3>
-      <p>Developed flexible pressure sensors using cold spray deposition on PDMS.</p>
-    </div>
+  <!-- Main -->
+  <div id="main">
 
-    <div class="card">
-      <h3>HfSe2 FET Device</h3>
-      <p>Exploring electrochemical exfoliation and FET fabrication.</p>
-    </div>
+    <!-- About -->
+    <article class="post featured">
+      <header class="major">
+        <h2>About Me</h2>
+      </header>
+
+      <p>
+        PhD in Materials Science & Engineering with expertise in semiconductor device fabrication, 
+        thin film deposition, and micro/nanofabrication. Experienced in cleanroom processes including 
+        PVD, ALD, RIE, and photolithography, with strong focus on process optimization, DOE, and device prototyping.
+      </p>
+    </article>
+
+    <!-- Projects -->
+    <section class="posts">
+
+      <!-- Project 1 -->
+      <article>
+        <header>
+          <h2>Cold Spray Graphene Sensor</h2>
+        </header>
+        <img src="images/project1.jpg" class="image fit" alt="" />
+        <p>
+          Developed flexible pressure sensors using cold spray deposition on PDMS. 
+          Achieved sensitivity of ~12 kPa⁻¹ with durability over 5000 cycles.
+        </p>
+      </article>
+
+      <!-- Project 2 -->
+      <article>
+        <header>
+          <h2>HfSe₂ FET Device</h2>
+        </header>
+        <img src="images/project2.jpg" class="image fit" alt="" />
+        <p>
+          Fabrication and exploration of HfSe₂-based FET devices using electrochemical exfoliation and thin film integration.
+        </p>
+      </article>
+
+      <!-- Project 3 -->
+      <article>
+        <header>
+          <h2>IDE Fabrication on PDMS</h2>
+        </header>
+        <img src="images/project3.jpg" class="image fit" alt="" />
+        <p>
+          Designed and fabricated interdigitated electrodes on flexible substrates with improved adhesion and process optimization.
+        </p>
+      </article>
+
+      <!-- Project 4 -->
+      <article>
+        <header>
+          <h2>Process Data Analysis (DOE/SPC)</h2>
+        </header>
+        <img src="images/project4.jpg" class="image fit" alt="" />
+        <p>
+          Applied JMP, Python, and statistical methods for process optimization, variability reduction, and yield improvement.
+        </p>
+      </article>
+
+    </section>
 
   </div>
-</section>
 
-<section id="experience">
-  <h2>Experience</h2>
-  <p>Graduate Assistant at FIU | Mechanical Engineer at GTCL | AKSML</p>
-</section>
+  <!-- Footer -->
+  <footer id="footer">
+    <section>
+      <h3>Email</h3>
+      <p>your_email@email.com</p>
+    </section>
+    <section>
+      <h3>Social</h3>
+      <ul class="icons alt">
+        <li><a href="#" class="icon brands alt fa-linkedin"><span>LinkedIn</span></a></li>
+        <li><a href="#" class="icon brands alt fa-github"><span>GitHub</span></a></li>
+      </ul>
+    </section>
+  </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
