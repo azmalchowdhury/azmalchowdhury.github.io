@@ -198,11 +198,11 @@
 
 	// Intro.
 // Intro.
+// Intro.
 var $intro = $('#intro');
 
 if ($intro.length > 0) {
 
-  // Fix for IE
   if (browser.name == 'ie') {
     $window.on('resize.ie-intro-fix', function() {
 
@@ -216,15 +216,37 @@ if ($intro.length > 0) {
     }).trigger('resize.ie-intro-fix');
   }
 
-  // Disable all scroll-based intro behavior
+  // ✅ ORIGINAL BEHAVIOR RESTORED
   breakpoints.on('>small', function() {
+
     $main.unscrollex();
+
+    $main.scrollex({
+      mode: 'top',
+      enter: function() {
+        $intro.removeClass('hidden');
+      },
+      leave: function() {
+        $intro.addClass('hidden');
+      }
+    });
+
   });
 
   breakpoints.on('<=small', function() {
+
     $main.unscrollex();
+
+    $main.scrollex({
+      mode: 'top',
+      enter: function() {
+        $intro.removeClass('hidden');
+      },
+      leave: function() {
+        $intro.addClass('hidden');
+      }
+    });
+
   });
 
 }
-
-})(jQuery);
