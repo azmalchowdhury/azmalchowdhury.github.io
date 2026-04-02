@@ -197,12 +197,10 @@
 						.css('transition', 'none');
 
 	// Intro.
-// Intro.
 var $intro = $('#intro');
 
 if ($intro.length > 0) {
 
-  // Fix for IE
   if (browser.name == 'ie') {
     $window.on('resize.ie-intro-fix', function() {
 
@@ -216,7 +214,6 @@ if ($intro.length > 0) {
     }).trigger('resize.ie-intro-fix');
   }
 
-  // ORIGINAL STABLE BEHAVIOR
   breakpoints.on('>small', function() {
 
     $main.unscrollex();
@@ -255,4 +252,5 @@ if ($intro.length > 0) {
 
 }
 
+// 🔥 ADD THIS MISSING CLOSURE
 })(jQuery);
