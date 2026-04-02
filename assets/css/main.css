@@ -4701,3 +4701,16 @@ input, select, textarea {
 
 		}
 
+/* 🔥 FINAL HERO FIX */
+#intro {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+/* Prevent hiding */
+#intro.hidden {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
