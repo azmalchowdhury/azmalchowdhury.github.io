@@ -198,7 +198,6 @@
 
 	// Intro.
 // Intro.
-// Intro.
 var $intro = $('#intro');
 
 if ($intro.length > 0) {
@@ -216,18 +215,19 @@ if ($intro.length > 0) {
     }).trigger('resize.ie-intro-fix');
   }
 
-  // ✅ ORIGINAL BEHAVIOR RESTORED
   breakpoints.on('>small', function() {
 
     $main.unscrollex();
 
     $main.scrollex({
-      mode: 'top',
+      mode: 'bottom',
+      top: '25vh',
+      bottom: '-50vh',
       enter: function() {
-        $intro.removeClass('hidden');
+        $intro.addClass('hidden');
       },
       leave: function() {
-        $intro.addClass('hidden');
+        $intro.removeClass('hidden');
       }
     });
 
@@ -238,12 +238,14 @@ if ($intro.length > 0) {
     $main.unscrollex();
 
     $main.scrollex({
-      mode: 'top',
+      mode: 'middle',
+      top: '15vh',
+      bottom: '-15vh',
       enter: function() {
-        $intro.removeClass('hidden');
+        $intro.addClass('hidden');
       },
       leave: function() {
-        $intro.addClass('hidden');
+        $intro.removeClass('hidden');
       }
     });
 
