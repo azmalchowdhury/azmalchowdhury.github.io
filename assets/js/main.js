@@ -197,58 +197,34 @@
 						.css('transition', 'none');
 
 	// Intro.
-		var $intro = $('#intro');
+// Intro.
+var $intro = $('#intro');
 
-		if ($intro.length > 0) {
+if ($intro.length > 0) {
 
-			// Hack: Fix flex min-height on IE.
-				if (browser.name == 'ie') {
-					$window.on('resize.ie-intro-fix', function() {
+  // Fix for IE
+  if (browser.name == 'ie') {
+    $window.on('resize.ie-intro-fix', function() {
 
-						var h = $intro.height();
+      var h = $intro.height();
 
-						if (h > $window.height())
-							$intro.css('height', 'auto');
-						else
-							$intro.css('height', h);
+      if (h > $window.height())
+        $intro.css('height', 'auto');
+      else
+        $intro.css('height', h);
 
-					}).trigger('resize.ie-intro-fix');
-				}
-
-			// Hide intro on scroll (> small).
-				breakpoints.on('>small', function() {
-
-					$main.unscrollex();
-
-$main.scrollex({
-  mode: 'top',
-  enter: function() {
-    $intro.removeClass('hidden');
-  },
-  leave: function() {
-    $intro.addClass('hidden');
+    }).trigger('resize.ie-intro-fix');
   }
-});
 
-				});
+  // Disable all scroll-based intro behavior
+  breakpoints.on('>small', function() {
+    $main.unscrollex();
+  });
 
-			// Hide intro on scroll (<= small).
-				breakpoints.on('<=small', function() {
+  breakpoints.on('<=small', function() {
+    $main.unscrollex();
+  });
 
-					$$main.unscrollex();
-
-$main.scrollex({
-  mode: 'top',
-  enter: function() {
-    $intro.removeClass('hidden');
-  },
-  leave: function() {
-    $intro.addClass('hidden');
-  }
-});
-
-			});
-
-		}
+}
 
 })(jQuery);
