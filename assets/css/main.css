@@ -4704,10 +4704,12 @@ input, select, textarea {
 /* 🔥 FINAL HERO FIX */
 #intro {
   transition: opacity 0.8s ease, transform 0.8s ease;
+  z-index: 1;
 }
 
 #intro.hidden {
   opacity: 0;
   transform: translateY(-2rem);
   pointer-events: none;
+  z-index: -1; /* 🔥 THIS FIXES YOUR TAB ISSUE */
 }
