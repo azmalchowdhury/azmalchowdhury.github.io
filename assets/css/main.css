@@ -3310,7 +3310,7 @@ input, select, textarea {
 		cursor: default;
 		text-align: center;
 		z-index: 1;
-		min-height: 70vh;
+		min-height: 100vh;
 	}
 
 		#intro input, #intro select, #intro textarea {
@@ -3421,7 +3421,7 @@ input, select, textarea {
 			-ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease, visibility 0.5s;
 			transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
 			opacity: 0;
-			
+			visibility: hidden;
 		}
 
 			#intro.hidden + #header .logo {
@@ -4685,20 +4685,5 @@ input, select, textarea {
 			box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
 			visibility: visible;
 		}
-		
-		.videoWrapper {
-			position: relative;
-			padding-bottom: 56.25%; /* 16:9 */
-			height: 0;
-		  }
-		  .videoWrapper iframe {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		  }
 
-		}
-
-
+	}
