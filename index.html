@@ -12,32 +12,38 @@
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   
   <style>
-    /* Override to keep intro always visible */
+    /* Remove extra spacing and simplify hero */
     #intro {
-      position: relative !important;
-      opacity: 1 !important;
-      transform: none !important;
-      visibility: visible !important;
-      pointer-events: auto !important;
+      padding: 4rem 2rem 2rem 2rem !important;
       min-height: auto !important;
-      padding: 8rem 4rem 6rem 4rem !important;
+      margin-bottom: 0 !important;
     }
     
-    #intro.hidden {
-      opacity: 1 !important;
-      transform: none !important;
-      visibility: visible !important;
+    #intro h1 {
+      font-size: 3rem !important;
+      margin-bottom: 0.5rem !important;
     }
     
-    /* Fix header positioning */
+    #intro p {
+      font-size: 1rem !important;
+      margin-bottom: 0 !important;
+    }
+    
+    #intro .actions {
+      display: none !important;
+    }
+    
     #header {
-      margin-top: 0 !important;
+      display: none !important;
     }
     
-    #header .logo {
-      transform: none !important;
-      opacity: 1 !important;
-      visibility: visible !important;
+    #main {
+      padding-top: 0 !important;
+    }
+    
+    /* Remove the large gap after hero */
+    #wrapper > .bg {
+      background-attachment: fixed;
     }
   </style>
 </head>
@@ -47,20 +53,12 @@
 <!-- Wrapper -->
 <div id="wrapper">
 
-  <!-- Intro - Always Visible -->
+  <!-- Intro - Simplified -->
   <div id="intro">
     <h1>Portfolio: Azmal Chowdhury</h1>
     <p>Process Engineer | Semiconductor | Microfabrication</p>
-    <ul class="actions">
-      <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-    </ul>
   </div>
 
-  <!-- Header -->
-  <header id="header">
-    <a href="index.html" class="logo">Azmal Chowdhury</a>
-  </header>
-  
   <!-- Nav -->
   <nav id="nav">
     <ul class="links">
