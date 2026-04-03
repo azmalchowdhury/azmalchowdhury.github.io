@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>MEMS Pressure Sensor | Azmal Chowdhury</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+  
+  <style>
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+    .project-gallery figure {
+      flex: 1 1 300px;
+      margin: 0;
+      text-align: center;
+    }
+    .project-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #eeeeee;
+    }
+    .project-gallery figcaption {
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      color: #666;
+    }
+    .downloads-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .downloads-list li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .downloads-list li:before {
+      content: '\f019';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #18bfef;
+    }
+    .tool-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0;
+    }
+    .tool-list li {
+      background: #f0f0f0;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+    }
+    .back-button {
+      margin-top: 3rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
+
+  <!-- Header -->
+  <header id="header">
+    <a href="../../index.html" class="logo">Azmal Chowdhury</a>
+  </header>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <ul class="links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../about.html">About</a></li>
+      <li><a href="../../experience.html">Experience</a></li>
+      <li class="active"><a href="../../projects.html">Projects</a></li>
+      <li><a href="../../publications.html">Publications</a></li>
+      <li><a href="../../hobby.html">Hobby</a></li>
+    </ul>
+
+    <ul class="icons">
+      <li>
+        <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/azmalchowdhury" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <div id="main">
+    <article class="post">
+
+      <!-- Project Title -->
+      <header class="major">
+        <h1>Wheatstone Bridge<br>MEMS Pressure Sensor</h1>
+        <p>Design, Fabrication, and Testing of a MEMS-Based Pressure Sensor</p>
+      </header>
+
+      <!-- Project Gallery -->
+      <div class="project-gallery">
+        <figure>
+          <img src="images/wheatstone-bridge.png" alt="Wheatstone Bridge Configuration" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Wheatstone+Bridge'">
+          <figcaption>Figure 1: Pressure Sensor with Wheatstone Bridge Configuration</figcaption>
+        </figure>
+        <figure>
+          <img src="images/cross-section.png" alt="Cross-sectional view" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Cross-Section'">
+          <figcaption>Figure 2: Cross-sectional view of the sensor</figcaption>
+        </figure>
+      </div>
+
+      <!-- Project Overview -->
+      <h2>Project Overview</h2>
+      <p>This project was developed under the course EGN5013C: Introduction to Nanofabrication at Florida International University. The goal was to design, fabricate, and test a MEMS-based pressure sensor leveraging standard cleanroom-based microfabrication techniques. The Wheatstone bridge configuration allows precise measurement of small pressure-induced resistance changes.</p>
+
+      <!-- Design & Layout -->
+      <h2>Design & Layout</h2>
+      <p>The Wheatstone bridge sensor consists of four resistive elements arranged in a bridge configuration to measure small changes in pressure. The layout was developed using LayoutEditor, with frontside and backside masks designed for layered processing.</p>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/frontside-mask.png" alt="Frontside Mask" onerror="this.src='https://placehold.co/400x400/1e252d/white?text=Frontside+Mask'">
+          <figcaption>Figure 3: Frontside Mask Design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/backside-mask.png" alt="Backside Mask" onerror="this.src='https://placehold.co/400x400/1e252d/white?text=Backside+Mask'">
+          <figcaption>Figure 4: Backside Mask Design</figcaption>
+        </figure>
+      </div>
+
+      <!-- Fabrication Process -->
+      <h2>Fabrication Process</h2>
+      <p>Fabrication took place in a Class 100 cleanroom environment. The major process steps included:</p>
+      
+      <ul>
+        <li><strong>Cleanroom Preparation:</strong> Class 100 cleanroom protocol adherence</li>
+        <li><strong>Substrate Preparation:</strong> Spin coating using spin coater</li>
+        <li><strong>Lithography:</strong> Mask alignment using OAI Mask Aligner, Laser Lithography for mask writing</li>
+        <li><strong>Etching:</strong> Reactive Ion Etching (RIE) and Deep Reactive Ion Etching (MARCH DRIE)</li>
+        <li><strong>Thin Film Deposition:</strong> Sputtering, Evaporation (PVD), Plasma-Enhanced CVD (PECVD)</li>
+        <li><strong>Profilometry:</strong> Film thickness measurement using ALPHA STEP Profilometer</li>
+        <li><strong>Packaging:</strong> Bonding with wedge bonder</li>
+      </ul>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/cleanroom.jpg" alt="Class 100 Cleanroom" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Cleanroom'">
+          <figcaption>Figure 5: Class 100 Cleanroom</figcaption>
+        </figure>
+        <figure>
+          <img src="images/mask-aligner.jpg" alt="OAI Mask Aligner" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Mask+Aligner'">
+          <figcaption>Figure 6: OAI Mask Aligner</figcaption>
+        </figure>
+      </div>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/wafer-after-etching.jpg" alt="Wafer after etching" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Wafer+After+Etching'">
+          <figcaption>Figure 7: Wafer after bulk silicon etching</figcaption>
+        </figure>
+        <figure>
+          <img src="images/wheatstone-bridge-membrane.jpg" alt="Wheatstone bridge with membrane" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Wheatstone+Bridge+Membrane'">
+          <figcaption>Figure 8: Wheatstone bridge with membrane</figcaption>
+        </figure>
+      </div>
+
+      <!-- Tools Used -->
+      <h2>Tools & Equipment Used</h2>
+      <ul class="tool-list">
+        <li>LayoutEditor</li>
+        <li>Heidelberg 101 Laser Lithography</li>
+        <li>OAI Mask Aligner</li>
+        <li>Reactive Ion Etching (RIE)</li>
+        <li>MARCH Deep RIE (DRIE)</li>
+        <li>PVD Sputtering System</li>
+        <li>PVD Evaporation System</li>
+        <li>Plasma-Enhanced CVD (PECVD)</li>
+        <li>ALPHA STEP Profilometer</li>
+        <li>Wedge Bonder</li>
+      </ul>
+
+      <!-- Testing & Results -->
+      <h2>Testing & Results</h2>
+      <p>Following fabrication, the Wheatstone bridge sensor was tested under varying pressure to validate its sensitivity and functional response. The change in resistance of the bridge arms was recorded and output voltage changes were measured to assess sensor performance.</p>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/testing-setup.jpg" alt="Testing Setup" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Testing+Setup'">
+          <figcaption>Figure 9: Pressure Sensor Testing Setup</figcaption>
+        </figure>
+      </div>
+
+      <!-- Downloads -->
+      <h2>Downloads</h2>
+      <ul class="downloads-list">
+        <li><a href="docs/project-report.pdf">Full Project Report (PDF)</a></li>
+        <li><a href="docs/fabrication-protocol.pdf">Fabrication Protocol & SOPs (PDF)</a></li>
+        <li><a href="docs/mask-designs.gds">Mask Design Files (GDS)</a></li>
+      </ul>
+
+      <!-- Conclusion -->
+      <h2>Conclusion</h2>
+      <p>The successful fabrication and testing of a Wheatstone Bridge Pressure Sensor provided deep insights into semiconductor fabrication, thin film deposition, lithography, and cleanroom protocols. This hands-on project not only reinforced microfabrication concepts but also strengthened troubleshooting and testing skills essential in the semiconductor and MEMS industries.</p>
+
+      <!-- Back Button -->
+      <div class="back-button">
+        <a href="../../projects.html" class="button primary">← Back to All Projects</a>
+      </div>
+
+    </article>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <section>
+      <h3>Email</h3>
+      <p>achow030@fiu.edu</p>
+      <p>azmalchowdhury93@gmail.com</p>
+    </section>
+    <section>
+      <h3>Social</h3>
+      <ul class="icons alt">
+        <li>
+          <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/azmalchowdhury" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../assets/js/jquery.scrolly.min.js"></script>
+<script src="../../assets/js/browser.min.js"></script>
+<script src="../../assets/js/breakpoints.min.js"></script>
+<script src="../../assets/js/util.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>
