@@ -52,7 +52,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #1e252d 0%, #2a3a4a 100%);
       color: white;
     }
     .project-image-placeholder i {
@@ -89,6 +89,7 @@
     .project-links {
       display: flex;
       gap: 1rem;
+      flex-wrap: wrap;
     }
     .project-links a {
       font-size: 0.85rem;
@@ -150,7 +151,7 @@
     <section class="post">
       <header class="major">
         <h1>Engineering Projects</h1>
-        <p>Microfabrication | Sensors | Data Analytics | Simulation | Embedded Systems</p>
+        <p>Microfabrication | MEMS Sensors | Data Analytics | Simulation | Embedded Systems</p>
       </header>
     </section>
 
@@ -165,19 +166,22 @@
         <div class="project-image">
           <div class="project-image-placeholder">
             <i class="fas fa-microchip"></i>
-            <span>MEMS Sensor Image</span>
+            <span>MEMS Pressure Sensor</span>
           </div>
+          <!-- Replace with: <img src="assets/images/wheatstone_bridge.jpg" alt="Wheatstone Bridge Pressure Sensor"> -->
         </div>
         <div class="project-content">
-          <h3>MEMS Pressure Sensor</h3>
+          <h3>Wheatstone Bridge MEMS Pressure Sensor</h3>
           <div class="project-tags">
-            <span class="project-tag">2D Materials</span>
-            <span class="project-tag">EBL</span>
-            <span class="project-tag">FET</span>
+            <span class="project-tag">MEMS</span>
+            <span class="project-tag">Wheatstone Bridge</span>
+            <span class="project-tag">Cleanroom</span>
+            <span class="project-tag">FIU</span>
           </div>
-          <p>Fabricated HfSe₂-based FET device for sensing applications. Process included mechanical exfoliation, electron beam lithography for electrode patterning, metal deposition, and electrical characterization.</p>
+          <p>Designed and fabricated a MEMS-based pressure sensor with four resistive elements in a Wheatstone bridge configuration. Fabrication performed in Class 100 cleanroom using lithography, etching (RIE/DRIE), and thin-film deposition (PVD/PECVD).</p>
           <div class="project-links">
-            <a href="#" class="button small">View Details</a>
+            <a href="#" class="button small">View Report</a>
+            <a href="#" class="button small">Masks</a>
           </div>
         </div>
       </div>
@@ -192,11 +196,12 @@
         <div class="project-content">
           <h3>PVD/CVD Process Optimization</h3>
           <div class="project-tags">
-            <span class="project-tag">PVD</span>
-            <span class="project-tag">CVD</span>
+            <span class="project-tag">PVD Sputtering</span>
+            <span class="project-tag">PVD Evaporation</span>
+            <span class="project-tag">PECVD</span>
             <span class="project-tag">DOE</span>
           </div>
-          <p>Optimized deposition parameters using Design of Experiments (DOE) methodology to achieve uniform thin films with controlled thickness and properties for semiconductor devices.</p>
+          <p>Optimized deposition parameters using Design of Experiments (DOE) methodology for thin films. Utilized sputtering, evaporation, and plasma-enhanced CVD systems for dielectric and metal film deposition.</p>
           <div class="project-links">
             <a href="#" class="button small">View Details</a>
           </div>
@@ -207,19 +212,19 @@
         <div class="project-image">
           <div class="project-image-placeholder">
             <i class="fas fa-ruler-combined"></i>
-            <span>Photolithography</span>
+            <span>Mask Design</span>
           </div>
         </div>
         <div class="project-content">
-          <h3>Photolithography Process Development</h3>
+          <h3>Frontside & Backside Mask Layout</h3>
           <div class="project-tags">
-            <span class="project-tag">Photolithography</span>
-            <span class="project-tag">Spin Coating</span>
-            <span class="project-tag">Etching</span>
+            <span class="project-tag">LayoutEditor</span>
+            <span class="project-tag">Laser Lithography</span>
+            <span class="project-tag">Mask Alignment</span>
           </div>
-          <p>Developed and optimized photolithography processes for pattern transfer, including spin coating parameters, exposure optimization, and etching recipe development.</p>
+          <p>Designed frontside and backside photomasks using LayoutEditor for layered MEMS processing. Masks were written using Heidelberg 101 Laser Lithography system for high-precision pattern transfer.</p>
           <div class="project-links">
-            <a href="#" class="button small">View Details</a>
+            <a href="#" class="button small">View Masks</a>
           </div>
         </div>
       </div>
@@ -246,7 +251,7 @@
             <span class="project-tag">Wearable</span>
             <span class="project-tag">Pulse Waveform</span>
           </div>
-          <p>Developed a paper-based supercapacitive pressure sensor for wrist arterial pulse waveform monitoring. Demonstrated high sensitivity and stability for continuous health monitoring.</p>
+          <p>Developed a paper-based supercapacitive pressure sensor for wrist arterial pulse waveform monitoring. Demonstrated high sensitivity and stability for continuous health monitoring. Published in ACS Applied Materials & Interfaces.</p>
           <div class="project-links">
             <a href="#" class="button small">Paper</a>
             <a href="#" class="button small">Details</a>
@@ -268,7 +273,7 @@
             <span class="project-tag">Capacitive</span>
             <span class="project-tag">Cardiovascular</span>
           </div>
-          <p>Novel dual-mode sensor combining capacitive and piezoresistive sensing mechanisms for enhanced cardiovascular monitoring with improved signal fidelity.</p>
+          <p>Novel dual-mode sensor combining capacitive and piezoresistive sensing mechanisms for enhanced cardiovascular monitoring with improved signal fidelity. Patent pending.</p>
           <div class="project-links">
             <a href="#" class="button small">Patent</a>
             <a href="#" class="button small">Details</a>
@@ -319,7 +324,7 @@
             <span class="project-tag">AFM</span>
             <span class="project-tag">Morphology</span>
           </div>
-          <p>Performed extensive SEM and AFM characterization of thin films and 2D materials to analyze surface morphology, thickness, and structural properties.</p>
+          <p>Performed extensive SEM and AFM characterization of thin films and MEMS structures to analyze surface morphology, membrane quality, and structural properties after etching.</p>
           <div class="project-links">
             <a href="#" class="button small">View Images</a>
           </div>
@@ -340,7 +345,7 @@
             <span class="project-tag">FTIR</span>
             <span class="project-tag">Material ID</span>
           </div>
-          <p>Utilized Raman spectroscopy and FTIR for material identification, defect analysis, and chemical bonding characterization of fabricated devices.</p>
+          <p>Utilized Raman spectroscopy and FTIR for material identification, defect analysis, and chemical bonding characterization of deposited thin films and fabricated devices.</p>
           <div class="project-links">
             <a href="#" class="button small">View Spectra</a>
           </div>
@@ -350,20 +355,20 @@
       <div class="project-card">
         <div class="project-image">
           <div class="project-image-placeholder">
-            <i class="fas fa-hard-hat"></i>
-            <span>Nanoindentation</span>
+            <i class="fas fa-ruler"></i>
+            <span>Profilometry</span>
           </div>
         </div>
         <div class="project-content">
-          <h3>Mechanical Testing (Nanoindentation)</h3>
+          <h3>Thin Film Thickness Measurement</h3>
           <div class="project-tags">
-            <span class="project-tag">Nanoindentation</span>
-            <span class="project-tag">Hardness</span>
-            <span class="project-tag">Young's Modulus</span>
+            <span class="project-tag">Alpha Step</span>
+            <span class="project-tag">Profilometer</span>
+            <span class="project-tag">Film Thickness</span>
           </div>
-          <p>Conducted nanoindentation testing on thin films and biological tissues to measure hardness, elastic modulus, and mechanical properties.</p>
+          <p>Used ALPHA STEP profilometer for precise measurement of deposited film thicknesses to ensure process uniformity and repeatability across wafers.</p>
           <div class="project-links">
-            <a href="#" class="button small">View Results</a>
+            <a href="#" class="button small">View Data</a>
           </div>
         </div>
       </div>
@@ -390,7 +395,7 @@
             <span class="project-tag">DAQ</span>
             <span class="project-tag">Signal Processing</span>
           </div>
-          <p>Developed LabVIEW-based data acquisition system for real-time pulse waveform monitoring with signal filtering and analysis capabilities.</p>
+          <p>Developed LabVIEW-based data acquisition system for real-time pulse waveform monitoring from pressure sensors with signal filtering and analysis capabilities.</p>
           <div class="project-links">
             <a href="#" class="button small">View Code</a>
           </div>
@@ -411,7 +416,7 @@
             <span class="project-tag">Automation</span>
             <span class="project-tag">Calibration</span>
           </div>
-          <p>Created automated calibration system for pressure sensors with GUI for data visualization and report generation.</p>
+          <p>Created automated calibration system for pressure sensors with GUI for data visualization, resistance measurement, and report generation.</p>
           <div class="project-links">
             <a href="#" class="button small">View Details</a>
           </div>
@@ -462,7 +467,7 @@
             <span class="project-tag">Sensors</span>
             <span class="project-tag">Patent</span>
           </div>
-          <p>Patent-pending smart footwear system with embedded sensors for gait analysis and automated adjustments.</p>
+          <p>Patent (US 11,737,507) for smart footwear system with embedded sensors for gait analysis and automated adjustments.</p>
           <div class="project-links">
             <a href="#" class="button small">Patent</a>
           </div>
@@ -491,7 +496,7 @@
             <span class="project-tag">FEA</span>
             <span class="project-tag">Multiphysics</span>
           </div>
-          <p>Performed multiphysics simulations using COMSOL to optimize piezoresistive sensor design parameters for maximum sensitivity.</p>
+          <p>Performed multiphysics simulations using COMSOL to optimize piezoresistive sensor membrane design parameters for maximum sensitivity and pressure response.</p>
           <div class="project-links">
             <a href="#" class="button small">View Report</a>
           </div>
@@ -512,7 +517,7 @@
             <span class="project-tag">Biomechanics</span>
             <span class="project-tag">Abaqus</span>
           </div>
-          <p>Finite element analysis of porcine myocardium under cyclic loading to understand strain rate effects on heart tissue mechanics.</p>
+          <p>Finite element analysis of porcine myocardium under cyclic loading to understand strain rate effects on heart tissue mechanics (under review).</p>
           <div class="project-links">
             <a href="#" class="button small">Paper</a>
           </div>
@@ -541,7 +546,7 @@
             <span class="project-tag">Scikit-learn</span>
             <span class="project-tag">TensorFlow</span>
           </div>
-          <p>Applied machine learning algorithms to classify cardiovascular conditions from pulse waveform data. Used feature extraction and deep learning models.</p>
+          <p>Applied machine learning algorithms to classify cardiovascular conditions from pulse waveform data. Published in Biosensors and Bioelectronics.</p>
           <div class="project-links">
             <a href="#" class="button small">GitHub</a>
             <a href="#" class="button small">Paper</a>
@@ -563,7 +568,7 @@
             <span class="project-tag">Minitab</span>
             <span class="project-tag">Python</span>
           </div>
-          <p>Implemented SPC charts for process monitoring and conducted DOE for optimizing semiconductor fabrication parameters.</p>
+          <p>Implemented SPC charts for process monitoring in cleanroom fabrication. Conducted DOE for optimizing deposition parameters and etching recipes.</p>
           <div class="project-links">
             <a href="#" class="button small">View Analysis</a>
           </div>
@@ -591,7 +596,7 @@
             <span class="project-tag">SolidWorks</span>
             <span class="project-tag">3D Printing</span>
           </div>
-          <p>Designed custom housing for wearable pressure sensors using SolidWorks, optimized for comfort and signal quality.</p>
+          <p>Designed custom housing for wearable pressure sensors using SolidWorks, optimized for comfort and signal quality during pulse waveform monitoring.</p>
           <div class="project-links">
             <a href="#" class="button small">View STL</a>
           </div>
@@ -606,12 +611,12 @@
           </div>
         </div>
         <div class="project-content">
-          <h3>Photomask Layout Design</h3>
+          <h3>MEMS Photomask Layout Design</h3>
           <div class="project-tags">
-            <span class="project-tag">L-Edit</span>
+            <span class="project-tag">LayoutEditor</span>
             <span class="project-tag">KLayout</span>
           </div>
-          <p>Designed photomasks for device fabrication using Tanner L-Edit and KLayout software.</p>
+          <p>Designed frontside and backside photomasks for MEMS pressure sensor fabrication using LayoutEditor software for layered device processing.</p>
           <div class="project-links">
             <a href="#" class="button small">View Layout</a>
           </div>
@@ -629,17 +634,18 @@
       <div class="project-card">
         <div class="project-image">
           <div class="project-image-placeholder">
-            <i class="fas fa-car"></i>
-            <span>Capstone Design</span>
+            <i class="fas fa-cogs"></i>
+            <span>Mechanical Design</span>
           </div>
         </div>
         <div class="project-content">
-          <h3>Senior Capstone: [Project Title]</h3>
+          <h3>Senior Capstone Design Project</h3>
           <div class="project-tags">
             <span class="project-tag">Design</span>
             <span class="project-tag">Fabrication</span>
+            <span class="project-tag">Testing</span>
           </div>
-          <p>Add your undergraduate capstone or major design project details here.</p>
+          <p>Completed comprehensive capstone design project integrating mechanical design principles with hands-on fabrication and validation testing.</p>
           <div class="project-links">
             <a href="#" class="button small">View Report</a>
           </div>
@@ -666,9 +672,9 @@
           <div class="project-tags">
             <span class="project-tag">Maintenance</span>
             <span class="project-tag">RCA</span>
-            <span class="project-tag">Industry</span>
+            <span class="project-tag">Industry 4.0</span>
           </div>
-          <p>Led root-cause analysis and implemented solutions reducing furnace downtime by 25% at Abul Khair Steel.</p>
+          <p>Led root-cause analysis and implemented solutions reducing furnace downtime by 25% at Abul Khair Steel (1600°C operations). Implemented predictive maintenance strategies.</p>
           <div class="project-links">
             <a href="#" class="button small">View Case Study</a>
           </div>
@@ -683,12 +689,13 @@
           </div>
         </div>
         <div class="project-content">
-          <h3>Gas Transmission System Optimization</h3>
+          <h3>National Gas Transmission System Optimization</h3>
           <div class="project-tags">
             <span class="project-tag">Process Control</span>
             <span class="project-tag">Shift Management</span>
+            <span class="project-tag">SCADA</span>
           </div>
-          <p>Managed shift operations and optimized gas transmission parameters for national grid stability.</p>
+          <p>Managed shift operations as shift in-charge for national gas transmission system. Optimized parameters for grid stability and reduced unplanned downtime.</p>
           <div class="project-links">
             <a href="#" class="button small">View Details</a>
           </div>
