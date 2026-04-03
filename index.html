@@ -7,19 +7,47 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/main.css" />
-
-  <!-- 🔥 ADD THIS LINE -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  
+  <style>
+    /* Override to keep intro always visible */
+    #intro {
+      position: relative !important;
+      opacity: 1 !important;
+      transform: none !important;
+      visibility: visible !important;
+      pointer-events: auto !important;
+      min-height: auto !important;
+      padding: 8rem 4rem 6rem 4rem !important;
+    }
+    
+    #intro.hidden {
+      opacity: 1 !important;
+      transform: none !important;
+      visibility: visible !important;
+    }
+    
+    /* Fix header positioning */
+    #header {
+      margin-top: 0 !important;
+    }
+    
+    #header .logo {
+      transform: none !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  </style>
 </head>
 
-<body class="is-preload">
+<body>
 
 <!-- Wrapper -->
-<div id="wrapper" class="fade-in">
+<div id="wrapper">
 
-  <!-- Intro -->
+  <!-- Intro - Always Visible -->
   <div id="intro">
     <h1>Portfolio: Azmal Chowdhury</h1>
     <p>Process Engineer | Semiconductor | Microfabrication</p>
@@ -35,65 +63,61 @@
   
   <!-- Nav -->
   <nav id="nav">
-  <ul class="links">
-    <li class="active"><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="experience.html">Experience</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="publications.html">Publications</a></li>
-    <li><a href="hobby.html">Hobby</a></li>
-  </ul>
+    <ul class="links">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="hobby.html">Hobby</a></li>
+    </ul>
 
-  <ul class="icons">
-    <li>
-      <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://github.com/azmalchowdhury" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-    </li>
-  </ul>
-</nav>
+    <ul class="icons">
+      <li>
+        <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/azmalchowdhury" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
   <!-- Main -->
   <div id="main">
+    <section class="post">
+      <header class="major">
+        <h2>SUMMARY</h2>
+      </header>
 
-  <section class="post">
-    
-    <header class="major">
-      <h2>SUMMARY</h2>
-    </header>
+      <!-- Your Image -->
+      <span class="image main">
+        <img src="images/profile.png" alt="Azmal Graduation Photo" />
+      </span>
 
-    <!-- 🔥 YOUR IMAGE -->
-    <span class="image main">
-      <img src="images/profile.png" alt="Azmal Graduation Photo" />
-    </span>
+      <!-- Your Summary -->
+      <p>
+        Hello and welcome to my portfolio. Whether you are looking for a mechanical engineer, 
+        a materials scientist, or someone passionate about semiconductor technologies, I'm glad you're here. 
+        I am originally from Bangladesh, and my journey in engineering has taken me across disciplines and geographies. 
+        I'm especially excited to connect with people interested in engineering, innovation, and problem solving.
+      </p>
 
-    <!-- 🔥 YOUR SUMMARY -->
-    <p>
-      Hello and welcome to my portfolio. Whether you are looking for a mechanical engineer, 
-      a materials scientist, or someone passionate about semiconductor technologies, I’m glad you’re here. 
-      I am originally from Bangladesh, and my journey in engineering has taken me across disciplines and geographies. 
-      And yes—while I’d enjoy a good debate on whether the earth is round or flat (just kidding), 
-      I’m especially excited to connect with people interested in engineering, innovation, and problem solving.
-    </p>
+      <p>
+        I enjoy working across disciplines and tackling complex, real-world challenges—from materials processing 
+        and device fabrication to data-driven analysis. I like to think of myself not as a specialist in a single box, 
+        but as an engineer driven by curiosity and the desire to build, optimize, and create impactful solutions.
+      </p>
 
-    <p>
-      I enjoy working across disciplines and tackling complex, real-world challenges—from materials processing 
-      and device fabrication to data-driven analysis. I like to think of myself not as a specialist in a single box, 
-      but as an engineer driven by curiosity and the desire to build, optimize, and create impactful solutions.
-    </p>
-
-    <p>
-      If you’re interested in collaboration, challenging ideas, or meaningful engineering work, 
-      I hope this portfolio gives you a clear sense of what I bring to the table.
-    </p>
-
-  </section>
-
-</div>
+      <p>
+        If you're interested in collaboration, challenging ideas, or meaningful engineering work, 
+        I hope this portfolio gives you a clear sense of what I bring to the table.
+      </p>
+    </section>
+  </div>
 
   <!-- Footer -->
   <footer id="footer">
@@ -105,17 +129,17 @@
     <section>
       <h3>Social</h3>
       <ul class="icons alt">
-  <li>
-    <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
-      <i class="fab fa-linkedin"></i>
-    </a>
-  </li>
-  <li>
-    <a href="https://github.com/azmalchowdhury" target="_blank">
-      <i class="fab fa-github"></i>
-    </a>
-  </li>
-</ul>
+        <li>
+          <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/azmalchowdhury" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
     </section>
   </footer>
 
@@ -123,22 +147,12 @@
 
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>   <!-- MUST be here -->
+<script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-  <script>
-  window.addEventListener("load", function () {
-    if (window.location.hash === "#about") {
-      const el = document.querySelector("#about");
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  });
-</script>
 
 </body>
 </html>
