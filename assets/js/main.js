@@ -196,7 +196,7 @@
 					$navPanel
 						.css('transition', 'none');
 
-	// Intro.
+// Intro.
 var $intro = $('#intro');
 
 if ($intro.length > 0) {
@@ -219,9 +219,9 @@ if ($intro.length > 0) {
     $main.unscrollex();
 
     $main.scrollex({
-      mode: 'bottom',
-      top: '25vh',
-      bottom: '-50vh',
+      mode: 'default',
+      top: '15vh',
+      bottom: '35vh',
       enter: function() {
         $intro.addClass('hidden');
       },
@@ -237,9 +237,9 @@ if ($intro.length > 0) {
     $main.unscrollex();
 
     $main.scrollex({
-      mode: 'middle',
-      top: '15vh',
-      bottom: '-15vh',
+      mode: 'default',
+      top: '10vh',
+      bottom: '25vh',
       enter: function() {
         $intro.addClass('hidden');
       },
