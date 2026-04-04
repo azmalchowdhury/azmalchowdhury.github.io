@@ -1,0 +1,496 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Piezoresistive Sensor Testbed | Azmal Chowdhury</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+  
+  <style>
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+    .project-gallery figure {
+      flex: 1 1 300px;
+      margin: 0;
+      text-align: center;
+    }
+    .project-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #eeeeee;
+    }
+    .project-gallery figcaption {
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      color: #666;
+    }
+    .downloads-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .downloads-list li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .downloads-list li:before {
+      content: '\f019';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #18bfef;
+    }
+    .tool-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0;
+    }
+    .tool-list li {
+      background: #f0f0f0;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+    }
+    .back-button {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .highlight {
+      background: #f0f7ff;
+      padding: 1.5rem;
+      border-left: 4px solid #18bfef;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .metric-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    .metric-card {
+      flex: 1;
+      min-width: 120px;
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .metric-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #18bfef;
+    }
+    .metric-label {
+      font-size: 0.75rem;
+      color: #666;
+    }
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.85rem;
+    }
+    .spec-table th, .spec-table td {
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    .spec-table th {
+      background: #f0f0f0;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
+
+  <!-- Header -->
+  <header id="header">
+    <a href="../../index.html" class="logo">Azmal Chowdhury</a>
+  </header>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <ul class="links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../about.html">About</a></li>
+      <li><a href="../../experience.html">Experience</a></li>
+      <li class="active"><a href="../../projects.html">Projects</a></li>
+      <li><a href="../../publications.html">Publications</a></li>
+      <li><a href="../../hobby.html">Hobby</a></li>
+    </ul>
+
+    <ul class="icons">
+      <li>
+        <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/azmalchowdhury" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <div id="main">
+    <article class="post">
+
+      <!-- Project Title -->
+      <header class="major">
+        <h1>Piezoresistive Pressure Sensor Testbed</h1>
+        <p>Hardware & Protocol for Pulse Wave Monitoring Validation</p>
+      </header>
+
+      <!-- Publication Badge -->
+      <div class="highlight">
+        <strong>📄 Co-Author Publication:</strong> IEEE Sensors Letters, 2023, 7(8), 2502304<br>
+        <strong>DOI:</strong> <a href="https://doi.org/10.1109/LSENS.2023.3300407" target="_blank">10.1109/LSENS.2023.3300407</a><br>
+        <strong>Journal:</strong> IEEE Sensors Letters<br>
+        <strong>Role:</strong> Co-author - Testbed validation, sensor characterization, data analysis
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-value">0-30 kPa</div>
+          <div class="metric-label">Pressure Range</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">25 Pa</div>
+          <div class="metric-label">Pressure Resolution</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">261 ms</div>
+          <div class="metric-label">Response Time</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">10,000 cycles</div>
+          <div class="metric-label">Durability Test</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">0.93 kPa⁻¹</div>
+          <div class="metric-label">Sensor Sensitivity</div>
+        </div>
+      </div>
+
+      <!-- Project Gallery -->
+      <div class="project-gallery">
+        <figure>
+          <img src="images/testbed-hardware.png" alt="Testbed Hardware" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Testbed+Hardware'">
+          <figcaption>Figure 1: Mechanical testbed structure with stationary base and movable arm</figcaption>
+        </figure>
+        <figure>
+          <img src="images/response-time-measurement.png" alt="Response Time Measurement" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Response+Time+Measurement'">
+          <figcaption>Figure 2: Response time measurement method using encoder feedback</figcaption>
+        </figure>
+      </div>
+
+      <!-- Project Overview -->
+      <h2>Project Overview</h2>
+      <p>This research presents a <strong>novel testing technique and hardware setup</strong> for evaluating piezoresistive pressure sensors intended for pulse wave monitoring applications. The testbed addresses critical gaps in traditional sensor characterization methods by providing more accurate response time measurements, programmable pressure profiles, and cost-effective operation compared to expensive force gauges and sourcemeters.</p>
+
+      <h3>Problem Addressed</h3>
+      <ul>
+        <li>Traditional response time measurement assumes <strong>no delay</strong> between pressure application and sensor response</li>
+        <li>Conventional equipment (force gauges, sourcemeters) is <strong>expensive and bulky</strong></li>
+        <li>Lack of <strong>programmable pressure waveforms</strong> for realistic pulse simulation</li>
+        <li>Difficulty in <strong>validating wearable operation</strong> before clinical trials</li>
+      </ul>
+
+      <!-- Hardware Design -->
+      <h2>Hardware Design & Specifications</h2>
+      
+      <h3>Mechanical Structure:</h3>
+      <ul>
+        <li><strong>Stationary Base:</strong> Fixed platform for sensor placement</li>
+        <li><strong>Movable Arm:</strong> Driven by stepper motor via screw mechanism</li>
+        <li><strong>Gear Assembly:</strong> 2:1 gear ratio translating axis rotation to encoder</li>
+        <li><strong>Clamps:</strong> JORGENSEN 36-inch bar clamps for secure mounting</li>
+        <li><strong>3D Printed Parts:</strong> Custom components for the testbed</li>
+      </ul>
+
+      <h3>Electronics & Control:</h3>
+      <ul>
+        <li><strong>Microcontroller:</strong> Arduino Nano (8-bit AVR ATmega328)</li>
+        <li><strong>Stepper Motor:</strong> ROHS 28BYJ-48</li>
+        <li><strong>Encoder:</strong> 2-phase Incremental Shaft Encoder</li>
+        <li><strong>Pressure Sensor:</strong> FSR402 (for testbed integration)</li>
+        <li><strong>Force Gauge (Calibration):</strong> Mark-10</li>
+      </ul>
+
+      <h3>Testbed Specifications:</h3>
+      <table class="spec-table">
+        <tbody>
+          <tr><th>Parameter</th><th>Specification</th></tr>
+          <tr><td>Pressure Range</td><td>0 - 30 kPa</td></tr>
+          <tr><td>Pressure Resolution</td><td>25 Pa</td></tr>
+          <tr><td>Sensor Sensitivity (5-12 kPa)</td><td>0.93 kPa⁻¹</td></tr>
+          <tr><td>Response Time (@3.7 kPa)</td><td>261 ms (σ = 5 ms)</td></tr>
+          <tr><td>Durability</td><td>10,000 cycles (minimal degradation)</td></tr>
+          <tr><td>Noise Mitigation</td><td>Mechanical padding + shielded wires + capacitor filtering</td></tr>
+        </tbody>
+      </table>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/sensitivity-plot.png" alt="Sensitivity Plot" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Sensitivity+Plot'">
+          <figcaption>Figure 3: Sensitivity calibration curve (0.93 kPa⁻¹ from 5-12 kPa)</figcaption>
+        </figure>
+        <figure>
+          <img src="images/durability-test.png" alt="Durability Test" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Durability+Test'">
+          <figcaption>Figure 4: 10,000-cycle durability test results</figcaption>
+        </figure>
+      </div>
+
+      <!-- Response Time Measurement -->
+      <h2>Response Time Measurement Innovation</h2>
+      
+      <h3>Conventional Method vs. Our Testbed:</h3>
+      
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>Conventional Method</th>
+            <th>Our Testbed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pressure Application Detection</td>
+            <td>Assumed instantaneous</td>
+            <td><strong>Encoder-measured with timestamp (t1)</strong></td>
+          </tr>
+          <tr>
+            <td>Sensor Response Detection</td>
+            <td>Output stabilization point</td>
+            <td><strong>Output stabilization with timestamp (t2)</strong></td>
+          </tr>
+          <tr>
+            <td>Response Time Calculation</td>
+            <td>Post-processing estimation</td>
+            <td><strong>t2 - t1 (real-time, per excitation)</strong></td>
+          </tr>
+          <tr>
+            <td>Accuracy</td>
+            <td>Limited (ignores application delay)</td>
+            <td><strong>High (accounts for actual pressure onset)</strong></td>
+          </tr>
+        </tbody>
+        </table>
+
+      <h3>Key Advantage:</h3>
+      <p>The testbed calculates response times <strong>for each excitation cycle</strong> in real-time, unlike conventional methods that rely on post-processing with costly equipment. The encoder integration allows precise measurement of when pressure is actually applied, not just when the sensor responds.</p>
+
+      <!-- Validation Results -->
+      <h2>Validation Results</h2>
+      
+      <h3>Sensor Testing Comparison (Testbed vs. Mark-10 Force Gauge):</h3>
+      
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>Sensor Model</th>
+            <th>Mark-10 Sensitivity (kPa⁻¹)</th>
+            <th>Testbed Sensitivity (kPa⁻¹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>MD30-60</td><td>0.58</td><td>0.42</td></tr>
+          <tr><td>DF9-40</td><td>0.41</td><td>0.15</td></tr>
+          <tr><td>RP-S5-ST (1)</td><td>0.71</td><td>0.50</td></tr>
+          <tr><td>RP-S5-ST (2)</td><td>0.44</td><td>0.69</td></tr>
+          <tr><td>C5-ST-LF50</td><td>0.35</td><td>0.54</td></tr>
+        </tbody>
+        </table>
+
+      <h3>Embedded Testbed Sensor Performance:</h3>
+      <ul>
+        <li><strong>Sensitivity:</strong> 0.93 kPa⁻¹ (5-12 kPa range)</li>
+        <li><strong>Response Time:</strong> 261 ms (±5 ms standard deviation at 3.7 kPa)</li>
+        <li><strong>Durability:</strong> Minimal degradation after 10,000 cycles (2-4 kPa, 520 ms duration)</li>
+        <li><strong>Output Deviation:</strong> 2% within batch, 6% across batches (per datasheet)</li>
+      </ul>
+
+      <!-- Programmable Pulse Waveform Generation -->
+      <h2>Programmable Pulse Waveform Generation</h2>
+      
+      <h3>Customizable Parameters:</h3>
+      <ul>
+        <li><strong>Pressure Amplitude:</strong> User-defined via Arduino input</li>
+        <li><strong>Frequency:</strong> Adjustable to simulate different heart rates</li>
+        <li><strong>Waveform Shape:</strong> Programmable to replicate various physiological conditions</li>
+        <li><strong>Peak Timing:</strong> Control relative occurrence of Percussion (P), Tidal (T), and Diastolic (D) waves</li>
+      </ul>
+
+      <h3>Applications of Programmable Waveforms:</h3>
+      <ul>
+        <li><strong>Cardiovascular Disease Simulation:</strong> Tidal wave can be programmed to appear earlier after percussion wave</li>
+        <li><strong>Age/Athletic Ability Variation:</strong> Accommodate population differences in pulse waveform</li>
+        <li><strong>Heart Rate Simulation:</strong> Test sensors at different BPMs (resting, active, exercise)</li>
+        <li><strong>Blood Pressure Profiles:</strong> Simulate normal and hypertensive conditions</li>
+      </ul>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/pulse-waveform-simulation.png" alt="Pulse Waveform Simulation" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Pulse+Waveform+Simulation'">
+          <figcaption>Figure 5: Simulated heartbeat with P, T, and D waves</figcaption>
+        </figure>
+        <figure>
+          <img src="images/comparison-natural-pulse.png" alt="Comparison with Natural Pulse" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Comparison+with+Natural+Pulse'">
+          <figcaption>Figure 6: Comparison with natural pulse waveform from state-of-the-art sensors</figcaption>
+        </figure>
+      </div>
+
+      <!-- Noise Immunity -->
+      <h2>Noise Immunity Measures</h2>
+      <ul>
+        <li><strong>Mechanical Noise:</strong> Padding between testbed and supporting desk dampens vibrations</li>
+        <li><strong>Electromagnetic Noise:</strong> Stepper motor shielded with grounded aluminum foil</li>
+        <li><strong>Electrical Noise:</strong> Shielded wires + capacitor added to stepper motor power line</li>
+        <li><strong>Measurement Error Reduction:</strong> Each measurement repeated 5 times with mean values reported</li>
+        <li><strong>Calibration:</strong> Pressure sensor calibrated against Mark-10 force gauge</li>
+      </ul>
+
+      <!-- Tools & Components Used -->
+      <h2>Components & Equipment</h2>
+      <ul class="tool-list">
+        <li>Arduino Nano (ATmega328)</li>
+        <li>28BYJ-48 Stepper Motor</li>
+        <li>2-phase Incremental Shaft Encoder</li>
+        <li>FSR402 Pressure Sensor</li>
+        <li>Mark-10 Force Gauge</li>
+        <li>JORGENSEN Bar Clamps</li>
+        <li>3D Printer (CTC Electronic)</li>
+        <li>Shielded Wires</li>
+        <li>Grounded Aluminum Foil</li>
+      </ul>
+
+      <!-- Downloads -->
+      <h2>Downloads</h2>
+      <ul class="downloads-list">
+        <li><a href="docs/jafarizadeh-et-al-2023-ieee-sensors.pdf">Full IEEE Sensors Letters Paper (PDF)</a></li>
+        <li><a href="docs/testbed-arduino-code.ino">Arduino Control Code (INO)</a></li>
+        <li><a href="docs/testbed-calibration-data.xlsx">Calibration Data (Excel)</a></li>
+        <li><a href="docs/3d-print-files.stl">3D Print Files (STL)</a></li>
+      </ul>
+
+      <!-- Key Innovations -->
+      <h2>Key Innovations</h2>
+      <ul>
+        <li><strong>First testbed with encoder-based response time measurement</strong> that accounts for actual pressure application delay</li>
+        <li><strong>Cost-effective alternative</strong> to expensive force gauges and sourcemeters</li>
+        <li><strong>Programmable pulse waveform generation</strong> simulating diverse blood pressures and heart rates</li>
+        <li><strong>Comprehensive characterization</strong> (sensitivity, response time, durability) in single device</li>
+        <li><strong>25 Pa pressure resolution</strong> - sufficient for pulse wave monitoring applications</li>
+        <li><strong>10,000-cycle durability testing</strong> with customizable pressure profiles</li>
+      </ul>
+
+      <!-- Comparison with Traditional Methods -->
+      <h2>Comparison with Traditional Methods</h2>
+      
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Traditional (Force Gauge + Sourcemeter)</th>
+            <th>Our Testbed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Cost</td><td>High</td><td>Low</td></tr>
+          <tr><td>Portability</td><td>Bulky</td><td>Compact</td></tr>
+          <tr><td>Response Time Accuracy</td><td>Limited (assumes instantaneous application)</td><td>High (encoder-measured onset)</td></tr>
+          <tr><td>Programmable Waveforms</td><td>No</td><td>Yes (P, T, D wave timing adjustable)</td></tr>
+          <tr><td>Per-cycle Response Time</td><td>Post-processing only</td><td>Real-time per excitation</td></tr>
+          <tr><td>Durability Testing</td><td>Manual or semi-automated</td><td>Fully automated (10,000 cycles)</td></tr>
+          <tr><td>Physiological Simulation</td><td>Limited</td><td>Comprehensive (age, athletic ability, disease states)</td></tr>
+        </tbody>
+        </table>
+
+      <!-- Funding -->
+      <h2>Funding</h2>
+      <ul>
+        <li>National Science Foundation (NSF) Awards #2126190 and #2107318</li>
+        <li>NSF PATHS-UP ERC (Award #1648451)</li>
+      </ul>
+
+      <!-- Related Publications -->
+      <h2>Related Publications</h2>
+      <ul>
+        <li>Jafarizadeh, B., <strong>Chowdhury, A.H.</strong>, Sozal, M.S.I., Cheng, Z., Pala, N., Wang, C. "Hardware and Protocol for Testing of Piezoresistive Pressure Sensors for Pulse Wave Monitoring." <em>IEEE Sensors Letters</em>, 2023, 7(8), 2502304.</li>
+        <li>Jafarizadeh, B., <strong>Chowdhury, A.H.</strong>, Khakpour, I., Pala, N., Wang, C. "Design Rules for a Wearable Micro-Fabricated Piezo-Resistive Pressure Sensor." <em>Micromachines</em>, 2022, 13, 838.</li>
+        <li>Jafarizadeh, B., <strong>Chowdhury, A.H.</strong>, Sozal, M.S.I., Cheng, Z., Pala, N., Wang, C. "Wearable System Integrating Dual Piezoresistive and Photoplethysmography Sensors for Simultaneous Pulse Wave Monitoring." <em>ACS Applied Materials & Interfaces</em>, 2024, 16, 65402-65413.</li>
+      </ul>
+
+      <!-- Conclusion -->
+      <h2>Conclusion</h2>
+      <p>This study introduced an innovative, cost-effective testbed for comprehensive evaluation of piezoresistive pressure sensors. The hardware enables precise measurement of sensitivity, response time, and durability within 0-30 kPa range at 25 Pa resolution. Key innovations include encoder-based response time measurement (accounting for actual pressure application delay) and programmable pulse waveform generation capability. The testbed successfully validated a commercial pressure sensor achieving 0.93 kPa⁻¹ sensitivity, 261 ms response time, and 10,000-cycle durability. By enabling simulation of diverse physiological conditions (different ages, athletic abilities, disease states), this testbed serves as a vital tool for advancing wearable pulse wave monitoring technology from laboratory to clinical applications.</p>
+
+      <!-- Back Button -->
+      <div class="back-button">
+        <a href="../../projects.html" class="button primary">← Back to All Projects</a>
+      </div>
+
+    </article>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <section>
+      <h3>Email</h3>
+      <p>achow030@fiu.edu</p>
+      <p>azmalchowdhury93@gmail.com</p>
+    </section>
+    <section>
+      <h3>Social</h3>
+      <ul class="icons alt">
+        <li>
+          <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/azmalchowdhury" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../assets/js/jquery.scrolly.min.js"></script>
+<script src="../../assets/js/browser.min.js"></script>
+<script src="../../assets/js/breakpoints.min.js"></script>
+<script src="../../assets/js/util.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>
