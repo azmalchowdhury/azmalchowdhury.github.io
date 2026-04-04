@@ -1,0 +1,488 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Wearable Capacitive Pressure Sensor | Azmal Chowdhury</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+  
+  <style>
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+    .project-gallery figure {
+      flex: 1 1 300px;
+      margin: 0;
+      text-align: center;
+    }
+    .project-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #eeeeee;
+    }
+    .project-gallery figcaption {
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      color: #666;
+    }
+    .downloads-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .downloads-list li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .downloads-list li:before {
+      content: '\f019';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #18bfef;
+    }
+    .tool-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0;
+    }
+    .tool-list li {
+      background: #f0f0f0;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+    }
+    .back-button {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .highlight {
+      background: #f0f7ff;
+      padding: 1.5rem;
+      border-left: 4px solid #18bfef;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .metric-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    .metric-card {
+      flex: 1;
+      min-width: 120px;
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .metric-value {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #18bfef;
+    }
+    .metric-label {
+      font-size: 0.8rem;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
+
+  <!-- Header -->
+  <header id="header">
+    <a href="../../index.html" class="logo">Azmal Chowdhury</a>
+  </header>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <ul class="links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../about.html">About</a></li>
+      <li><a href="../../experience.html">Experience</a></li>
+      <li class="active"><a href="../../projects.html">Projects</a></li>
+      <li><a href="../../publications.html">Publications</a></li>
+      <li><a href="../../hobby.html">Hobby</a></li>
+    </ul>
+
+    <ul class="icons">
+      <li>
+        <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/azmalchowdhury" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <div id="main">
+    <article class="post">
+
+      <!-- Project Title -->
+      <header class="major">
+        <h1>Wearable Capacitive Pressure Sensor<br>Contact & Non-Contact Sensing</h1>
+        <p>MWCNT-PDMS Porous Dielectric for Tactile and Proximity Sensing</p>
+      </header>
+
+      <!-- Publication Badge -->
+      <div class="highlight">
+        <strong>📄 First-Author Publication:</strong> Molecules, 2022, 27, 6872<br>
+        <strong>DOI:</strong> <a href="https://doi.org/10.3390/molecules27206872" target="_blank">10.3390/molecules27206872</a><br>
+        <strong>Journal:</strong> Molecules (Open Access) | <strong>Citations:</strong> [Add citation count if known]
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-value">2.41 kPa⁻¹</div>
+          <div class="metric-label">Sensitivity (0-0.5 kPa)</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">1.46 Pa</div>
+          <div class="metric-label">Limit of Detection</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">9000 cycles</div>
+          <div class="metric-label">Cyclic Stability</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">12 inches</div>
+          <div class="metric-label">Proximity Range</div>
+        </div>
+      </div>
+
+      <!-- Project Gallery -->
+      <div class="project-gallery">
+        <figure>
+          <img src="images/sensor-schematic.png" alt="Sensor Schematic" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Sensor+Schematic'">
+          <figcaption>Figure 1: Schematic of the MWCNT-PDMS capacitive pressure sensor</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sensor-photo.jpg" alt="Physical Sensor" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Physical+Sensor'">
+          <figcaption>Figure 2: Flexible sensor packaged in Kapton tape</figcaption>
+        </figure>
+      </div>
+
+      <!-- Project Overview -->
+      <h2>Project Overview</h2>
+      <p>This research presents a <strong>low-cost, sacrificial template-assisted method</strong> for fabricating a capacitive pressure sensor using a porous Polydimethylsiloxane (PDMS) and multiwalled carbon nanotube (MWCNT) composite dielectric layer. The sensor demonstrates high sensitivity (2.41 kPa⁻¹), ultralow detection limit (1.46 Pa), excellent cyclic stability (9000 cycles), and unique dual-mode sensing capability for both contact (pressure) and non-contact (proximity) applications using a single data readout system.</p>
+
+      <h3>Motivation</h3>
+      <p>Flexible pressure sensors are critical for healthcare monitoring, electronic skin, tactile sensing, and soft robotics. However, achieving high sensitivity often requires expensive, multi-step fabrication processes (photolithography, 3D printing). This work addresses the barrier between high sensitivity and low fabrication cost by using a simple sacrificial template method with sucrose particles to create porosity in the dielectric layer, combined with MWCNT functionalization to enhance dielectric permittivity.</p>
+
+      <!-- Materials & Methods -->
+      <h2>Materials & Fabrication</h2>
+      
+      <h3>Materials Used:</h3>
+      <ul>
+        <li><strong>Polymer:</strong> PDMS (Polydimethylsiloxane) - SYLGARD™ 184</li>
+        <li><strong>Conductive Filler:</strong> MWCNT (6-13 nm OD × 2.5-20 μm length)</li>
+        <li><strong>Sacrificial Template:</strong> Sucrose particles (sugar)</li>
+        <li><strong>Solvent:</strong> Acetone (to increase pore volume)</li>
+        <li><strong>Electrodes:</strong> Conductive carbon cloth</li>
+        <li><strong>Packaging:</strong> Polyimide (Kapton) tape</li>
+      </ul>
+
+      <h3>Fabrication Process:</h3>
+      <ol>
+        <li><strong>Solution Preparation:</strong> PDMS base and curing agent mixed at 10:1 ratio. MWCNTs dispersed in acetone and added to PDMS (0-2 wt.% concentrations).</li>
+        <li><strong>Sacrificial Template Addition:</strong> Sucrose particles added to the mixture (volume ratio PDMS:Acetone:Sucrose = 2:1:8).</li>
+        <li><strong>Casting & Curing:</strong> Mixture poured into glass mold (40×25×2 mm) and cured at 70°C for 5 hours.</li>
+        <li><strong>Template Removal:</strong> Sucrose particles dissolved in water overnight, leaving porous structure (~82% porosity).</li>
+        <li><strong>Sensor Assembly:</strong> Dielectric layer (1×1 cm) sandwiched between conductive carbon cloth electrodes, packaged in Kapton tape.</li>
+      </ol>
+
+      <!-- Sensing Mechanism -->
+      <h2>Sensing Mechanism</h2>
+      
+      <h3>Pressure Sensing (Contact Mode)</h3>
+      <p>The sensor operates on the parallel plate capacitor mechanism:</p>
+      <ul>
+        <li><strong>Without Pressure:</strong> Pores contain air (εᵣ ≈ 1), low dielectric constant</li>
+        <li><strong>Under Pressure:</strong> Pores collapse, air replaced by PDMS (εᵣ ≈ 3) + MWCNT network (εᵣ ≈ 100 at 1 kHz)</li>
+        <li><strong>Result:</strong> Large capacitance change (ΔC) due to both reduced distance (d) and increased permittivity (ε)</li>
+      </ul>
+
+      <h3>Proximity Sensing (Non-Contact Mode)</h3>
+      <p>The sensor detects objects via fringe field effect:</p>
+      <ul>
+        <li>Electric field lines extend beyond parallel plates (fringe field)</li>
+        <li>When a conductive object (e.g., finger) approaches, fringe field is absorbed → capacitance decreases</li>
+        <li>Detection range: <strong>12 inches (30 cm)</strong></li>
+        <li>Enables hands-free applications without multiple sensors</li>
+      </ul>
+
+      <!-- Performance Results -->
+      <h2>Performance Characterization</h2>
+      
+      <h3>Pressure Sensitivity Optimization</h3>
+      <p>MWCNT concentration was optimized for maximum sensitivity:</p>
+      
+      <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+        <tr style="background:#f0f0f0;">
+          <th style="padding: 0.5rem; border:1px solid #ddd;">MWCNT Concentration</th>
+          <th style="padding: 0.5rem; border:1px solid #ddd;">Dielectric Permittivity (εᵣ)</th>
+          <th style="padding: 0.5rem; border:1px solid #ddd;">Sensitivity (0-0.5 kPa)</th>
+        </tr>
+        <tr>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">0% (Pure PDMS)</td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">3.0</td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">0.31 kPa⁻¹</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">0.4%</td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">4.11</td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">-</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">0.8%</td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">4.99</td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">-</td>
+         </tr>
+        <tr>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">1.2%</td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">5.05</td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">-</td>
+         </tr>
+        <tr style="background:#e8f4f8;">
+          <td style="padding: 0.5rem; border:1px solid #ddd;"><strong>1.6% (Optimal)</strong></td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;"><strong>5.15</strong></td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;"><strong>2.41 kPa⁻¹</strong></td>
+         </tr>
+        <tr>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">2.0%</td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">5.24</td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">Decreased (stiffness increase)</td>
+         </tr>
+       </table>
+
+      <h3>Key Performance Metrics</h3>
+      <ul>
+        <li><strong>High Sensitivity Range (0-0.5 kPa):</strong> 2.41 kPa⁻¹</li>
+        <li><strong>Low Sensitivity Range (>0.5 kPa):</strong> 0.11 kPa⁻¹</li>
+        <li><strong>Limit of Detection (LoD):</strong> 1.46 Pa (equivalent to 69 mg mass)</li>
+        <li><strong>Cyclic Stability:</strong> 9000 cycles with stable performance</li>
+        <li><strong>Base Capacitance:</strong> Increases with MWCNT concentration (0-0.8 nF range)</li>
+        <li><strong>Response Delay:</strong> 0.19 s rise time (compared to commercial sensor)</li>
+      </ul>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/sensitivity-graph.png" alt="Sensitivity Graph" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Sensitivity+Graph'">
+          <figcaption>Figure 3: Relative capacitance change vs. pressure for different MWCNT concentrations</figcaption>
+        </figure>
+        <figure>
+          <img src="images/cyclic-test.png" alt="Cyclic Test" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Cyclic+Stability'">
+          <figcaption>Figure 4: 9000-cycle stability test</figcaption>
+        </figure>
+      </div>
+
+      <!-- SEM Characterization -->
+      <h2>Materials Characterization</h2>
+      
+      <h3>SEM Analysis</h3>
+      <ul>
+        <li>Randomly distributed pores throughout the dielectric layer</li>
+        <li>Average pore size: 455.22 ± 168.92 μm</li>
+        <li>Pore volume: ~82% (controlled by sucrose/acetone ratio)</li>
+        <li>Conductive textile electrode shows high surface roughness (enhances sensitivity)</li>
+      </ul>
+
+      <h3>FTIR Analysis</h3>
+      <ul>
+        <li>Si(CH₃) rocking bands: 785-815 cm⁻¹</li>
+        <li>Si-C bonds: 835-855 cm⁻¹</li>
+        <li>Si-O-Si stretching: 1000-1100 cm⁻¹</li>
+        <li>-CH₃ deformation: 1258 cm⁻¹ and 1410 cm⁻¹</li>
+      </ul>
+
+      <!-- Applications -->
+      <h2>Real-World Applications</h2>
+      
+      <h3>1. Pulse Waveform Monitoring (Physiological Sensing)</h3>
+      <p>The sensor successfully captured arterial pulse waveforms from the wrist artery of a 30-year-old healthy male volunteer. Key features extracted:</p>
+      <ul>
+        <li><strong>Heart Rate:</strong> 85 BPM</li>
+        <li><strong>Systolic Peak (P-wave):</strong> Ventricular contraction</li>
+        <li><strong>Diastolic Peak (D-wave):</strong> Reflection from lower body</li>
+        <li><strong>Percussion Response (T-wave):</strong> Peripheral artery reflection</li>
+        <li><strong>Augmentation Index (AIx):</strong> 68% (normal, no vascular aging)</li>
+      </ul>
+
+      <h3>2. Tactile Sensing & Morse Code Generation</h3>
+      <p>The sensor detects finger tapping at irregular intervals and can generate Morse code (dots and dashes), with potential applications in hospital settings for paralyzed patients to communicate.</p>
+
+      <h3>3. Proximity Sensing (Non-Contact)</h3>
+      <ul>
+        <li><strong>Detection Range:</strong> 12 inches (30 cm)</li>
+        <li><strong>Capacitance Change:</strong> ~8% when finger approaches</li>
+        <li><strong>Applications:</strong> Touchless interfaces, automatic dispensers, gesture control, robotics collision avoidance</li>
+      </ul>
+
+      <h3>4. COVID-19 Related Applications</h3>
+      <p>The proximity sensing capability enables touchless applications to prevent disease spread: automatic soap dispensers, water faucets, door handles, and sanitizer dispensers.</p>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/pulse-waveform.png" alt="Pulse Waveform" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Pulse+Waveform'">
+          <figcaption>Figure 5: Real-time pulse waveform monitoring from wrist artery</figcaption>
+        </figure>
+        <figure>
+          <img src="images/proximity-sensing.png" alt="Proximity Sensing" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Proximity+Sensing'">
+          <figcaption>Figure 6: Proximity sensing capability (12-inch range)</figcaption>
+        </figure>
+      </div>
+
+      <!-- Tools Used -->
+      <h2>Equipment Used</h2>
+      <ul class="tool-list">
+        <li>JSM-FS100 Scanning Electron Microscope (SEM)</li>
+        <li>JASCO FT/IR-4100 (FTIR Spectroscopy)</li>
+        <li>MARK-10 ES-20 Test Stand</li>
+        <li>MARK-10 M5-50 Force Gauge</li>
+        <li>Agilent 4263B Precision LCR Meter</li>
+        <li>LabVIEW for Data Acquisition</li>
+      </ul>
+
+      <!-- Comparison with Literature -->
+      <h2>Comparison with State-of-the-Art</h2>
+      
+      <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+        <tr style="background:#f0f0f0;">
+          <th style="padding: 0.5rem; border:1px solid #ddd;">Material</th>
+          <th style="padding: 0.5rem; border:1px solid #ddd;">Sensitivity (Low Pressure)</th>
+          <th style="padding: 0.5rem; border:1px solid #ddd;">Sensitivity (High Pressure)</th>
+          <th style="padding: 0.5rem; border:1px solid #ddd;">Year</th>
+         </tr>
+        <tr>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">Porous PDMS</td>
+          <td style="padding: 0.18 kPa⁻¹</td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">-</td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">2021</td>
+         </tr>
+        <tr>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">Porous PDMS</td>
+          <td style="padding: 0.3 kPa⁻¹</td>
+          <td style="padding: 0.0032 kPa⁻¹</td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">2021</td>
+         </tr>
+        <tr>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">Porous Ecoflex/GNP</td>
+          <td style="padding: 0.062 kPa⁻¹</td>
+          <td style="padding: 0.033 kPa⁻¹</td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;">2019</td>
+         </tr>
+        <tr style="background:#e8f4f8;">
+          <td style="padding: 0.5rem; border:1px solid #ddd;"><strong>Porous PDMS/MWCNT (This work)</strong></td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;"><strong>2.41 kPa⁻¹</strong></td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;"><strong>0.11 kPa⁻¹</strong></td>
+          <td style="padding: 0.5rem; border:1px solid #ddd;"><strong>2022</strong></td>
+         </tr>
+       </table>
+
+      <!-- Downloads -->
+      <h2>Downloads</h2>
+      <ul class="downloads-list">
+        <li><a href="docs/chowdhury-et-al-2022-molecules.pdf">Full Journal Paper (PDF)</a></li>
+        <li><a href="docs/supporting-information.pdf">Supporting Information (PDF)</a></li>
+        <li><a href="docs/fabrication-protocol.pdf">Fabrication Protocol (PDF)</a></li>
+      </ul>
+
+      <!-- Key Innovations -->
+      <h2>Key Innovations</h2>
+      <ul>
+        <li><strong>First demonstration</strong> of low-cost sacrificial template method for porous PDMS-MWCNT dielectric layer</li>
+        <li><strong>Dual-mode sensing</strong> (pressure + proximity) using single data readout system</li>
+        <li><strong>Ultralow detection limit</strong> of 1.46 Pa (69 mg mass)</li>
+        <li><strong>Simple, scalable fabrication</strong> without photolithography or 3D printing</li>
+        <li><strong>Record sensitivity</strong> for porous PDMS-based sensors (2.41 kPa⁻¹)</li>
+        <li><strong>Excellent stability</strong> over 9000 cycles</li>
+      </ul>
+
+      <!-- Funding -->
+      <h2>Funding</h2>
+      <ul>
+        <li>National Science Foundation (NSF) Engineering Research Center for PATHS-UP ERC (Award #1648451)</li>
+      </ul>
+
+      <!-- Related Publications -->
+      <h2>Related Publications</h2>
+      <ul>
+        <li><strong>Chowdhury, A.H.</strong>, Jafarizadeh, B., Pala, N., Wang, C. "Wearable Capacitive Pressure Sensor for Contact and Non-Contact Sensing and Pulse Waveform Monitoring." <em>Molecules</em>, 2022, 27, 6872.</li>
+        <li>Chowdhury, A.H., Jafarizadeh, B., Pala, N., Wang, C. "Paper-Based Supercapacitive Pressure Sensor for Wrist Arterial Pulse Waveform Monitoring." <em>ACS Applied Materials & Interfaces</em>, 2023, 15, 53043-53052.</li>
+        <li>Chowdhury, A.H., Jafarizadeh, B., Baboukani, A.R., Pala, N., Wang, C. "Monitoring and analysis of cardiovascular pulse waveforms using flexible capacitive and piezoresistive pressure sensors and machine learning perspective." <em>Biosensors and Bioelectronics</em>, 2023, 237, 115449.</li>
+      </ul>
+
+      <!-- Conclusion -->
+      <h2>Conclusion</h2>
+      <p>This study successfully developed a low-cost, high-performance capacitive pressure sensor using a porous PDMS-MWCNT dielectric layer fabricated via a simple sacrificial template method. The sensor achieved excellent sensitivity (2.41 kPa⁻¹), ultralow detection limit (1.46 Pa), and outstanding cyclic stability (9000 cycles). Unique dual-mode sensing capability enables both contact (pressure) and non-contact (proximity) sensing using a single readout system. The sensor demonstrated practical applications in pulse waveform monitoring, tactile sensing, Morse code generation, and proximity detection (12-inch range). This work provides a scalable, cost-effective solution for wearable health monitoring and touchless interface applications.</p>
+
+      <!-- Back Button -->
+      <div class="back-button">
+        <a href="../../projects.html" class="button primary">← Back to All Projects</a>
+      </div>
+
+    </article>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <section>
+      <h3>Email</h3>
+      <p>achow030@fiu.edu</p>
+      <p>azmalchowdhury93@gmail.com</p>
+    </section>
+    <section>
+      <h3>Social</h3>
+      <ul class="icons alt">
+        <li>
+          <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/azmalchowdhury" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../assets/js/jquery.scrolly.min.js"></script>
+<script src="../../assets/js/browser.min.js"></script>
+<script src="../../assets/js/breakpoints.min.js"></script>
+<script src="../../assets/js/util.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>
