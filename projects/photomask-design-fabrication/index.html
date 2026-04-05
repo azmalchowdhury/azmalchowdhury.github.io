@@ -1,0 +1,429 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Photomask Design & Fabrication | Azmal Chowdhury</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+  
+  <style>
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+    .project-gallery figure {
+      flex: 1 1 300px;
+      margin: 0;
+      text-align: center;
+    }
+    .project-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #eeeeee;
+      background: #1e252d;
+    }
+    .project-gallery figcaption {
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      color: #666;
+    }
+    .downloads-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .downloads-list li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .downloads-list li:before {
+      content: '\f019';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #18bfef;
+    }
+    .tool-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0;
+    }
+    .tool-list li {
+      background: #f0f0f0;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+    }
+    .back-button {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .highlight {
+      background: #f0f7ff;
+      padding: 1.5rem;
+      border-left: 4px solid #18bfef;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .mask-card {
+      background: #f5f5f5;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      transition: transform 0.3s ease;
+    }
+    .mask-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    .mask-title {
+      color: #18bfef;
+      margin-bottom: 0.5rem;
+    }
+    .spec-badge {
+      display: inline-block;
+      background: #18bfef;
+      color: white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 15px;
+      font-size: 0.7rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
+
+  <!-- Header -->
+  <header id="header">
+    <a href="../../index.html" class="logo">Azmal Chowdhury</a>
+  </header>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <ul class="links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../about.html">About</a></li>
+      <li><a href="../../experience.html">Experience</a></li>
+      <li class="active"><a href="../../projects.html">Projects</a></li>
+      <li><a href="../../publications.html">Publications</a></li>
+      <li><a href="../../hobby.html">Hobby</a></li>
+    </ul>
+
+    <ul class="icons">
+      <li>
+        <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/azmalchowdhury" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <div id="main">
+    <article class="post">
+
+      <!-- Project Title -->
+      <header class="major">
+        <h1>Photomask Design & Fabrication<br>Microfabrication Mask Layout</h1>
+        <p>LayoutEditor | Laser Lithography | Multi-Project Mask Design</p>
+      </header>
+
+      <!-- Project Badge -->
+      <div class="highlight">
+        <strong>🎯 Project Type:</strong> Microfabrication Enabling Technology<br>
+        <strong>🛠️ Software:</strong> LayoutEditor (Free Version)<br>
+        <strong>🔬 Fabrication:</strong> μPG 101 Laser Mask Writer (405 nm wavelength)<br>
+        <strong>📅 Period:</strong> 2019 – 2024 (Throughout Ph.D.)<br>
+        <strong>🎭 Role:</strong> Sole mask designer for multiple device fabrication projects
+      </div>
+
+      <!-- Mask Gallery -->
+      <div class="project-gallery">
+        <figure>
+          <img src="images/mask1-wheatstone-front.jpg" alt="MEMS Frontside Mask" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Frontside+Mask'">
+          <figcaption>Mask 1: Frontside Mask for MEMS Pressure Sensor</figcaption>
+        </figure>
+        <figure>
+          <img src="images/mask2-wheatstone-back.jpg" alt="MEMS Backside Mask" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Backside+Mask'">
+          <figcaption>Mask 2: Backside Mask for MEMS Pressure Sensor</figcaption>
+        </figure>
+      </div>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/mask3-microsupercapacitor.jpg" alt="Microsupercapacitor Mask" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Microsupercapacitor+Mask'">
+          <figcaption>Mask 3: Interdigitated Electrodes for Microsupercapacitor</figcaption>
+        </figure>
+        <figure>
+          <img src="images/mask4-strain-sensor.jpg" alt="Strain Sensor Mask" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Strain+Sensor+Mask'">
+          <figcaption>Mask 4: Serpentine Pattern for Strain Sensor</figcaption>
+        </figure>
+      </div>
+
+      <!-- Project Overview -->
+      <h2>Project Overview</h2>
+      <p>Photomask design is a critical enabling technology for microfabrication. This project encompasses the complete workflow of designing and fabricating photomasks for various MEMS and microdevice applications using <strong>LayoutEditor software</strong> and <strong>laser lithography (μPG 101)</strong>. I have designed multiple masks for different devices including MEMS pressure sensors (frontside and backside masks), microsupercapacitors with interdigitated electrodes, strain sensors with serpentine patterns, and micropyramid molds for PDMS casting.</p>
+
+      <h3>Why Photomasks Matter</h3>
+      <p>Photomasks are the master templates used in photolithography to transfer circuit patterns onto semiconductor wafers. Every microfabricated device - from MEMS sensors to integrated circuits - begins with a carefully designed photomask. The quality and precision of mask design directly determines the resolution, alignment accuracy, and yield of the final devices.</p>
+
+      <!-- Mask Design Workflow -->
+      <h2>Mask Design & Fabrication Workflow</h2>
+      
+      <div style="background:#f5f5f5; padding:1rem; border-radius:8px; margin:1rem 0;">
+        <h3 style="color:#18bfef;">Step 1: Layout Design (LayoutEditor)</h3>
+        <p>Design patterns using LayoutEditor free version. Key features used: layer management, DRC (Design Rule Checking), Boolean operations, array generation, GDSII export.</p>
+        
+        <h3 style="color:#18bfef;">Step 2: Mask Writing (Laser Lithography)</h3>
+        <p>μPG 101 laser mask writer (405 nm wavelength) exposes pattern onto photoresist-coated blank mask. Parameters: 4.8 mW laser power, optimized focus.</p>
+        
+        <h3 style="color:#18bfef;">Step 3: Development</h3>
+        <p>AZ400K developer (1:4 with water) removes exposed photoresist, revealing chromium layer according to designed pattern.</p>
+        
+        <h3 style="color:#18bfef;">Step 4: Chromium Etching</h3>
+        <p>Chromium Etch 1020 AC (nitric acid + ceric ammonium nitrate) removes exposed chromium for 3 minutes.</p>
+        
+        <h3 style="color:#18bfef;">Step 5: Final Cleaning</h3>
+        <p>Oxygen plasma RIE removes remaining photoresist, leaving only the chromium pattern on glass.</p>
+      </div>
+
+      <!-- Mask 1: MEMS Pressure Sensor Frontside -->
+      <div class="mask-card">
+        <h3 class="mask-title"><i class="fas fa-microchip"></i> Mask 1: MEMS Pressure Sensor (Frontside)</h3>
+        <div>
+          <span class="spec-badge">Wheatstone Bridge</span>
+          <span class="spec-badge">4 Resistive Elements</span>
+          <span class="spec-badge">Metal Interconnects</span>
+          <span class="spec-badge">Contact Pads</span>
+        </div>
+        <p><strong>Purpose:</strong> Defines the metal pattern for piezoresistive elements and electrical interconnects on the front side of the MEMS pressure sensor membrane.</p>
+        <p><strong>Design Features:</strong> Four resistive elements arranged in Wheatstone bridge configuration with optimized serpentine paths for maximum piezoresistive response. Contact pads designed for wire bonding.</p>
+        <p><strong>Applications:</strong> EGN5013C Nanofabrication course project - MEMS pressure sensor fabrication.</p>
+      </div>
+
+      <!-- Mask 2: MEMS Pressure Sensor Backside -->
+      <div class="mask-card">
+        <h3 class="mask-title"><i class="fas fa-layer-group"></i> Mask 2: MEMS Pressure Sensor (Backside)</h3>
+        <div>
+          <span class="spec-badge">Membrane Definition</span>
+          <span class="spec-badge">Bulk Silicon Etching</span>
+          <span class="spec-badge">Alignment Marks</span>
+          <span class="spec-badge">Double-Side Alignment</span>
+        </div>
+        <p><strong>Purpose:</strong> Defines the backside etch window for creating the pressure-sensitive membrane using bulk silicon etching (DRIE).</p>
+        <p><strong>Design Features:</strong> Precision alignment marks for front-to-back alignment (±5 μm accuracy). Etch window dimensions calculated for optimal membrane thickness and pressure sensitivity.</p>
+        <p><strong>Applications:</strong> Backside processing for MEMS pressure sensor using MARCH DRIE system.</p>
+      </div>
+
+      <!-- Mask 3: Microsupercapacitor -->
+      <div class="mask-card">
+        <h3 class="mask-title"><i class="fas fa-battery-full"></i> Mask 3: Microsupercapacitor Electrodes</h3>
+        <div>
+          <span class="spec-badge">Interdigitated Design</span>
+          <span class="spec-badge">32 Fingers (16 per side)</span>
+          <span class="spec-badge">100 μm Width/Spacing</span>
+          <span class="spec-badge">High Aspect Ratio</span>
+        </div>
+        <p><strong>Purpose:</strong> Defines interdigitated gold microelectrodes for on-chip microsupercapacitors.</p>
+        <p><strong>Design Features:</strong> 32 interdigitated fingers (16 per electrode side) with 100 μm width and 100 μm spacing. Optimized finger length for maximum capacitance within 9.66 mm² footprint.</p>
+        <p><strong>Applications:</strong> Energy storage devices, C-MEMS microsupercapacitors, bipolar exfoliated graphene deposition.</p>
+      </div>
+
+      <!-- Mask 4: Strain Sensor -->
+      <div class="mask-card">
+        <h3 class="mask-title"><i class="fas fa-chart-line"></i> Mask 4: Strain Sensor (Serpentine Pattern)</h3>
+        <div>
+          <span class="spec-badge">Serpentine Geometry</span>
+          <span class="spec-badge">High Linearity</span>
+          <span class="spec-badge">Flexible Electronics</span>
+          <span class="spec-badge">Stretchable Design</span>
+        </div>
+        <p><strong>Purpose:</strong> Defines serpentine metal pattern for strain sensing applications on flexible substrates.</p>
+        <p><strong>Design Features:</strong> Optimized serpentine geometry for maximum strain sensitivity while maintaining mechanical flexibility. Designed for transfer printing onto PDMS.</p>
+        <p><strong>Applications:</strong> Wearable strain sensors, flexible electronics, transfer printing.</p>
+      </div>
+
+      <!-- Additional Designs -->
+      <h2>Additional Mask Designs</h2>
+      
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0;">
+        <div style="flex: 1; min-width: 200px; background: #f9f9f9; padding: 1rem; border-radius: 8px;">
+          <h3 style="color:#18bfef; font-size:1rem;">Micropyramid Mold</h3>
+          <p style="font-size:0.85rem;">Array of micropyramids for PDMS casting. Used for creating textured surfaces for piezoresistive pressure sensors.</p>
+        </div>
+        <div style="flex: 1; min-width: 200px; background: #f9f9f9; padding: 1rem; border-radius: 8px;">
+          <h3 style="color:#18bfef; font-size:1rem;">C-MEMS 3D Structures</h3>
+          <p style="font-size:0.85rem;">Photolithography masks for SU-8 patterning to create 3D carbon microstructures via pyrolysis.</p>
+        </div>
+        <div style="flex: 1; min-width: 200px; background: #f9f9f9; padding: 1rem; border-radius: 8px;">
+          <h3 style="color:#18bfef; font-size:1rem;">Interdigitated IDE Patterns</h3>
+          <p style="font-size:0.85rem;">Multiple IDE configurations for electrochemical sensing and impedance spectroscopy applications.</p>
+        </div>
+      </div>
+
+      <!-- Tools & Equipment -->
+      <h2>Tools & Equipment Used</h2>
+      <ul class="tool-list">
+        <li>LayoutEditor (Free Version)</li>
+        <li>μPG 101 Laser Mask Writer (405 nm)</li>
+        <li>AZ400K Developer (1:4 dilution)</li>
+        <li>Chromium Etch 1020 AC</li>
+        <li>OAI Mask Aligner (for inspection)</li>
+        <li>Reactive Ion Etching (RIE) for cleaning</li>
+        <li>Optical Microscope (pattern verification)</li>
+      </ul>
+
+      <!-- Mask Specifications -->
+      <h2>Mask Specifications</h2>
+      
+      <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+        <thead>
+          <tr style="background:#f0f0f0;">
+            <th style="padding: 0.5rem; border:1px solid #ddd;">Parameter</th>
+            <th style="padding: 0.5rem; border:1px solid #ddd;">Specification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding: 0.5rem; border:1px solid #ddd;">Mask Substrate</td><td style="padding: 0.5rem; border:1px solid #ddd;">Glass with Cr layer + positive photoresist</td></tr>
+          <tr><td style="padding: 0.5rem; border:1px solid #ddd;">Laser Wavelength</td><td style="padding: 0.5rem; border:1px solid #ddd;">405 nm</td></tr>
+          <tr><td style="padding: 0.5rem; border:1px solid #ddd;">Laser Power</td><td style="padding: 0.5rem; border:1px solid #ddd;">4.8 mW</td></tr>
+          <tr><td style="padding: 0.5rem; border:1px solid #ddd;">Developer</td><td style="padding: 0.5rem; border:1px solid #ddd;">AZ400K (1:4 with water)</td></tr>
+          <tr><td style="padding: 0.5rem; border:1px solid #ddd;">Cr Etch Time</td><td style="padding: 0.5rem; border:1px solid #ddd;">3 minutes</td></tr>
+          <tr><td style="padding: 0.5rem; border:1px solid #ddd;">Minimum Feature Size</td><td style="padding: 0.5rem; border:1px solid #ddd;">~2 μm (limited by laser writer)</td></tr>
+          <tr><td style="padding: 0.5rem; border:1px solid #ddd;">Alignment Accuracy</td><td style="padding: 0.5rem; border:1px solid #ddd;">±5 μm (double-side alignment)</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Skills Learned -->
+      <h2>Skills Acquired</h2>
+      <div style="margin: 1rem 0;">
+        <span class="skill-badge">LayoutEditor Proficiency</span>
+        <span class="skill-badge">GDSII File Format</span>
+        <span class="skill-badge">Design Rule Checking (DRC)</span>
+        <span class="skill-badge">Layer Management</span>
+        <span class="skill-badge">Boolean Operations</span>
+        <span class="skill-badge">Array Generation</span>
+        <span class="skill-badge">Double-Side Alignment Design</span>
+        <span class="skill-badge">Mask-to-Mask Alignment Marks</span>
+        <span class="skill-badge">Laser Lithography Operation</span>
+        <span class="skill-badge">Photoresist Development</span>
+        <span class="skill-badge">Wet Etching (Chromium)</span>
+        <span class="skill-badge">Mask Inspection (Microscopy)</span>
+      </div>
+
+      <!-- Downloads -->
+      <h2>Downloads</h2>
+      <ul class="downloads-list">
+        <li><a href="docs/mems-frontside-mask.gds">MEMS Pressure Sensor - Frontside Mask (GDS)</a></li>
+        <li><a href="docs/mems-backside-mask.gds">MEMS Pressure Sensor - Backside Mask (GDS)</a></li>
+        <li><a href="docs/microsupercapacitor-mask.gds">Microsupercapacitor - Interdigitated Mask (GDS)</a></li>
+        <li><a href="docs/strain-sensor-mask.gds">Strain Sensor - Serpentine Mask (GDS)</a></li>
+        <li><a href="docs/micropyramid-mask.gds">Micropyramid Mold Mask (GDS)</a></li>
+        <li><a href="docs/layouteditor-design-guide.pdf">LayoutEditor Design Guide (PDF)</a></li>
+      </ul>
+
+      <!-- Projects Enabled -->
+      <h2>Devices Enabled by These Masks</h2>
+      <ul>
+        <li><strong>MEMS Wheatstone Bridge Pressure Sensor:</strong> Frontside and backside masks enabled complete device fabrication (EGN5013C course project)</li>
+        <li><strong>Microsupercapacitors:</strong> Interdigitated electrode mask for on-chip energy storage (C-MEMS training)</li>
+        <li><strong>Wearable Strain Sensors:</strong> Serpentine pattern for flexible electronics applications</li>
+        <li><strong>Piezoresistive Pressure Sensors:</strong> Micropyramid mold for PDMS texturing (used in dual piezoresistive sensor work)</li>
+      </ul>
+
+      <!-- Connection to Research -->
+      <h2>Connection to My Research</h2>
+      <p>Photomask design is foundational to all my microfabrication work:</p>
+      <ul>
+        <li><strong>MEMS Pressure Sensor:</strong> My frontside/backside masks were used to fabricate the Wheatstone bridge device for the Nanofabrication course</li>
+        <li><strong>C-MEMS Training:</strong> Masks for SU-8 patterning enabled 3D carbon microstructure fabrication</li>
+        <li><strong>Sensor Projects:</strong> IDE masks for electrochemical characterization of pressure sensors</li>
+        <li><strong>Published Papers:</strong> Mask designs from this work contributed to multiple co-authored publications (Micromachines 2022, etc.)</li>
+      </ul>
+
+      <!-- Design Examples -->
+      <h2>Mask Design Examples</h2>
+      
+      <div class="project-gallery">
+        <figure>
+          <img src="images/mask-design-detail1.png" alt="Design Detail" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=LayoutEditor+Screenshot'">
+          <figcaption>LayoutEditor workspace showing mask design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/mask-alignment-marks.png" alt="Alignment Marks" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Alignment+Marks'">
+          <figcaption>Double-side alignment marks for front-to-back alignment</figcaption>
+        </figure>
+      </div>
+
+      <!-- Conclusion -->
+      <h2>Conclusion</h2>
+      <p>This project demonstrates comprehensive photomask design and fabrication capability using LayoutEditor software and laser lithography. Multiple masks were successfully designed and fabricated for MEMS pressure sensors (frontside and backside), microsupercapacitors (interdigitated electrodes), strain sensors (serpentine patterns), and micropyramid molds. These masks enabled numerous device fabrication projects throughout my Ph.D., including the MEMS Wheatstone bridge pressure sensor for the Nanofabrication course, C-MEMS structures for energy storage, and textured PDMS layers for piezoresistive sensors. The skills acquired - LayoutEditor proficiency, DRC, double-side alignment design, and laser lithography operation - are essential for any microfabrication engineer and directly support all my device fabrication work.</p>
+
+      <!-- Back Button -->
+      <div class="back-button">
+        <a href="../../projects.html" class="button primary">← Back to All Projects</a>
+      </div>
+
+    </article>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <section>
+      <h3>Email</h3>
+      <p>achow030@fiu.edu</p>
+      <p>azmalchowdhury93@gmail.com</p>
+    </section>
+    <section>
+      <h3>Social</h3>
+      <ul class="icons alt">
+        <li>
+          <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/azmalchowdhury" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../assets/js/jquery.scrolly.min.js"></script>
+<script src="../../assets/js/browser.min.js"></script>
+<script src="../../assets/js/breakpoints.min.js"></script>
+<script src="../../assets/js/util.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>
