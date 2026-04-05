@@ -1,0 +1,498 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Piezoresistive Sensor Design Rules | Azmal Chowdhury</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+  
+  <style>
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+    .project-gallery figure {
+      flex: 1 1 300px;
+      margin: 0;
+      text-align: center;
+    }
+    .project-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #eeeeee;
+    }
+    .project-gallery figcaption {
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      color: #666;
+    }
+    .downloads-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .downloads-list li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .downloads-list li:before {
+      content: '\f019';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #18bfef;
+    }
+    .tool-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0;
+    }
+    .tool-list li {
+      background: #f0f0f0;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+    }
+    .back-button {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .highlight {
+      background: #f0f7ff;
+      padding: 1.5rem;
+      border-left: 4px solid #18bfef;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .metric-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    .metric-card {
+      flex: 1;
+      min-width: 100px;
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .metric-value {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #18bfef;
+    }
+    .metric-label {
+      font-size: 0.7rem;
+      color: #666;
+    }
+    .design-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.85rem;
+    }
+    .design-table th, .design-table td {
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    .design-table th {
+      background: #f0f0f0;
+      font-weight: 700;
+    }
+    .formula {
+      font-family: monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
+
+  <!-- Header -->
+  <header id="header">
+    <a href="../../index.html" class="logo">Azmal Chowdhury</a>
+  </header>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <ul class="links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../about.html">About</a></li>
+      <li><a href="../../experience.html">Experience</a></li>
+      <li class="active"><a href="../../projects.html">Projects</a></li>
+      <li><a href="../../publications.html">Publications</a></li>
+      <li><a href="../../hobby.html">Hobby</a></li>
+    </ul>
+
+    <ul class="icons">
+      <li>
+        <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/azmalchowdhury" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <div id="main">
+    <article class="post">
+
+      <!-- Project Title -->
+      <header class="major">
+        <h1>Design Rules for<br>Micro-Fabricated Piezoresistive Sensors</h1>
+        <p>FEA-Based Optimization for Wearable Pulse Monitoring</p>
+      </header>
+
+      <!-- Publication Badge -->
+      <div class="highlight">
+        <strong>📄 Co-Author Publication:</strong> Micromachines, 2022, 13, 838<br>
+        <strong>DOI:</strong> <a href="https://doi.org/10.3390/mi13060838" target="_blank">10.3390/mi13060838</a><br>
+        <strong>Journal:</strong> Micromachines (Open Access)<br>
+        <strong>Role:</strong> Co-author - Validation, data analysis, writing & editing
+      </div>
+
+      <!-- Key Findings Summary -->
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-value">Micro-dome<br>Micro-pyramid</div>
+          <div class="metric-label">Highest Sensitivity Shapes</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">10⁵ S/m</div>
+          <div class="metric-label">Optimal Conductivity (Gold coating)</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">3 mm⁻¹</div>
+          <div class="metric-label">Optimal Feature Density</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">100 μm</div>
+          <div class="metric-label">Optimal Feature Size</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">50-60°</div>
+          <div class="metric-label">Optimal Pyramid Angle</div>
+        </div>
+      </div>
+
+      <!-- Project Gallery -->
+      <div class="project-gallery">
+        <figure>
+          <img src="images/sensor-schematic.png" alt="Sensor Schematic" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Sensor+Schematic'">
+          <figcaption>Figure 1: Schematic of micro-pyramid piezoresistive sensor</figcaption>
+        </figure>
+        <figure>
+          <img src="images/microfeature-shapes.png" alt="Microfeature Shapes" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Microfeature+Shapes'">
+          <figcaption>Figure 2: Four micro-feature shapes analyzed: pyramid, cone, dome, pillar</figcaption>
+        </figure>
+      </div>
+
+      <!-- Project Overview -->
+      <h2>Project Overview</h2>
+      <p>This research establishes <strong>design rules for highly sensitive piezoresistive pressure sensors</strong> using finite element analysis (FEA) in COMSOL Multiphysics. The study addresses a critical gap in the literature: while many micro-patterned piezoresistive sensors have been developed, there are no systematic design optimization guidelines. The work provides quantitative recommendations for micro-feature shape, material conductivity, spatial density, feature size, and pyramid angle to maximize sensitivity and current output for wearable pulse wave monitoring applications.</p>
+
+      <h3>Problem Addressed</h3>
+      <ul>
+        <li>Most piezoresistive sensors output <strong>nanoampere-range currents</strong>, requiring bulky sourcemeters for signal acquisition</li>
+        <li><strong>No design rules exist</strong> for optimizing micro-feature geometry in piezoresistive sensors</li>
+        <li>Trade-off between <strong>sensitivity and linearity</strong> not systematically studied</li>
+        <li>Need for <strong>milliamp-range output</strong> to enable truly wearable signal acquisition with simple electronics</li>
+      </ul>
+
+      <!-- Simulation Methodology -->
+      <h2>Simulation Methodology</h2>
+      
+      <h3>COMSOL Multiphysics Setup:</h3>
+      <ul>
+        <li><strong>Physics Interfaces:</strong> Electric Currents (ec) + Solid Mechanics module</li>
+        <li><strong>Formulation:</strong> Arbitrary Lagrangian-Eulerian (ALE) method for large deformation problems</li>
+        <li><strong>Contact Algorithm:</strong> Augmented Lagrangian method (more accurate than default penalty method)</li>
+        <li><strong>Mesh Type:</strong> Free tetrahedral with "extremely fine" size calibration</li>
+        <li><strong>Convergence Criteria:</strong> DOF increased to 1000% until results varied &lt;5%</li>
+      </ul>
+
+      <h3>Simulation Parameters:</h3>
+      <table class="design-table">
+        <thead>
+          <tr><th>Parameter</th><th>Micro-Patterned Layer</th><th>Current Collector</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Feature Angle (α)</td><td>57.4°</td><td>N/A</td><td>[40]</td></tr>
+          <tr><td>Feature Base Size (ℓ)</td><td>100 μm</td><td>N/A</td><td>-</td></tr>
+          <tr><td>Feature Spacing</td><td>300 μm</td><td>N/A</td><td>-</td></tr>
+          <tr><td>Array Size</td><td>5×5 (low density)</td><td>N/A</td><td>-</td></tr>
+          <tr><td>Footprint</td><td>1.8×1.8 mm²</td><td>1.8×1.8 mm²</td><td>-</td></tr>
+          <tr><td>Conductivity</td><td>1×10⁵ S/m</td><td>46×10⁶ S/m</td><td>[41]</td></tr>
+          <tr><td>Young's Modulus</td><td>750 kPa</td><td>70 GPa</td><td>[41,42]</td></tr>
+          <tr><td>Poisson's Ratio</td><td>0.49</td><td>0.44</td><td>[41,42]</td></tr>
+          <tr><td>Density</td><td>970 kg/m³</td><td>19,300 kg/m³</td><td>[41,42]</td></tr>
+          <tr><td>Relative Permittivity</td><td>2.75</td><td>1</td><td>[41,42]</td></tr>
+        </tbody>
+      }</div>
+
+      <!-- Results: Micro-feature Shape -->
+      <h2>Results 1: Micro-Feature Shape Comparison</h2>
+      
+      <h3>Ranking by Sensitivity (0-12 kPa range):</h3>
+      <ol>
+        <li><strong>Micro-dome</strong> - Highest sensitivity (but non-linear response)</li>
+        <li><strong>Micro-pyramid</strong> - Excellent sensitivity + <strong>linear response</strong> (best overall)</li>
+        <li><strong>Micro-cone</strong> - Moderate sensitivity</li>
+        <li><strong>Micro-pillar</strong> - Lowest sensitivity (good for digital switching applications)</li>
+      </ol>
+
+      <h3>Analytical Derivation of Contact Area:</h3>
+      <p>Using Thales theorem, the contact area for each shape was derived:</p>
+      
+      <p class="formula">Pyramid contact area: Sₚ = 1.3333 × d²</p>
+      <p class="formula">Cone contact area: S꜀ = 1.0472 × d²</p>
+      <p class="formula">Dome contact area: Sᴅ = π × (√(100d - d²))²</p>
+      
+      <p>Where <strong>d</strong> is the displacement (layer spacing decrease). These analytical equations match COMSOL simulation results, validating the model.</p>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/sensitivity-comparison.png" alt="Sensitivity Comparison" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Sensitivity+Comparison'">
+          <figcaption>Figure 3: Relative current change vs. pressure for four micro-feature shapes</figcaption>
+        </figure>
+        <figure>
+          <img src="images/contact-area-analysis.png" alt="Contact Area Analysis" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Contact+Area+Analysis'">
+          <figcaption>Figure 4: Contact area vs. layer spacing decrease (analytical derivation)</figcaption>
+        </figure>
+      </div>
+
+      <!-- Results: Conductivity -->
+      <h2>Results 2: Effect of Material Conductivity</h2>
+      
+      <h3>Key Findings:</h3>
+      <ul>
+        <li><strong>Sensitivity saturation:</strong> Sensor sensitivity saturates at elastomeric layer conductivity of <strong>10 S/m</strong></li>
+        <li><strong>Below 1 S/m:</strong> Sensitivity deteriorates significantly (typical of CNT-PDMS composites)</li>
+        <li><strong>Gold coating (10⁵ S/m):</strong> Current output in <strong>milliamp range</strong> (vs. nanoamp range for conductive polymers)</li>
+        <li><strong>Higher current = Higher SNR = Simple electronics (Arduino, ESP32) instead of bulky sourcemeters</strong></li>
+      </ul>
+
+      <h3>Conductivity Recommendations:</h3>
+      <table class="design-table">
+        <thead><tr><th>Conductivity Range</th><th>Material Example</th><th>Current Output</th><th>Recommendation</th></tr></thead>
+        <tbody>
+          <tr><td>&lt;1 S/m</td><td>CNT-PDMS composites</td><td>Nanoamp range</td><td style="color:red;">❌ Not recommended (poor sensitivity)</td></tr>
+          <tr><td>1-10 S/m</td><td>Some conductive polymers</td><td>Microamp range</td><td style="color:orange;">⚠️ Marginal</td></tr>
+          <tr><td>&gt;10 S/m</td><td>Metal-coated elastomers</td><td>Milliamp range</td><td style="color:green;">✅ Recommended (gold, zirconium nitride)</td></tr>
+        </tbody>
+      }</div>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/conductivity-sensitivity.png" alt="Conductivity vs Sensitivity" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Conductivity+vs+Sensitivity'">
+          <figcaption>Figure 5: Sensitivity vs. conductivity of elastomeric layer</figcaption>
+        </figure>
+        <figure>
+          <img src="images/current-output.png" alt="Current Output" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Current+Output'">
+          <figcaption>Figure 6: Current response at different conductivity values (3V applied)</figcaption>
+        </figure>
+      </div>
+
+      <!-- Results: Geometric Optimization -->
+      <h2>Results 3: Geometric Parameter Optimization (Micro-Pyramid)</h2>
+      
+      <h3>A. Spatial Number Density:</h3>
+      <ul>
+        <li><strong>Low density (3 pyramids/mm):</strong> Highest sensitivity (pressure concentrated at fewer contact points)</li>
+        <li><strong>Medium density (4.5 pyramids/mm):</strong> Moderate sensitivity</li>
+        <li><strong>High density (7 pyramids/mm):</strong> Lowest sensitivity (pressure distributed across more pyramids)</li>
+        <li><strong>Optimal recommendation: 3 pyramids per millimeter</strong></li>
+      </ul>
+
+      <h3>B. Pyramid Angle (α):</h3>
+      <ul>
+        <li><strong>Optimal range: 50° - 60°</strong></li>
+        <li>Balance between contact area growth rate and localized pressure</li>
+        <li>Angles &lt;50°: High contact area growth but low localized pressure</li>
+        <li>Angles &gt;60°: High localized pressure but low contact area growth</li>
+      </ul>
+
+      <h3>C. Feature Base Size:</h3>
+      <ul>
+        <li><strong>Optimal size: 100 μm</strong></li>
+        <li>Smaller features → higher localized pressure → higher sensitivity</li>
+        <li>Tested sizes: 100 μm, 150 μm, 200 μm (all with 60° angle, low density)</li>
+      </ul>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/spatial-density.png" alt="Spatial Density" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Spatial+Density'">
+          <figcaption>Figure 7: Effect of spatial density on sensitivity</figcaption>
+        </figure>
+        <figure>
+          <img src="images/angle-optimization.png" alt="Angle Optimization" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Angle+Optimization'">
+          <figcaption>Figure 8: Pyramid angle optimization (50-60° optimal)</figcaption>
+        </figure>
+      </div>
+
+      <!-- Design Rules Summary -->
+      <h2>Summary of Design Rules</h2>
+      
+      <table class="design-table">
+        <thead>
+          <tr><th>Design Parameter</th><th>Optimal Value</th><th>Reason</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Micro-feature Shape</td><td><strong>Micro-pyramid or Micro-dome</strong></td><td>Highest sensitivity; pyramid offers better linearity</td></tr>
+          <tr><td>Material Conductivity</td><td><strong>&gt;10 S/m (Gold coating: 10⁵ S/m)</strong></td><td>Ensures high sensitivity and milliamp current output</td></tr>
+          <tr><td>Spatial Number Density</td><td><strong>3 features/mm (low density)</strong></td><td>Concentrates pressure for greater deformation</td></tr>
+          <tr><td>Pyramid Angle (α)</td><td><strong>50° - 60°</strong></td><td>Balance between contact growth and localized pressure</td></tr>
+          <tr><td>Feature Base Size (ℓ)</td><td><strong>100 μm</strong></td><td>Smaller features increase localized pressure</td></tr>
+          <tr><td>Footprint Area</td><td><strong>1.8×1.8 mm²</strong></td><td>Matches radial artery diameter (~2.3 mm)</td></tr>
+        </tbody>
+      }</div>
+
+      <!-- Governing Equations -->
+      <h2>Governing Equations</h2>
+      
+      <h3>Charge Conservation (Continuity Equation):</h3>
+      <p class="formula">∇·J = Qⱼᵥ</p>
+      
+      <h3>Current Density:</h3>
+      <p class="formula">J = σE + Jₑ</p>
+      
+      <h3>Electric Field Strength:</h3>
+      <p class="formula">E = -∇V</p>
+      
+      <p>Where: J = current density, σ = electrical conductivity, E = electric field strength, V = electrical potential, Jₑ = externally generated current density.</p>
+
+      <!-- Practical Implications -->
+      <h2>Practical Implications for Wearable Sensors</h2>
+      
+      <h3>Current Output Comparison:</h3>
+      <ul>
+        <li><strong>Conductive polymer sensors (CNT-PDMS):</strong> ~nanoamp output → requires bulky sourcemeter</li>
+        <li><strong>Gold-coated sensors (this design):</strong> ~milliamp output → readable by Arduino/ESP32</li>
+      </ul>
+
+      <h3>Enabling Truly Wearable Systems:</h3>
+      <ul>
+        <li>High current output eliminates need for expensive, desktop-sized sourcemeters</li>
+        <li>Simple voltage divider circuits + development boards (Arduino Nano, ESP32) sufficient</li>
+        <li>Higher signal-to-noise ratio enables reliable pulse waveform detection</li>
+        <li>Battery-powered operation possible (1000 mAh LiPo)</li>
+      </ul>
+
+      <!-- Tools Used -->
+      <h2>Software & Tools Used</h2>
+      <ul class="tool-list">
+        <li>COMSOL Multiphysics (FEA)</li>
+        <li>Electric Currents (ec) Interface</li>
+        <li>Solid Mechanics Module</li>
+        <li>Arbitrary Lagrangian-Eulerian (ALE) Method</li>
+        <li>Augmented Lagrangian Contact Algorithm</li>
+        <li>Free Tetrahedral Meshing</li>
+      </ul>
+
+      <!-- Downloads -->
+      <h2>Downloads</h2>
+      <ul class="downloads-list">
+        <li><a href="docs/jafarizadeh-et-al-2022-micromachines.pdf">Full Journal Paper (PDF)</a></li>
+        <li><a href="docs/comsol-simulation-files.mph">COMSOL Simulation Files (MPH)</a></li>
+        <li><a href="docs/simulation-data.xlsx">Raw Simulation Data (Excel)</a></li>
+      </ul>
+
+      <!-- Key Contributions -->
+      <h2>My Contributions</h2>
+      <ul>
+        <li>Validation of simulation results against experimental data</li>
+        <li>Data analysis and interpretation</li>
+        <li>Manuscript writing, review, and editing</li>
+      </ul>
+
+      <!-- Funding -->
+      <h2>Funding</h2>
+      <ul>
+        <li>National Science Foundation (NSF) PATHS-UP ERC (Award #1648451)</li>
+        <li>NSF Awards #2126190 and #2107318</li>
+      </ul>
+
+      <!-- Related Publications -->
+      <h2>Related Publications</h2>
+      <ul>
+        <li>Jafarizadeh, B., <strong>Chowdhury, A.H.</strong>, Khakpour, I., Pala, N., Wang, C. "Design Rules for a Wearable Micro-Fabricated Piezo-Resistive Pressure Sensor." <em>Micromachines</em>, 2022, 13, 838.</li>
+        <li>Jafarizadeh, B., <strong>Chowdhury, A.H.</strong>, Sozal, M.S.I., Cheng, Z., Pala, N., Wang, C. "Hardware and Protocol for Testing of Piezoresistive Pressure Sensors for Pulse Wave Monitoring." <em>IEEE Sensors Letters</em>, 2023, 7(8), 2502304.</li>
+        <li>Jafarizadeh, B., <strong>Chowdhury, A.H.</strong>, Sozal, M.S.I., Cheng, Z., Pala, N., Wang, C. "Wearable System Integrating Dual Piezoresistive and Photoplethysmography Sensors for Simultaneous Pulse Wave Monitoring." <em>ACS Applied Materials & Interfaces</em>, 2024, 16, 65402-65413.</li>
+      </ul>
+
+      <!-- Conclusion -->
+      <h2>Conclusion</h2>
+      <p>This study established the first comprehensive design rules for micro-fabricated piezoresistive pressure sensors using finite element analysis. Key findings include: (1) micro-domes and micro-pyramids offer highest sensitivity, with pyramids providing better linearity; (2) material conductivity must exceed 10 S/m (preferably gold coating at 10⁵ S/m) to achieve milliamp current output for wearable signal acquisition; (3) optimal geometric parameters are 3 features/mm spatial density, 100 μm feature size, and 50-60° pyramid angle. These design rules enable the development of truly wearable pressure sensors that can be read by simple, low-cost electronics (Arduino, ESP32) instead of bulky sourcemeters, advancing the field toward practical, continuous cardiovascular monitoring.</p>
+
+      <!-- Back Button -->
+      <div class="back-button">
+        <a href="../../projects.html" class="button primary">← Back to All Projects</a>
+      </div>
+
+    </article>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <section>
+      <h3>Email</h3>
+      <p>achow030@fiu.edu</p>
+      <p>azmalchowdhury93@gmail.com</p>
+    </section>
+    <section>
+      <h3>Social</h3>
+      <ul class="icons alt">
+        <li>
+          <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/azmalchowdhury" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../assets/js/jquery.scrolly.min.js"></script>
+<script src="../../assets/js/browser.min.js"></script>
+<script src="../../assets/js/breakpoints.min.js"></script>
+<script src="../../assets/js/util.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>
