@@ -1,0 +1,559 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Resist Adhesion on PDMS | Azmal Chowdhury</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+  
+  <style>
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+    .project-gallery figure {
+      flex: 1 1 300px;
+      margin: 0;
+      text-align: center;
+    }
+    .project-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #eeeeee;
+    }
+    .project-gallery figcaption {
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      color: #666;
+    }
+    .downloads-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .downloads-list li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .downloads-list li:before {
+      content: '\f019';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #18bfef;
+    }
+    .tool-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0;
+    }
+    .tool-list li {
+      background: #f0f0f0;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+    }
+    .back-button {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .highlight {
+      background: #f0f7ff;
+      padding: 1.5rem;
+      border-left: 4px solid #18bfef;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .doe-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .doe-card {
+      flex: 1;
+      min-width: 200px;
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .doe-card h3 {
+      color: #18bfef;
+      margin-bottom: 0.5rem;
+    }
+    .failure-badge {
+      display: inline-block;
+      background: #dc3545;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .success-badge {
+      display: inline-block;
+      background: #28a745;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .process-badge {
+      display: inline-block;
+      background: #18bfef;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    .comparison-table th {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
+
+  <!-- Header -->
+  <header id="header">
+    <a href="../../index.html" class="logo">Azmal Chowdhury</a>
+  </header>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <ul class="links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../about.html">About</a></li>
+      <li><a href="../../experience.html">Experience</a></li>
+      <li class="active"><a href="../../projects.html">Projects</a></li>
+      <li><a href="../../publications.html">Publications</a></li>
+      <li><a href="../../hobby.html">Hobby</a></li>
+    </ul>
+
+    <ul class="icons">
+      <li>
+        <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/azmalchowdhury" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <div id="main">
+    <article class="post">
+
+      <!-- Project Title -->
+      <header class="major">
+        <h1>Photoresist Adhesion Optimization<br>on Hydrophobic PDMS</h1>
+        <p>Surface Activation | DOE Plasma Treatment | Failure Analysis</p>
+      </header>
+
+      <!-- Project Badge -->
+      <div class="highlight">
+        <strong>🎯 Project Type:</strong> Process Development & Failure Analysis<br>
+        <strong>📅 Period:</strong> 2020 – 2021<br>
+        <strong>🧪 Key Techniques:</strong> O₂ Plasma Treatment (RIE) | AZ 1518 Positive Resist | Hydrophobic Surface Activation<br>
+        <strong>🎭 Role:</strong> Sole process developer - Designed and executed DOE, characterized failures, optimized parameters
+      </div>
+
+      <!-- Problem Statement -->
+      <h2>The Problem: Photoresist Delamination on PDMS</h2>
+      <p>PDMS (polydimethylsiloxane) is inherently <strong>hydrophobic</strong> with a water contact angle of ~110-120°. This hydrophobicity causes poor adhesion of aqueous-based photoresists, leading to <strong>resist peeling, delamination, and pattern transfer failure</strong> during development. This was a critical bottleneck for fabricating metal patterns on PDMS for flexible sensors.</p>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/pr-failure1.jpg" alt="PR Failure 1" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=PR+Peeling+Off'">
+          <figcaption>Figure 1: Photoresist peeling off PDMS during development (no plasma treatment)</figcaption>
+        </figure>
+        <figure>
+          <img src="images/pr-failure2.jpg" alt="PR Failure 2" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=PR+Delamination'">
+          <figcaption>Figure 2: Severe delamination - resist washed away in developer</figcaption>
+        </figure>
+      </div>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/pr-failure3.jpg" alt="PR Failure 3" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Pattern+Failure'">
+          <figcaption>Figure 3: Pattern completely lost after development</figcaption>
+        </figure>
+        <figure>
+          <img src="images/pr-failure4.jpg" alt="PR Failure 4" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Resist+Lifting'">
+          <figcaption>Figure 4: Resist lifting at pattern edges</figcaption>
+        </figure>
+      </div>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/pr-failure5.jpg" alt="PR Failure 5" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Complete+Delamination'">
+          <figcaption>Figure 5: Complete resist delamination across wafer</figcaption>
+        </figure>
+      </div>
+
+      <!-- Root Cause Analysis -->
+      <h2>Root Cause Analysis</h2>
+      <ul>
+        <li><strong>Hydrophobic Surface:</strong> PDMS has low surface energy (∼20 mJ/m²) vs. photoresist surface tension (∼30-40 mJ/m²) → poor wetting</li>
+        <li><strong>Low Adhesion:</strong> No chemical bonding between PDMS and resist</li>
+        <li><strong>Developer Attack:</strong> Aqueous developer penetrates between resist and substrate, causing lifting</li>
+        <li><strong>Mechanical Stress:</strong> Spin coating and developing create shear forces that lift poorly adhered resist</li>
+      </ul>
+
+      <!-- Hypothesis -->
+      <div class="highlight" style="background:#e8f4f8;">
+        <strong>💡 Hypothesis:</strong> O₂ plasma treatment will introduce polar functional groups (-OH, -COOH) on PDMS surface, increasing surface energy and improving resist adhesion.
+      </div>
+
+      <!-- DOE Approach -->
+      <h2>Design of Experiments (DOE) Approach</h2>
+      
+      <div class="doe-grid">
+        <div class="doe-card">
+          <h3>Factor 1</h3>
+          <p><strong>Plasma Power (W)</strong><br>50W → 100W → 150W</p>
+        </div>
+        <div class="doe-card">
+          <h3>Factor 2</h3>
+          <p><strong>Chamber Pressure (mTorr)</strong><br>200 → 400 → 600 mTorr</p>
+        </div>
+        <div class="doe-card">
+          <h3>Factor 3</h3>
+          <p><strong>O₂ Flow Rate (sccm)</strong><br>40 → 60 → 80 sccm</p>
+        </div>
+        <div class="doe-card">
+          <h3>Factor 4</h3>
+          <p><strong>Treatment Time (sec)</strong><br>30 → 60 → 120 → 180 sec</p>
+        </div>
+      </div>
+
+      <h3>Experimental Matrix (Selected Runs):</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr><th>Run</th><th>Power (W)</th><th>Pressure (mTorr)</th><th>O₂ Flow (sccm)</th><th>Time (sec)</th><th>Result</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>50</td><td>400</td><td>60</td><td>30</td><td style="color:#dc3545;">❌ Partial adhesion</td></tr>
+          <tr><td>2</td><td>100</td><td>400</td><td>60</td><td>30</td><td style="color:#dc3545;">❌ Still peeling</td></tr>
+          <tr><td>3</td><td>150</td><td>400</td><td>60</td><td>30</td><td style="color:#ff9800;">⚠️ Too aggressive</td></tr>
+          <tr><td>4</td><td>100</td><td>200</td><td>60</td><td>60</td><td style="color:#ff9800;">⚠️ Partial improvement</td></tr>
+          <tr><td>5</td><td>100</td><td>400</td><td>60</td><td>60</td><td style="color:#ff9800;">⚠️ Better but uneven</td></tr>
+          <tr><td>6</td><td>100</td><td>600</td><td>60</td><td>60</td><td style="color:#dc3545;">❌ Inconsistent</td></tr>
+          <tr><td>7</td><td>100</td><td>400</td><td>40</td><td>90</td><td style="color:#28a745;">✅ Good adhesion</td></tr>
+          <tr><td>8</td><td>100</td><td>400</td><td>60</td><td>90</td><td style="color:#28a745;">✅ Optimal result</td></tr>
+          <tr><td>9</td><td>100</td><td>400</td><td>80</td><td>90</td><td style="color:#ff9800;">⚠️ Slight over-treatment</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Failure Mode 1: No Treatment -->
+      <h2>Failure Mode 1: No Plasma Treatment (Control)</h2>
+      <div class="project-gallery">
+        <figure>
+          <img src="images/no-treatment1.jpg" alt="No Treatment 1" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=No+Treatment+-+Peeling'">
+          <figcaption>Figure 6: Resist completely washed away during development</figcaption>
+        </figure>
+        <figure>
+          <img src="images/no-treatment2.jpg" alt="No Treatment 2" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=No+Treatment+-+Delamination'">
+          <figcaption>Figure 7: Severe delamination - only traces of resist remain</figcaption>
+        </figure>
+      </div>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/no-treatment3.jpg" alt="No Treatment 3" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=No+Treatment+-+Pattern+Loss'">
+          <figcaption>Figure 8: Pattern features completely lost</figcaption>
+        </figure>
+        <figure>
+          <img src="images/no-treatment4.jpg" alt="No Treatment 4" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=No+Treatment+-+Resist+Lifting'">
+          <figcaption>Figure 9: Resist lifting at edges during development</figcaption>
+        </figure>
+      </div>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/no-treatment5.jpg" alt="No Treatment 5" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=No+Treatment+-+Complete+Failure'">
+          <figcaption>Figure 10: Complete pattern failure - no usable features</figcaption>
+        </figure>
+      </div>
+
+      <!-- Failure Mode 2: Over-Treatment -->
+      <h2>Failure Mode 2: Excessive Plasma Treatment</h2>
+      <p>Too much plasma treatment (high power, long time) creates excessive surface activation, causing the photoresist to <strong>adhere too strongly</strong>, making it impossible to remove even after development. This results in:</p>
+      <ul>
+        <li>Resist residue in exposed areas (should have been removed)</li>
+        <li>Poor pattern fidelity</li>
+        <li>Difficult lift-off</li>
+        <li>Surface cracking/roughening</li>
+      </ul>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/over-treatment1.jpg" alt="Over Treatment 1" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Over+Treatment+-+Resist+Residue'">
+          <figcaption>Figure 11: Resist residue in exposed areas (over-adhesion)</figcaption>
+        </figure>
+        <figure>
+          <img src="images/over-treatment2.jpg" alt="Over Treatment 2" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Over+Treatment+-+Poor+Fidelity'">
+          <figcaption>Figure 12: Poor pattern fidelity due to excessive surface activation</figcaption>
+        </figure>
+      </div>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/over-treatment3.jpg" alt="Over Treatment 3" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Over+Treatment+-+Surface+Damage'">
+          <figcaption>Figure 13: Surface damage and cracking from over-treatment</figcaption>
+        </figure>
+      </div>
+
+      <!-- Optimal Process Development -->
+      <h2>Process Development: Finding the Sweet Spot</h2>
+      <p>Through systematic DOE, the optimal plasma treatment parameters were identified to achieve <strong>strong resist adhesion without over-adhesion</strong>.</p>
+
+      <h3>Key Findings:</h3>
+      <ul>
+        <li><strong>Power:</strong> 100W provided the best balance (50W insufficient, 150W too aggressive)</li>
+        <li><strong>Time:</strong> 90 seconds was optimal (30-60s insufficient adhesion, 120s+ over-treatment)</li>
+        <li><strong>Pressure:</strong> 400 mTorr gave most uniform treatment across wafer</li>
+        <li><strong>O₂ Flow:</strong> 60 sccm optimal for uniform plasma distribution</li>
+      </ul>
+
+      <div class="highlight" style="background:#e8f4f8;">
+        <strong>✅ Optimal Parameters:</strong> 100W | 400 mTorr | 60 sccm O₂ | 90 seconds
+      </div>
+
+      <!-- Success Results -->
+      <h2>Success: Clean Patterned Resist on PDMS</h2>
+      <p>After rigorous process development and DOE optimization, clean, well-adhered photoresist patterns were achieved on hydrophobic PDMS substrates.</p>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/optimized1.jpg" alt="Optimized Result 1" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Optimized+Pattern+1'">
+          <figcaption>Figure 14: Clean, well-adhered resist pattern after optimal plasma treatment</figcaption>
+        </figure>
+        <figure>
+          <img src="images/optimized2.jpg" alt="Optimized Result 2" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Optimized+Pattern+2'">
+          <figcaption>Figure 15: High-resolution features with no peeling</figcaption>
+        </figure>
+      </div>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/optimized3.jpg" alt="Optimized Result 3" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Optimized+Pattern+3'">
+          <figcaption>Figure 16: Uniform pattern across large area</figcaption>
+        </figure>
+        <figure>
+          <img src="images/optimized4.jpg" alt="Optimized Result 4" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Optimized+Pattern+4'">
+          <figcaption>Figure 17: Sharp feature edges with no delamination</figcaption>
+        </figure>
+      </div>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/optimized5.jpg" alt="Optimized Result 5" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Optimized+Pattern+5'">
+          <figcaption>Figure 18: Completed pattern ready for metal deposition</figcaption>
+        </figure>
+      </div>
+
+      <!-- Process Summary -->
+      <h2>Optimized Process Flow</h2>
+      
+      <div style="background:#f5f5f5; padding:1rem; border-radius:8px; margin:1rem 0;">
+        <h3 style="color:#18bfef;">Step 1: PDMS Preparation</h3>
+        <p>Spin-coat PDMS (10:1 ratio) on Si wafer → Cure at 80°C for 12h</p>
+        
+        <h3 style="color:#18bfef;">Step 2: O₂ Plasma Treatment (OPTIMIZED)</h3>
+        <p><strong>MARCH RIE System:</strong> 100W | 400 mTorr | 60 sccm O₂ | 90 seconds</p>
+        
+        <h3 style="color:#18bfef;">Step 3: Immediate Resist Coating</h3>
+        <p>Process within 30 minutes of plasma treatment (surface activation decays over time)</p>
+        
+        <h3 style="color:#18bfef;">Step 4: Soft Bake</h3>
+        <p>110°C for 70 seconds</p>
+        
+        <h3 style="color:#18bfef;">Step 5: UV Exposure</h3>
+        <p>OAI 800 Mask Aligner, 80 mJ/cm²</p>
+        
+        <h3 style="color:#18bfef;">Step 6: Development</h3>
+        <p>AZ 300 MIF, 60 seconds</p>
+      </div>
+
+      <!-- Key Learnings -->
+      <h2>Key Learnings & Insights</h2>
+      <ul>
+        <li><strong>Surface energy is critical:</strong> Hydrophobic PDMS requires surface activation for resist adhesion</li>
+        <li><strong>There is an optimal window:</strong> Too little treatment → peeling; too much → resist residue</li>
+        <li><strong>Time sensitivity:</strong> Treated PDMS surface re-hydrophobizes over time (plasma treatment effect decays within hours)</li>
+        <li><strong>DOE is powerful:</strong> Systematic variation of power, time, pressure, and flow identified optimal parameters</li>
+        <li><strong>Characterization is key:</strong> Optical microscopy and profilometry essential for failure analysis</li>
+      </ul>
+
+      <!-- Equipment Used -->
+      <h2>Equipment Used</h2>
+      <ul class="tool-list">
+        <li>MARCH RIE System (O₂ Plasma)</li>
+        <li>Headway Spin Coater</li>
+        <li>Despatch Oven (PDMS Curing)</li>
+        <li>OAI 800 Mask Aligner</li>
+        <li>Hotplates (Soft Bake)</li>
+        <li>Develop Deck (AZ 300 MIF)</li>
+        <li>Olympus Optical Microscope</li>
+        <li>Alpha Step Profilometer</li>
+      </ul>
+
+      <!-- Skills Acquired -->
+      <h2>Skills Acquired</h2>
+      <div style="margin: 1rem 0;">
+        <span class="process-badge">DOE (Design of Experiments)</span>
+        <span class="process-badge">Failure Analysis</span>
+        <span class="process-badge">Root Cause Analysis</span>
+        <span class="process-badge">O₂ Plasma Treatment (RIE)</span>
+        <span class="process-badge">Surface Activation</span>
+        <span class="process-badge">Hydrophobic Surface Engineering</span>
+        <span class="process-badge">AZ 1518 Processing</span>
+        <span class="process-badge">Process Optimization</span>
+        <span class="process-badge">Quality Control</span>
+      </div>
+
+      <!-- Downloads -->
+      <h2>Downloads</h2>
+      <ul class="downloads-list">
+        <li><a href="docs/doe-plasma-optimization.xlsx">DOE Experimental Matrix (Excel)</a></li>
+        <li><a href="docs/optimized-protocol.pdf">Optimized Plasma Treatment Protocol (PDF)</a></li>
+        <li><a href="docs/failure-analysis-guide.pdf">Failure Analysis Guide (PDF)</a></li>
+      </ul>
+
+      <!-- Comparison Table -->
+      <h2>Process Comparison</h2>
+      
+      <table class="comparison-table">
+        <thead>
+          <tr style="background:#f0f0f0;">
+            <th>Condition</th>
+            <th>Resist Adhesion</th>
+            <th>Pattern Fidelity</th>
+            <th>Lift-Off Ease</th>
+            <th>Verdict</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>No Plasma Treatment</td>
+            <td style="color:#dc3545;">❌ Very Poor</td>
+            <td style="color:#dc3545;">❌ Complete Failure</td>
+            <td>N/A</td>
+            <td style="color:#dc3545;">Unacceptable</td>
+          </tr>
+          <tr><td>Under-Treatment (30-60s)</td>
+            <td style="color:#ff9800;">⚠️ Partial</td>
+            <td style="color:#ff9800;">⚠️ Peeling at edges</td>
+            <td style="color:#28a745;">✅ Easy</td>
+            <td style="color:#ff9800;">Poor</td>
+          </tr>
+          <tr style="background:#e8f4f8;">
+            <td><strong>Optimal (90s)</strong></td>
+            <td style="color:#28a745;"><strong>✅ Excellent</strong></td>
+            <td style="color:#28a745;"><strong>✅ Sharp/Uniform</strong></td>
+            <td style="color:#28a745;"><strong>✅ Clean</strong></td>
+            <td style="color:#28a745;"><strong>Optimal</strong></td>
+          </tr>
+          <tr><td>Over-Treatment (120-180s)</td>
+            <td style="color:#dc3545;">❌ Too Strong</td>
+            <td style="color:#dc3545;">❌ Residue/Scum</td>
+            <td style="color:#dc3545;">❌ Difficult</td>
+            <td style="color:#dc3545;">Unacceptable</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Connection to Research -->
+      <h2>Connection to My Research</h2>
+      <p>This process development directly enabled multiple projects:</p>
+      <ul>
+        <li><strong>Flexible Pressure Sensors:</strong> Reliable metal patterning on PDMS for stretchable electrodes</li>
+        <li><strong>Dual-Mode Sensors:</strong> Clean lift-off for interdigitated electrodes</li>
+        <li><strong>Wearable Devices:</strong> PDMS-based flexible substrates for skin-mounted sensors</li>
+      </ul>
+
+      <!-- Conclusion -->
+      <h2>Conclusion</h2>
+      <p>This project systematically addressed the critical challenge of photoresist adhesion on hydrophobic PDMS substrates through O₂ plasma surface activation. Using Design of Experiments (DOE) methodology, four parameters (power, pressure, O₂ flow, time) were optimized. Key findings include: (1) no plasma treatment results in complete resist delamination during development; (2) under-treatment (30-60s) causes partial peeling; (3) over-treatment (120s+) leads to resist residue and lift-off failure; (4) optimal parameters are <strong>100W power, 400 mTorr pressure, 60 sccm O₂ flow, 90 seconds</strong>. The optimized process yields clean, well-adhered resist patterns with sharp feature edges and excellent pattern fidelity. This work demonstrates systematic problem-solving using DOE, failure analysis, and process optimization — critical skills for semiconductor process engineering roles.</p>
+
+      <!-- Back Button -->
+      <div class="back-button">
+        <a href="../../projects.html" class="button primary">← Back to All Projects</a>
+      </div>
+
+    </article>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <section>
+      <h3>Email</h3>
+      <p>achow030@fiu.edu</p>
+      <p>azmalchowdhury93@gmail.com</p>
+    </section>
+    <section>
+      <h3>Social</h3>
+      <ul class="icons alt">
+        <li>
+          <a href="https://www.linkedin.com/in/azmal-chowdhury/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/azmalchowdhury" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../assets/js/jquery.scrolly.min.js"></script>
+<script src="../../assets/js/browser.min.js"></script>
+<script src="../../assets/js/breakpoints.min.js"></script>
+<script src="../../assets/js/util.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>
