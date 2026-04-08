@@ -1251,11 +1251,11 @@ class ImageCarousel {
 document.addEventListener('DOMContentLoaded', function() {
   
   // EXAMPLE 1: Wheatstone Bridge Sensor (3 images, 4 second interval)
-  const wheatstoneContainer = document.querySelector('#wheatstone-carousel-target');
+  const wheatstoneContainer = document.querySelector('#wheatstone-carousel');
   if (wheatstoneContainer) {
     new ImageCarousel(wheatstoneContainer, [
       'projects/mems-pressure-sensor/images/wheatstone-bridge.png',
-      'projects/mems-pressure-sensor/images/wheatstone-bridge.png.png',
+      'projects/mems-pressure-sensor/images/wheatstone-bridge.png',
       'projects/mems-pressure-sensor/images/wheatstone-bridge-membrane.png'
     ], 4000);
   }
