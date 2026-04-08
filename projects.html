@@ -12,6 +12,126 @@
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   
   <style>
+    /* ============================================ */
+/* SECTION 1: IMAGE CAROUSEL / SLIDESHOW STYLES */
+/* ============================================ */
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Fade animation between slides */
+.slide {
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* Image counter badge (bottom right corner) */
+.image-counter {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  z-index: 10;
+}
+
+/* Navigation dots (bottom center) */
+.slide-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.dot {
+  height: 6px;
+  width: 6px;
+  margin: 0 2px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #18bfef;
+  width: 12px;
+  border-radius: 3px;
+}
+
+/* Previous/Next buttons (appear on hover) */
+.slide-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 20;
+  font-size: 18px;
+}
+
+.project-image:hover .slide-control {
+  opacity: 1;
+}
+
+.slide-prev {
+  left: 5px;
+}
+
+.slide-next {
+  right: 5px;
+}
+
+/* Single image style (for projects with only one image) */
+.project-image img.single-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
     .project-grid {
       display: flex;
       flex-wrap: wrap;
@@ -984,6 +1104,178 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+  <script>
+// ============================================
+// SECTION 2: IMAGE CAROUSEL CONTROLLER
+// ============================================
+
+class ImageCarousel {
+  constructor(container, images, interval = 3000) {
+    this.container = container;      // HTML element that will hold the carousel
+    this.images = images;            // Array of image paths
+    this.interval = interval;        // Time between slides (ms)
+    this.currentIndex = 0;           // Currently visible slide (0 = first)
+    this.intervalId = null;          // Stores the autoplay timer
+    this.isPlaying = true;           // Autoplay status
+    
+    this.init();                     // Build the carousel
+  }
+  
+  // Build the entire carousel HTML structure
+  init() {
+    // Create main slideshow container
+    const slideshowDiv = document.createElement('div');
+    slideshowDiv.className = 'slideshow-container';
+    
+    // Create individual slides
+    this.images.forEach((img, idx) => {
+      const slide = document.createElement('div');
+      slide.className = 'slide' + (idx === 0 ? ' active' : '');
+      const imgElement = document.createElement('img');
+      imgElement.src = img;
+      imgElement.alt = `Slide ${idx + 1}`;
+      slide.appendChild(imgElement);
+      slideshowDiv.appendChild(slide);
+    });
+    
+    // Add image counter (e.g., "1/3")
+    const counter = document.createElement('div');
+    counter.className = 'image-counter';
+    counter.textContent = `1/${this.images.length}`;
+    slideshowDiv.appendChild(counter);
+    
+    // Add navigation dots
+    const dotsDiv = document.createElement('div');
+    dotsDiv.className = 'slide-dots';
+    this.images.forEach((_, idx) => {
+      const dot = document.createElement('span');
+      dot.className = 'dot' + (idx === 0 ? ' active' : '');
+      dot.addEventListener('click', () => this.goToSlide(idx));
+      dotsDiv.appendChild(dot);
+    });
+    slideshowDiv.appendChild(dotsDiv);
+    
+    // Add Previous button
+    const prevBtn = document.createElement('button');
+    prevBtn.className = 'slide-control slide-prev';
+    prevBtn.innerHTML = '‹';
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.prevSlide();
+    });
+    
+    // Add Next button
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'slide-control slide-next';
+    nextBtn.innerHTML = '›';
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.nextSlide();
+    });
+    
+    slideshowDiv.appendChild(prevBtn);
+    slideshowDiv.appendChild(nextBtn);
+    
+    // Replace container content with our carousel
+    this.container.innerHTML = '';
+    this.container.appendChild(slideshowDiv);
+    
+    // Store references to elements we'll need to update
+    this.slides = slideshowDiv.querySelectorAll('.slide');
+    this.dots = slideshowDiv.querySelectorAll('.dot');
+    this.counter = counter;
+    
+    // Start automatic slideshow
+    this.startAutoplay();
+    
+    // Pause autoplay when mouse enters, resume when leaves
+    this.container.addEventListener('mouseenter', () => this.pauseAutoplay());
+    this.container.addEventListener('mouseleave', () => this.resumeAutoplay());
+  }
+  
+  // Update UI to show current slide
+  updateUI() {
+    // Update which slide is visible
+    this.slides.forEach((slide, idx) => {
+      slide.classList.toggle('active', idx === this.currentIndex);
+    });
+    
+    // Update which dot is active
+    this.dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === this.currentIndex);
+    });
+    
+    // Update the image counter text
+    this.counter.textContent = `${this.currentIndex + 1}/${this.images.length}`;
+  }
+  
+  // Jump to a specific slide
+  goToSlide(index) {
+    this.currentIndex = index;
+    this.updateUI();
+  }
+  
+  // Go to next slide
+  nextSlide() {
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+    this.updateUI();
+  }
+  
+  // Go to previous slide
+  prevSlide() {
+    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+    this.updateUI();
+  }
+  
+  // Start automatic slideshow
+  startAutoplay() {
+    if (this.intervalId) clearInterval(this.intervalId);
+    this.intervalId = setInterval(() => this.nextSlide(), this.interval);
+  }
+  
+  // Pause automatic slideshow
+  pauseAutoplay() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = null;
+    }
+  }
+  
+  // Resume automatic slideshow
+  resumeAutoplay() {
+    this.startAutoplay();
+  }
+}
+
+// ============================================
+// SECTION 2b: INITIALIZE ALL CAROUSELS
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // EXAMPLE 1: Wheatstone Bridge Sensor (3 images, 4 second interval)
+  const wheatstoneContainer = document.querySelector('#wheatstone-carousel-target');
+  if (wheatstoneContainer) {
+    new ImageCarousel(wheatstoneContainer, [
+      'images/projects/wheatstone/mask-design.png',
+      'images/projects/wheatstone/fabricated-device.jpg',
+      'images/projects/wheatstone/sem-image.png'
+    ], 4000);
+  }
+  
+  // EXAMPLE 2: Add another carousel for a different project
+  // const anotherContainer = document.querySelector('#another-carousel-target');
+  // if (anotherContainer) {
+  //   new ImageCarousel(anotherContainer, [
+  //     'images/projects/another/image1.jpg',
+  //     'images/projects/another/image2.jpg'
+  //   ], 3000);
+  // }
+  
+  // You can add more carousels here as needed
+  
+});
+</script>
 
 </body>
 </html>
