@@ -455,12 +455,7 @@
     <div class="project-grid">
 
       <div class="project-card">
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-drafting-compass"></i>
-      <span>Mask Design</span>
-    </div>
-  </div>
+  <div class="project-image" id="mask-carousel"></div>
   <div class="project-content">
     <h3>Photomask Design & Fabrication</h3>
     <div class="project-tags">
@@ -1292,6 +1287,16 @@ if (wrinkleContainer) {
     'projects/tunable-wrinkling-pdms/images/wrinkle-pattern1.jpg',
     'projects/tunable-wrinkling-pdms/images/fabricated-device.jpg',
     'projects/tunable-wrinkling-pdms/images/patterned-device-30um.jpg'
+  ], 3500);
+}
+
+const maskContainer = document.getElementById('mask-carousel');
+
+if (maskContainer) {
+  new ImageCarousel(maskContainer, [
+    'projects/photomask-design-fabrication/images/mask1-wheatstone-front.png',
+    'projects/photomask-design-fabrication/images/Mask_Spatial_Strain.png',
+    'projects/photomask-design-fabrication/images/Mask_Strain_Sensor_1D.png'
   ], 3500);
 }
   
