@@ -383,13 +383,7 @@
     </h3>
     <div class="project-grid">
       
-      <div class="project-card">
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-waveform"></i>
-      <span>Wrinkle Engineering</span>
-    </div>
-  </div>
+      <div class="project-image" id="wrinkle-carousel"></div>
   <div class="project-content">
     <h3>Tunable Wrinkling of Gold on PDMS</h3>
     <div class="project-tags">
@@ -1289,6 +1283,15 @@ if (cmemsContainer) {
     'projects/c-mems-training/images/c-mems-chip.png',
     'projects/c-mems-training/images/bpe-rgo-deposition.png',
     'projects/c-mems-training/images/c-mems-fabrication.png'
+  ], 3500);
+}
+const wrinkleContainer = document.getElementById('wrinkle-carousel');
+
+if (wrinkleContainer) {
+  new ImageCarousel(wrinkleContainer, [
+    'projects/tunable-wrinkling-pdms/images/wrinkle-pattern1.jpg',
+    'projects/tunable-wrinkling-pdms/images/fabricated-device.jpg',
+    'projects/tunable-wrinkling-pdms/images/patterned-device-30um.jpg'
   ], 3500);
 }
   
