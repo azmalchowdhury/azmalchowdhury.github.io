@@ -332,6 +332,14 @@
   </div>
   <div class="project-content">
     <h3>C-MEMS: Carbon Microelectromechanical Systems</h3>
+<div class="project-card">
+
+  <!-- 🔥 CAROUSEL CONTAINER -->
+  <div class="project-image" id="cmems-carousel"></div>
+
+  <div class="project-content">
+    <h3>C-MEMS: Carbon Microelectromechanical Systems</h3>
+
     <div class="project-tags">
       <span class="project-tag">Training</span>
       <span class="project-tag">Photolithography</span>
@@ -339,11 +347,21 @@
       <span class="project-tag">SU-8</span>
       <span class="project-tag">2019-2021</span>
     </div>
-    <p>Comprehensive training in C-MEMS fabrication during first two years of Ph.D. Skills include SU-8 photolithography (2D and 3D structures), high-temperature pyrolysis (900°C), oxygen plasma functionalization, and bipolar exfoliated graphene integration. Fabricated interdigital carbon microelectrodes, 3D micropillar arrays, and demonstrated applications in on-chip energy storage and biosensing.</p>
+
+    <p>
+      Comprehensive training in C-MEMS fabrication during first two years of Ph.D.
+      Skills include SU-8 photolithography (2D and 3D structures), high-temperature
+      pyrolysis (900°C), oxygen plasma functionalization, and bipolar exfoliated
+      graphene integration.
+    </p>
+
     <div class="project-links">
-      <a href="projects/c-mems-training/" class="button small">View Training →</a>
+      <a href="projects/c-mems-training/" class="button small">
+        View Training →
+      </a>
     </div>
   </div>
+
 </div>
 
       <div class="project-card">
@@ -1274,6 +1292,16 @@ document.addEventListener('DOMContentLoaded', function() {
       'projects/mems-pressure-sensor/images/wheatstone-bridge-membrane.png'
     ], 4000);
   }
+
+  const cmemsContainer = document.getElementById('cmems-carousel');
+
+if (cmemsContainer) {
+  new ImageCarousel(cmemsContainer, [
+    'projects/c-mems-training/images/c-mems-chip.png',
+    'projects/c-mems-training/images/bpe-rgo-deposition.png',
+    'projects/c-mems-training/images/c-mems-fabrication.png'
+  ], 3500);
+}
   
   // EXAMPLE 2: Add another carousel for a different project
   // const anotherContainer = document.querySelector('#another-carousel-target');
