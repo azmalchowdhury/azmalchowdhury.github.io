@@ -454,13 +454,7 @@
     </div>
   </div>
 </div>
-<div class="project-card">
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-flask"></i>
-      <span>PR Adhesion DOE</span>
-    </div>
-  </div>
+<div class="project-image" id="pr-adhesion-carousel"></div>
   <div class="project-content">
     <h3>Photoresist Adhesion Optimization on Hydrophobic PDMS</h3>
     <div class="project-tags">
@@ -1308,6 +1302,16 @@ if (pvdContainer) {
     'projects/thin-film-process-development/images/NegativePR.png',
     'projects/thin-film-process-development/images/PositivePR.png',
     'projects/thin-film-process-development/images/Ni-Ti thin film.png'
+  ], 3500);
+}
+
+const prAdhesionContainer = document.getElementById('pr-adhesion-carousel');
+
+if (prAdhesionContainer) {
+  new ImageCarousel(prAdhesionContainer, [
+    'projects/resist-adhesion-pdms/images/over-treatment1.jpg',
+    'projects/resist-adhesion-pdms/images/over-treatment3.jpg',
+    'projects/resist-adhesion-pdms/images/optimized1.jpg'
   ], 3500);
 }
   
