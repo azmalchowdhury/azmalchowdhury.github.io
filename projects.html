@@ -525,12 +525,7 @@
 </div>
 
       <div class="project-card">
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-hand-peace"></i>
-      <span>MWCNT-PDMS Sensor</span>
-    </div>
-  </div>
+  <div class="project-image" id="mwcnd-pdms-carousel"></div>
   <div class="project-content">
     <h3>Wearable Capacitive Pressure Sensor</h3>
     <div class="project-tags">
@@ -1321,6 +1316,17 @@ if (ceramicContainer) {
     'projects/photolithography-ceramic/images/mask-design.png',
     'projects/photolithography-ceramic/images/patterned-resist.png',
     'projects/photolithography-ceramic/images/fabricated-electrode.png'
+  ], 3500);
+}
+
+  const mwcntContainer = document.getElementById('mwcnd-pdms-carousel');
+
+if (mwcntContainer) {
+  new ImageCarousel(mwcntContainer, [
+    'projects/wearable-capacitive-pressure-sensor/images/Schematic.png',
+    'projects/wearable-capacitive-pressure-sensor/images/Picture1.jpg',
+    'projects/wearable-capacitive-pressure-sensor/images/sensor-photo.png',
+    'projects/wearable-capacitive-pressure-sensor/images/Pregnancy.png'
   ], 3500);
 }
   
