@@ -556,12 +556,7 @@
 </div>
 
 <div class="project-card">
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-heartbeat"></i>
-      <span>Dual Sensor System</span>
-    </div>
-  </div>
+  <div class="project-image" id="dualppg-carousel"></div>
   <div class="project-content">
     <h3>Dual Piezoresistive Sensor with PPG Integration</h3>
     <div class="project-tags">
@@ -1337,6 +1332,17 @@ if (dualModeContainer) {
     'projects/dual-mode-pressure-sensor/images/Picture1.png',
     'projects/dual-mode-pressure-sensor/images/Picture2.png',
     'projects/dual-mode-pressure-sensor/images/Picture3.png'
+  ], 3500);
+}
+
+
+  const dualPPGContainer = document.getElementById('dualppg-carousel');
+
+if (dualPPGContainer) {
+  new ImageCarousel(dualPPGContainer, [
+    'projects/dual-piezoresistive-sensor-system/images/sensor-schematic.png',
+    'projects/dual-piezoresistive-sensor-system/images/wearable-prototype.png',
+    'projects/dual-piezoresistive-sensor-system/images/pulse-waveform.png'
   ], 3500);
 }
   
