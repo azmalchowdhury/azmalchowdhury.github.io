@@ -396,12 +396,7 @@
 </div>
 
       <div class="project-card">
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-fire"></i>
-      <span>Plasma Treatment</span>
-    </div>
-  </div>
+  <div class="project-image" id="plasma-carousel"></div>
   <div class="project-content">
     <h3>Plasma-Treated PDMS: Wrinkle-Free Metal Films</h3>
     <div class="project-tags">
@@ -1301,6 +1296,15 @@ if (mscContainer) {
   new ImageCarousel(mscContainer, [
     'projects/microsupercapacitor-training/images/Fabrication.png',
     'projects/microsupercapacitor-training/images/IDE.png'
+  ], 3500);
+}
+const plasmaContainer = document.getElementById('plasma-carousel');
+
+if (plasmaContainer) {
+  new ImageCarousel(plasmaContainer, [
+    'projects/plasma-treated-wrinkle-free-pdms/images/Picture2.jpg',
+    'projects/plasma-treated-wrinkle-free-pdms/images/patterned1.png',
+    'projects/plasma-treated-wrinkle-free-pdms/images/patterned3.png'
   ], 3500);
 }
   
