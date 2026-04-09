@@ -210,81 +210,7 @@
         <p>Oxygen plasma RIE removes remaining photoresist, leaving only the chromium pattern on glass.</p>
       </div>
 
-      <!-- Mask 1: MEMS Pressure Sensor Frontside -->
-      <div class="mask-card">
-        <h3 class="mask-title"><i class="fas fa-microchip"></i> Mask 1: MEMS Pressure Sensor (Frontside)</h3>
-        <div>
-          <span class="spec-badge">Wheatstone Bridge</span>
-          <span class="spec-badge">4 Resistive Elements</span>
-          <span class="spec-badge">Metal Interconnects</span>
-          <span class="spec-badge">Contact Pads</span>
-        </div>
-        <p><strong>Purpose:</strong> Defines the metal pattern for piezoresistive elements and electrical interconnects on the front side of the MEMS pressure sensor membrane.</p>
-        <p><strong>Design Features:</strong> Four resistive elements arranged in Wheatstone bridge configuration with optimized serpentine paths for maximum piezoresistive response. Contact pads designed for wire bonding.</p>
-        <p><strong>Applications:</strong> EGN5013C Nanofabrication course project - MEMS pressure sensor fabrication.</p>
-      </div>
-
-      <!-- Mask 2: MEMS Pressure Sensor Backside -->
-      <div class="mask-card">
-        <h3 class="mask-title"><i class="fas fa-layer-group"></i> Mask 2: MEMS Pressure Sensor (Backside)</h3>
-        <div>
-          <span class="spec-badge">Membrane Definition</span>
-          <span class="spec-badge">Bulk Silicon Etching</span>
-          <span class="spec-badge">Alignment Marks</span>
-          <span class="spec-badge">Double-Side Alignment</span>
-        </div>
-        <p><strong>Purpose:</strong> Defines the backside etch window for creating the pressure-sensitive membrane using bulk silicon etching (DRIE).</p>
-        <p><strong>Design Features:</strong> Precision alignment marks for front-to-back alignment (±5 μm accuracy). Etch window dimensions calculated for optimal membrane thickness and pressure sensitivity.</p>
-        <p><strong>Applications:</strong> Backside processing for MEMS pressure sensor using MARCH DRIE system.</p>
-      </div>
-
-      <!-- Mask 3: Microsupercapacitor -->
-      <div class="mask-card">
-        <h3 class="mask-title"><i class="fas fa-battery-full"></i> Mask 3: Microsupercapacitor Electrodes</h3>
-        <div>
-          <span class="spec-badge">Interdigitated Design</span>
-          <span class="spec-badge">32 Fingers (16 per side)</span>
-          <span class="spec-badge">100 μm Width/Spacing</span>
-          <span class="spec-badge">High Aspect Ratio</span>
-        </div>
-        <p><strong>Purpose:</strong> Defines interdigitated gold microelectrodes for on-chip microsupercapacitors.</p>
-        <p><strong>Design Features:</strong> 32 interdigitated fingers (16 per electrode side) with 100 μm width and 100 μm spacing. Optimized finger length for maximum capacitance within 9.66 mm² footprint.</p>
-        <p><strong>Applications:</strong> Energy storage devices, C-MEMS microsupercapacitors, bipolar exfoliated graphene deposition.</p>
-      </div>
-
-      <!-- Mask 4: Strain Sensor -->
-      <div class="mask-card">
-        <h3 class="mask-title"><i class="fas fa-chart-line"></i> Mask 4: Strain Sensor (Serpentine Pattern)</h3>
-        <div>
-          <span class="spec-badge">Serpentine Geometry</span>
-          <span class="spec-badge">High Linearity</span>
-          <span class="spec-badge">Flexible Electronics</span>
-          <span class="spec-badge">Stretchable Design</span>
-        </div>
-        <p><strong>Purpose:</strong> Defines serpentine metal pattern for strain sensing applications on flexible substrates.</p>
-        <p><strong>Design Features:</strong> Optimized serpentine geometry for maximum strain sensitivity while maintaining mechanical flexibility. Designed for transfer printing onto PDMS.</p>
-        <p><strong>Applications:</strong> Wearable strain sensors, flexible electronics, transfer printing.</p>
-      </div>
-
-      <!-- Additional Designs -->
-      <h2>Additional Mask Designs</h2>
-      
-      <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0;">
-        <div style="flex: 1; min-width: 200px; background: #f9f9f9; padding: 1rem; border-radius: 8px;">
-          <h3 style="color:#18bfef; font-size:1rem;">Micropyramid Mold</h3>
-          <p style="font-size:0.85rem;">Array of micropyramids for PDMS casting. Used for creating textured surfaces for piezoresistive pressure sensors.</p>
-        </div>
-        <div style="flex: 1; min-width: 200px; background: #f9f9f9; padding: 1rem; border-radius: 8px;">
-          <h3 style="color:#18bfef; font-size:1rem;">C-MEMS 3D Structures</h3>
-          <p style="font-size:0.85rem;">Photolithography masks for SU-8 patterning to create 3D carbon microstructures via pyrolysis.</p>
-        </div>
-        <div style="flex: 1; min-width: 200px; background: #f9f9f9; padding: 1rem; border-radius: 8px;">
-          <h3 style="color:#18bfef; font-size:1rem;">Interdigitated IDE Patterns</h3>
-          <p style="font-size:0.85rem;">Multiple IDE configurations for electrochemical sensing and impedance spectroscopy applications.</p>
-        </div>
-      </div>
-
-      <!-- Tools & Equipment -->
+           <!-- Tools & Equipment -->
       <h2>Tools & Equipment Used</h2>
       <ul class="tool-list">
         <li>LayoutEditor (Free Version)</li>
@@ -337,12 +263,10 @@
       <!-- Downloads -->
       <h2>Downloads</h2>
       <ul class="downloads-list">
-        <li><a href="docs/mems-frontside-mask.gds">MEMS Pressure Sensor - Frontside Mask (GDS)</a></li>
-        <li><a href="docs/mems-backside-mask.gds">MEMS Pressure Sensor - Backside Mask (GDS)</a></li>
-        <li><a href="docs/microsupercapacitor-mask.gds">Microsupercapacitor - Interdigitated Mask (GDS)</a></li>
-        <li><a href="docs/strain-sensor-mask.gds">Strain Sensor - Serpentine Mask (GDS)</a></li>
-        <li><a href="docs/micropyramid-mask.gds">Micropyramid Mold Mask (GDS)</a></li>
-        <li><a href="docs/layouteditor-design-guide.pdf">LayoutEditor Design Guide (PDF)</a></li>
+        <li><a href="docs/Mask Template.dxf">Mask Template with Alignment Marks (DXF)</a></li>
+        <li><a href="docs/Mask Design for Strain Sensor.dxf">Strain Sensor with Different Feature Sizes (DXF)</a></li>
+        <li><a href="docs/Micropyramid Mold.dxf">Micropyramid Mold Mask (DXF)</a></li>
+        <li><a href="docs/Spatial Strain Sensor.gds.gds">Strain Sensor - Spatial Mapping (GDS)</a></li>
       </ul>
 
       <!-- Projects Enabled -->
