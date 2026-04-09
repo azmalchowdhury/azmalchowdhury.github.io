@@ -502,12 +502,7 @@
     <div class="project-grid">
       
       <div class="project-card">
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-hand-paper"></i>
-      <span>Paper-Based Sensor</span>
-    </div>
-  </div>
+  <div class="project-image" id="paper-sensor-carousel"></div>
   <div class="project-content">
     <h3>Paper-Based Supercapacitive Pressure Sensor</h3>
     <div class="project-tags">
@@ -1319,6 +1314,17 @@ if (ceramicContainer) {
   ], 3500);
 }
 
+const paperSensorContainer = document.getElementById('paper-sensor-carousel');
+
+if (paperSensorContainer) {
+  new ImageCarousel(paperSensorContainer, [
+    'projects/paper-based-supercapacitive-sensor/images/Schematic.png',
+    'projects/paper-based-supercapacitive-sensor/images/Picture1.jpg',
+    'projects/paper-based-supercapacitive-sensor/images/sensor-photo.png',
+    'projects/paper-based-supercapacitive-sensor/images/Pregnancy.png'
+  ], 3500);
+}
+  
   const mwcntContainer = document.getElementById('mwcnd-pdms-carousel');
 
 if (mwcntContainer) {
