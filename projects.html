@@ -622,12 +622,7 @@
     <div class="project-grid">
       
       <div class="project-card">
-    <div class="project-image">
-      <div class="project-image-placeholder">
-        <i class="fas fa-chart-line"></i>
-        <span>Design Rules FEA</span>
-      </div>
-    </div>
+   <div class="project-image" id="fea-carousel"></div>
     <div class="project-content">
       <h3>Design Rules for Micro-Fabricated Piezoresistive Sensors</h3>
       <div class="project-tags">
@@ -646,27 +641,6 @@
 
 </div>
 
-      <div class="project-card">
-        <div class="project-image">
-          <div class="project-image-placeholder">
-            <i class="fas fa-heart"></i>
-            <span>Myocardium Model</span>
-          </div>
-        </div>
-        <div class="project-content">
-          <h3>Porcine Myocardium Mechanical Behavior</h3>
-          <div class="project-tags">
-            <span class="project-tag">FEA</span>
-            <span class="project-tag">Biomechanics</span>
-            <span class="project-tag">Abaqus</span>
-          </div>
-          <p>Finite element analysis of porcine myocardium under cyclic loading to understand strain rate effects on heart tissue mechanics (under review).</p>
-          <div class="project-links">
-            <a href="#" class="button small">Paper</a>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
       
@@ -1349,6 +1323,16 @@ if (testbedContainer) {
   new ImageCarousel(testbedContainer, [
     'projects/piezoresistive-sensor-testbed/images/testbed-hardware.png',
     'projects/piezoresistive-sensor-testbed/images/response-time-measurement.png'
+  ], 3500);
+}
+
+const feaContainer = document.getElementById('fea-carousel');
+
+if (feaContainer) {
+  new ImageCarousel(feaContainer, [
+    'projects/piezoresistive-sensor-design-rules/images/sensor-schematic.png',
+    'projects/piezoresistive-sensor-design-rules/images/microfeature-shapes.png',
+    'projects/piezoresistive-sensor-design-rules/images/spatial-density.png'
   ], 3500);
 }
 
