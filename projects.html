@@ -538,12 +538,7 @@
 </div>
       
       <div class="project-card">
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-hand-peace"></i>
-      <span>Dual-Mode Sensor</span>
-    </div>
-  </div>
+  <div class="project-image" id="dualmode-carousel"></div>
   <div class="project-content">
     <h3>Dual-Mode Pressure Sensor for Cardiovascular Monitoring</h3>
     <div class="project-tags">
@@ -1332,6 +1327,16 @@ if (mwcntContainer) {
     'projects/wearable-capacitive-pressure-sensor/images/sensor-schematic.png',
     'projects/wearable-capacitive-pressure-sensor/images/sensor-photo.jpg',
     'projects/wearable-capacitive-pressure-sensor/images/sensitivity-graph.png'
+  ], 3500);
+}
+
+const dualModeContainer = document.getElementById('dualmode-carousel');
+
+if (dualModeContainer) {
+  new ImageCarousel(dualModeContainer, [
+    'projects/dual-mode-pressure-sensor/images/Picture1.png',
+    'projects/dual-mode-pressure-sensor/images/Picture2.png',
+    'projects/dual-mode-pressure-sensor/images/Picture3.png'
   ], 3500);
 }
   
