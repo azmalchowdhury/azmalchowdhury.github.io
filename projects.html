@@ -475,12 +475,7 @@
 </div>
     
       <div class="project-card">
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-fire"></i>
-      <span>Ceramic Lithography</span>
-    </div>
-  </div>
+  <div class="project-image" id="ceramic-carousel"></div>
   <div class="project-content">
     <h3>Photolithography Optimization on Ceramic</h3>
     <div class="project-tags">
@@ -1316,6 +1311,16 @@ if (prAdhesionContainer) {
     'projects/resist-adhesion-pdms/images/over-treatment1.jpg',
     'projects/resist-adhesion-pdms/images/over-treatment3.jpg',
     'projects/resist-adhesion-pdms/images/optimized1.jpg'
+  ], 3500);
+}
+
+const ceramicContainer = document.getElementById('ceramic-carousel');
+
+if (ceramicContainer) {
+  new ImageCarousel(ceramicContainer, [
+    'projects/photolithography-ceramic/images/mask-design.png',
+    'projects/photolithography-ceramic/images/patterned-resist.png',
+    'projects/photolithography-ceramic/images/fabricated-electrode.png'
   ], 3500);
 }
   
