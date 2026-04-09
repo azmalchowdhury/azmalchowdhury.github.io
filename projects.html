@@ -413,13 +413,7 @@
   </div>
 </div>
       
-<div class="project-card">
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-tint"></i>
-      <span>PVD Optimization</span>
-    </div>
-  </div>
+<div class="project-image" id="pvd-carousel"></div>
   <div class="project-content">
     <h3>Thin Film Process Development: E-beam vs. Sputtering</h3>
     <div class="project-tags">
@@ -1305,6 +1299,15 @@ if (plasmaContainer) {
     'projects/plasma-treated-wrinkle-free-pdms/images/Picture2.jpg',
     'projects/plasma-treated-wrinkle-free-pdms/images/patterned1.png',
     'projects/plasma-treated-wrinkle-free-pdms/images/patterned3.png'
+  ], 3500);
+}
+const pvdContainer = document.getElementById('pvd-carousel');
+
+if (pvdContainer) {
+  new ImageCarousel(pvdContainer, [
+    'projects/thin-film-process-development/images/NegativePR.png',
+    'projects/thin-film-process-development/images/PositivePR.png',
+    'projects/thin-film-process-development/images/Ni-Ti thin film.png'
   ], 3500);
 }
   
