@@ -354,12 +354,7 @@
 </div>
 
       <div class="project-card">
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-battery-full"></i>
-      <span>Microsupercapacitors</span>
-    </div>
-  </div>
+  <div class="project-image" id="msc-carousel"></div>
   <div class="project-content">
     <h3>Microsupercapacitor Fabrication Training</h3>
     <div class="project-tags">
@@ -1297,6 +1292,15 @@ if (maskContainer) {
     'projects/photomask-design-fabrication/images/mask1-wheatstone-front.png',
     'projects/photomask-design-fabrication/images/Mask_Spatial_Strain.png',
     'projects/photomask-design-fabrication/images/Mask_Strain_Sensor_1D.png'
+  ], 3500);
+}
+
+  const mscContainer = document.getElementById('msc-carousel');
+
+if (mscContainer) {
+  new ImageCarousel(mscContainer, [
+    'projects/microsupercapacitor-training/images/Fabrication.png',
+    'projects/microsupercapacitor-training/images/IDE.png'
   ], 3500);
 }
   
