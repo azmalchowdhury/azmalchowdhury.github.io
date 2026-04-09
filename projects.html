@@ -575,12 +575,7 @@
 </div>
 
 <div class="project-card">
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-microchip"></i>
-      <span>Sensor Testbed</span>
-    </div>
-  </div>
+  <div class="project-image" id="testbed-carousel"></div>
   <div class="project-content">
     <h3>Piezoresistive Pressure Sensor Testbed</h3>
     <div class="project-tags">
@@ -1344,6 +1339,15 @@ if (dualPPGContainer) {
     'projects/dual-piezoresistive-sensor-system/images/pulse-waveform.png'
   ], 3500);
 }
+  const testbedContainer = document.getElementById('testbed-carousel');
+
+if (testbedContainer) {
+  new ImageCarousel(testbedContainer, [
+    'projects/piezoresistive-sensor-testbed/images/testbed-hardware.png',
+    'projects/piezoresistive-sensor-testbed/images/response-time-measurement.png'
+  ], 3500);
+}
+
   
   // EXAMPLE 2: Add another carousel for a different project
   // const anotherContainer = document.querySelector('#another-carousel-target');
