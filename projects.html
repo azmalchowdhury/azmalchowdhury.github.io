@@ -653,12 +653,7 @@
       
       <div class="project-card">
 
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-microscope"></i>
-      <span>SEM Characterization</span>
-    </div>
-  </div>
+  <div class="project-image" id="sem-carousel"></div>
 
   <div class="project-content">
     <h3>SEM Characterization of Functional Materials</h3>
@@ -1227,6 +1222,15 @@ if (feaContainer) {
   ], 3500);
 }
 
+  const semContainer = document.getElementById('sem-carousel');
+
+if (semContainer) {
+  new ImageCarousel(semContainer, [
+    'projects/Characterization_SEM/images/carbon cloth 100um.png',
+    'projects/Characterization_SEM/images/Cu_GNP CS on PDMS_9.png',
+    'projects/Characterization_SEM/images/TISSUE_PAPER.png'
+  ], 3500);
+}
   
   // EXAMPLE 2: Add another carousel for a different project
   // const anotherContainer = document.querySelector('#another-carousel-target');
