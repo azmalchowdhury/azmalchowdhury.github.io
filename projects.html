@@ -680,12 +680,7 @@
 
 </div>
       <div class="project-card">
-        <div class="project-image">
-          <div class="project-image-placeholder">
-            <i class="fas fa-waveform"></i>
-            <span>Raman/FTIR</span>
-          </div>
-        </div>
+        <div class="project-image" id="raman-carousel"></div>
         <div class="project-content">
           <h3>Raman & FTIR Spectroscopy</h3>
           <div class="project-tags">
@@ -1229,6 +1224,15 @@ if (semContainer) {
     'projects/Characterization_SEM/images/carbon cloth 100um.png',
     'projects/Characterization_SEM/images/Cu_GNP CS on PDMS_9.png',
     'projects/Characterization_SEM/images/TISSUE_PAPER.png'
+  ], 3500);
+}
+  const ramanContainer = document.getElementById('raman-carousel');
+
+if (ramanContainer) {
+  new ImageCarousel(ramanContainer, [
+    'projects/Characterization_FTIR_RAMAN/images/Picture1.jpg',
+    'projects/Characterization_FTIR_RAMAN/images/Picture2.jpg',
+    'projects/Characterization_FTIR_RAMAN/images/Porous PDMS(1).png'
   ], 3500);
 }
   
