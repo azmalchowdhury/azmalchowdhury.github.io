@@ -593,12 +593,7 @@
 </div>
       
       <div class="project-card">
-        <div class="project-image">
-          <div class="project-image-placeholder">
-            <i class="fas fa-bolt"></i>
-            <span>Graphene Sensor</span>
-          </div>
-        </div>
+        <div class="project-image" id="coldspray-carousel"></div>
         <div class="project-content">
           <h3>Cold Spray Graphene Flexible Sensor</h3>
           <div class="project-tags">
@@ -606,9 +601,11 @@
             <span class="project-tag">Cold Spray</span>
             <span class="project-tag">PDMS</span>
           </div>
-          <p>Fabricated flexible pressure sensors on PDMS substrate using cold spray deposition of graphene. Achieved high sensitivity and durability for wearable applications.</p>
+          <p>Developed a scalable cold spray process for depositing graphene nanoplatelets 
+      on flexible PDMS substrates for wearable sensing applications. 
+      Manuscript submitted to ACS AMI.</p>
           <div class="project-links">
-            <a href="#" class="button small">View Details</a>
+            <a href="projects/Cold-spray" class="button small">View Details</a>
           </div>
         </div>
       </div>
@@ -1241,6 +1238,18 @@ if (labviewContainer) {
     'projects/labview-automation-projects/images/Front Panel  mk_lcr.png',
     'projects/labview-automation-projects/images/Block Diagram3.png',
     'projects/labview-automation-projects/images/Front Panel3.png'
+  ], 3500);
+}
+
+const coldSprayContainer = document.getElementById('coldspray-carousel');
+
+if (coldSprayContainer) {
+  new ImageCarousel(coldSprayContainer, [
+    'projects/cold-spray-gnp-pdms/images/Deposit.png',
+    'projects/cold-spray-gnp-pdms/images/SEM.png',
+    'projects/cold-spray-gnp-pdms/images/SEM2.png',
+    'projects/cold-spray-gnp-pdms/images/Wearable Sensor.png',
+    'projects/cold-spray-gnp-pdms/images/Characterization.png'
   ], 3500);
 }
   
