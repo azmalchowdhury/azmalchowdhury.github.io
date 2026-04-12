@@ -727,12 +727,7 @@
       </div>
       
       <div class="project-card">
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-chart-bar"></i>
-      <span>LabVIEW DAQ</span>
-    </div>
-  </div>
+  <div class="project-image" id="labview-carousel"></div>
   <div class="project-content">
     <h3>LabVIEW Automation: Instrument Control & Data Acquisition</h3>
     <div class="project-tags">
@@ -1233,6 +1228,19 @@ if (ramanContainer) {
     'projects/Characterization_FTIR_RAMAN/images/Picture1.jpg',
     'projects/Characterization_FTIR_RAMAN/images/Picture2.jpg',
     'projects/Characterization_FTIR_RAMAN/images/Porous PDMS.png'
+  ], 3500);
+}
+
+const labviewContainer = document.getElementById('labview-carousel');
+
+if (labviewContainer) {
+  new ImageCarousel(labviewContainer, [
+    'projects/labview-automation-projects/images/Block Diagram keithley.png',
+    'projects/labview-automation-projects/images/Front End keithley.png',
+    'projects/labview-automation-projects/images/Block Diagram mk_lcr.png',
+    'projects/labview-automation-projects/images/Front Panel  mk_lcr.png',
+    'projects/labview-automation-projects/images/Block Diagram3.png',
+    'projects/labview-automation-projects/images/Front Panel3.png'
   ], 3500);
 }
   
