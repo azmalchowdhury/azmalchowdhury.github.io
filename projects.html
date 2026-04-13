@@ -843,25 +843,35 @@
     <div class="project-grid">
       
       <div class="project-card">
-        <div class="project-image">
-          <div class="project-image-placeholder">
-            <i class="fas fa-fire"></i>
-            <span>Steel Plant</span>
-          </div>
-        </div>
-        <div class="project-content">
-          <h3>High-Temperature Furnace Reliability Improvement</h3>
-          <div class="project-tags">
-            <span class="project-tag">Maintenance</span>
-            <span class="project-tag">RCA</span>
-            <span class="project-tag">Industry 4.0</span>
-          </div>
-          <p>Led root-cause analysis and implemented solutions reducing furnace downtime by 25% at Abul Khair Steel (1600°C operations). Implemented predictive maintenance strategies.</p>
-          <div class="project-links">
-            <a href="#" class="button small">View Case Study</a>
-          </div>
-        </div>
-      </div>
+
+  <div class="project-image" id="eaf-carousel"></div>
+
+  <div class="project-content">
+    <h3>Electric Arc Furnace (EAF) Operations & Reliability Engineering</h3>
+
+    <div class="project-tags">
+      <span class="project-tag">Process Engineering</span>
+      <span class="project-tag">Heavy Industry</span>
+      <span class="project-tag">Maintenance</span>
+      <span class="project-tag">CAD</span>
+      <span class="project-tag">Root Cause Analysis</span>
+    </div>
+
+    <p>
+      Led critical maintenance, troubleshooting, and process optimization activities 
+      for Electric Arc Furnace operations. Improved reliability through spare parts 
+      planning, real-time failure intervention, and in-house retrofit design.
+    </p>
+
+    <div class="project-links">
+      <a href="projects/eaf-operations/" class="button small">
+        View Project →
+      </a>
+    </div>
+
+  </div>
+
+</div>
 
       <div class="project-card">
         <div class="project-image">
@@ -1269,6 +1279,16 @@ if (robotContainer) {
     'projects/glass-climbing-robot/images/vacuum-pump.jpg',
     'projects/glass-climbing-robot/images/gear-motor.jpg',
     'projects/glass-climbing-robot/images/circuit-schematic.png'
+  ], 3500);
+}
+
+const eafContainer = document.getElementById('eaf-carousel');
+
+if (eafContainer) {
+  new ImageCarousel(eafContainer, [
+    'projects/eaf-operations/images/eaf-furnace.png',
+    'projects/eaf-operations/images/eaf-plant-aerial.png',
+    'projects/eaf-operations/images/eaf-machine.png'
   ], 3500);
 }
   
