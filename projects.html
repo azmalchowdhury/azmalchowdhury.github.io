@@ -811,25 +811,35 @@
 
 </div>
 <div class="project-card">
-  <div class="project-image">
-    <div class="project-image-placeholder">
-      <i class="fas fa-industry"></i>
-      <span>Hammer Mill</span>
-    </div>
-  </div>
+
+  <!-- CAROUSEL -->
+  <div class="project-image" id="hammer-carousel"></div>
+
   <div class="project-content">
     <h3>Hammer Mill Corn Grinder</h3>
+
     <div class="project-tags">
       <span class="project-tag">BUET Thesis</span>
       <span class="project-tag">Mechanical Design</span>
       <span class="project-tag">Fabrication</span>
       <span class="project-tag">2016</span>
     </div>
-    <p>Bachelor's thesis designing and fabricating a hammer mill corn grinder from locally available materials. Features 0.5 HP motor (2800 RPM), 12 swinging hammers, replaceable 3mm screen. Achieved 98.33% crushing efficiency, ~10 kg/hr capacity. Designed for rural farmers to process corn into corn flakes and reduce post-harvest losses.</p>
+
+    <p>
+      Bachelor's thesis designing and fabricating a hammer mill corn grinder from 
+      locally available materials. Features 0.5 HP motor (2800 RPM), 12 swinging 
+      hammers, and replaceable 3mm screen. Achieved 98.33% crushing efficiency 
+      and ~10 kg/hr capacity for rural applications.
+    </p>
+
     <div class="project-links">
-      <a href="projects/hammer-mill-corn-grinder/" class="button small">View Project →</a>
+      <a href="projects/hammer-mill-corn-grinder/" class="button small">
+        View Project →
+      </a>
     </div>
+
   </div>
+
 </div>
 
       
@@ -1312,6 +1322,17 @@ if (gtclContainer) {
     'projects/gtcl-operations/images/pipeline.jpg',
     'projects/gtcl-operations/images/scrubber.jpg',
     'projects/gtcl-operations/images/Compressor_turbine.jpg'
+  ], 3500);
+}
+
+const hammerContainer = document.getElementById('hammer-carousel');
+
+if (hammerContainer) {
+  new ImageCarousel(hammerContainer, [
+    'projects/hammer-mill-corn-grinder/images/3.jpg',
+    'projects/hammer-mill-corn-grinder/images/4.jpg',
+    'projects/hammer-mill-corn-grinder/images/hammer-mill-assembly.jpg',
+    'projects/hammer-mill-corn-grinder/images/rotor-assembly.jpg'
   ], 3500);
 }
   
