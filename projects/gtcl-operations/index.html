@@ -3,12 +3,104 @@
 <html>
 <head>
   <title>GTCL Operations | Azmal Chowdhury</title>
-  <meta charset="utf-8" />
+    <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- CSS -->
   <link rel="stylesheet" href="../../assets/css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+  
+  <style>
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+    .project-gallery figure {
+      flex: 1 1 300px;
+      margin: 0;
+      text-align: center;
+    }
+    .project-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #eeeeee;
+    }
+    .project-gallery figcaption {
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      color: #666;
+    }
+    .downloads-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .downloads-list li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .downloads-list li:before {
+      content: '\f019';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #18bfef;
+    }
+    .tool-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0;
+    }
+    .tool-list li {
+      background: #f0f0f0;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+    }
+    .back-button {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .highlight {
+      background: #f0f7ff;
+      padding: 1.5rem;
+      border-left: 4px solid #18bfef;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .skill-badge {
+      display: inline-block;
+      background: #18bfef;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+      font-weight: 600;
+    }
+    .process-step {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: #f9f9f9;
+      border-radius: 8px;
+    }
+    .process-step h3 {
+      color: #18bfef;
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -64,9 +156,12 @@
   </header>
 
   <!-- HERO IMAGE -->
-  <span class="image main">
-    <img src="images/plant-overview.jpg" alt="Gas Transmission Plant" />
-  </span>
+  <div class="project-gallery">
+        <figure>
+          <img src="images/plant-overview.jpg" alt="Gas Transmission Plant" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Plant_Overview'">
+          <figcaption>Figure 1: Gas Compressor Plant</figcaption>
+        </figure>
+      </div>
 
   <!-- Overview -->
   <h2>Overview</h2>
@@ -116,10 +211,17 @@
     <li>Process Instrumentation & Control Panels</li>
   </ul>
 
-  <span class="image fit">
-    <img src="images/scrubber.jpg" alt="Gas Scrubber System" />
-    <img src="images/condensate.jpg" alt="Gas Scrubber System" />
-  </span>
+<div class="project-gallery">
+        <figure>
+          <img src="images/scrubber.jpg" alt="Gas Scrubber System" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Gas+Scrubber+System'">
+          <figcaption>Figure 2: Gas scrubber system</figcaption>
+        </figure>
+        <figure>
+          <img src="images/condensate.jpg" alt="Gas Scrubber System" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Gas+Condensate+Trap'">
+          <figcaption>Figure 3: Gas condensate collector</figcaption>
+        </figure>
+      </div>
+  
 
   <hr />
 
@@ -133,10 +235,17 @@
     <li>Improved operational efficiency through process observation and corrective actions</li>
   </ul>
 
-  <span class="image fit">
-    <img src="images/pipeline.jpg" alt="Pipeline System" />
-    <img src="images/pipeline1.jpg" alt="Pipeline System" />
-  </span>
+<div class="project-gallery">
+        <figure>
+          <img src="images/pipeline.jpg" alt="Pipeline System" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Pipeline'">
+          <figcaption>Figure 4: Gas Pipeline</figcaption>
+        </figure>
+        <figure>
+          <img src=images/pipeline1.jpg" alt="Pipeline System" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Pipeline'">
+          <figcaption>Figure 5: Gas Pipeline</figcaption>
+        </figure>
+      </div>
+
 
   <hr />
 
@@ -149,9 +258,14 @@
     <li>Maintained stable process conditions through parameter monitoring</li>
   </ul>
 
-  <span class="image fit">
-    <img src="images/Compressor_turbine.jpg" alt="Control Panel" />
-  </span>
+<div class="project-gallery">
+        <figure>
+          <img src="images/Compressor_turbine.jpg" alt="Control Panel" onerror="this.src='https://placehold.co/400x300/1e252d/white?text=Turbine'">
+          <figcaption>Figure 6: Gas compressor-turbine unit.</figcaption>
+        </figure>
+      </div>
+
+
 
   <hr />
 
