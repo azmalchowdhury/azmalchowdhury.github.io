@@ -874,25 +874,37 @@
 </div>
 
       <div class="project-card">
-        <div class="project-image">
-          <div class="project-image-placeholder">
-            <i class="fas fa-gas-pump"></i>
-            <span>Gas Transmission</span>
-          </div>
-        </div>
-        <div class="project-content">
-          <h3>National Gas Transmission System Optimization</h3>
-          <div class="project-tags">
-            <span class="project-tag">Process Control</span>
-            <span class="project-tag">Shift Management</span>
-            <span class="project-tag">SCADA</span>
-          </div>
-          <p>Managed shift operations as shift in-charge for national gas transmission system. Optimized parameters for grid stability and reduced unplanned downtime.</p>
-          <div class="project-links">
-            <a href="#" class="button small">View Details</a>
-          </div>
-        </div>
-      </div>
+
+  <!-- IMAGE (carousel placeholder like your other projects) -->
+  <div class="project-image" id="gtcl-carousel"></div>
+
+  <!-- CONTENT -->
+  <div class="project-content">
+    <h3>Gas Transmission & Process Plant Operations</h3>
+
+    <div class="project-tags">
+      <span class="project-tag">Process Engineering</span>
+      <span class="project-tag">Reliability</span>
+      <span class="project-tag">High-Pressure Systems</span>
+      <span class="project-tag">RCA</span>
+      <span class="project-tag">Leadership</span>
+    </div>
+
+    <p>
+      Led operations and maintenance in a high-pressure gas transmission plant, 
+      improving system reliability, optimizing process conditions, and managing 
+      real-time troubleshooting in a 24/7 industrial environment.
+    </p>
+
+    <div class="project-links">
+      <a href="projects/gtcl-operations/" class="button small">
+        View Project →
+      </a>
+    </div>
+
+  </div>
+
+</div>
     </div>
 
   </div>
@@ -1289,6 +1301,18 @@ if (eafContainer) {
     'projects/eaf-operations/images/eaf-furnace.png',
     'projects/eaf-operations/images/eaf-plant-aerial.png',
     'projects/eaf-operations/images/eaf-machine.png'
+  ], 3500);
+}
+
+const gtclContainer = document.getElementById('gtcl-carousel');
+
+if (gtclContainer) {
+  new ImageCarousel(gtclContainer, [
+    'projects/gtcl-operations/images/plant-overview.jpg',
+    'projects/gtcl-operations/images/pipeline.jpg',
+    'projects/gtcl-operations/images/scrubber.jpg',
+    'projects/gtcl-operations/images/control-room.jpg',
+    'projects/gtcl-operations/images/turbine.jpg'
   ], 3500);
 }
   
