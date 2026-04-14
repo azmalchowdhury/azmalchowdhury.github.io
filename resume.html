@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azmal Chowdhury — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     CUSTOMIZATION GUIDE
+     ============================================================
+     FONTS:       Change 'IBM Plex Sans' and 'IBM Plex Mono' in
+                  the Google Fonts link above and in CSS below.
+     COLORS:      Search for hex codes (#1a1a1a, #1a4a7a, etc.)
+                  and replace with your preferred palette.
+     FONT SIZES:  body { font-size } controls the base size.
+                  Scale up/down to fit more or less content.
+     PAGE WIDTH:  .page { width: 816px } = US Letter at 96dpi.
+                  Leave as-is for correct print sizing.
+     MARGINS:     .page { padding } controls white space inside.
+     TWO COLUMNS: .body { grid-template-columns: 1fr 210px }
+                  Change 210px to widen/narrow the right column.
+     PRINT:       Open in Chrome → Ctrl+P / Cmd+P → Save as PDF
+                  Set margins to None, enable Background graphics.
+     ============================================================ -->
+
+<style>
+
+  /* ── RESET ── */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ── PAGE SHELL ── */
+  body {
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    font-size: 10.5px;           /* BASE FONT SIZE — scale up/down to fit content */
+    line-height: 1.45;
+    color: #1a1a1a;              /* DEFAULT TEXT COLOR */
+    background: #f0ede8;         /* PAGE BACKGROUND (only visible on screen, not print) */
+    padding: 24px;
+  }
+
+  .page {
+    background: #ffffff;         /* PAPER COLOR */
+    width: 816px;                /* US Letter width at 96dpi — do not change for print */
+    min-height: 1056px;          /* US Letter height at 96dpi */
+    margin: 0 auto;
+    padding: 40px 44px 36px;     /* TOP / SIDES / BOTTOM inner padding */
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto; /* name left, contact right */
+    gap: 16px;
+    border-bottom: 1.5px solid #1a1a1a; /* HEADER DIVIDER LINE COLOR */
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: 26px;             /* NAME SIZE */
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    margin-bottom: 4px;
+    color: #111111;              /* NAME COLOR */
+  }
+
+  .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px;
+    color: #666666;              /* SUBTITLE COLOR */
+    letter-spacing: 0.07em;
+  }
+
+  /* ── CREDENTIAL BADGES ── */
+  .badges {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8.5px;
+    padding: 2px 7px;
+    border: 0.5px solid #aaaaaa;
+    border-radius: 3px;
+    color: #555555;
+    background: #f5f5f5;
+  }
+
+  .badge.blue {                  /* HIGHLIGHTED BADGE — change colors here */
+    background: #ddeeff;
+    border-color: #7aaedd;
+    color: #1a4a7a;
+  }
+
+  /* ── CONTACT BLOCK (top right) ── */
+  .contact {
+    text-align: right;
+    font-size: 9.5px;
+    color: #555555;
+    line-height: 1.8;
+  }
+
+  .contact a {
+    color: #555555;
+    text-decoration: none;
+  }
+
+  /* ── SUMMARY PARAGRAPH ── */
+  .summary {
+    font-size: 10px;
+    line-height: 1.55;
+    color: #444444;
+    margin-bottom: 10px;
+  }
+
+  /* ── TWO-COLUMN LAYOUT ── */
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 210px; /* LEFT auto-width, RIGHT fixed 210px */
+    gap: 22px;                         /* GAP BETWEEN COLUMNS */
+  }
+
+  /* ── SECTION LABELS ── */
+  .sec {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #777777;              /* SECTION LABEL COLOR */
+    border-top: 0.5px solid #dddddd; /* SECTION TOP RULE COLOR */
+    padding-top: 6px;
+    margin: 12px 0 6px;
+  }
+
+  .sec:first-child { margin-top: 0; }
+
+  /* ── JOB / EXPERIENCE BLOCKS ── */
+  .job {
+    margin-bottom: 10px;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .job-title {
+    font-weight: 600;
+    font-size: 10.5px;
+    color: #111111;              /* JOB TITLE COLOR */
+  }
+
+  .job-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8.5px;
+    color: #888888;              /* DATE COLOR */
+    white-space: nowrap;
+  }
+
+  .job-org {
+    font-size: 9.5px;
+    color: #666666;              /* ORGANIZATION NAME COLOR */
+    margin-bottom: 3px;
+  }
+
+  /* ── BULLET POINTS ── */
+  ul.bullets {
+    list-style: none;
+    margin: 2px 0 0;
+    padding: 0;
+  }
+
+  ul.bullets li {
+    padding-left: 13px;
+    position: relative;
+    margin-bottom: 2px;
+    font-size: 10px;             /* BULLET TEXT SIZE */
+    line-height: 1.45;
+    color: #222222;
+  }
+
+  ul.bullets li::before {
+    content: '—';               /* BULLET CHARACTER — change to '•' or '›' etc. */
+    position: absolute;
+    left: 0;
+    color: #aaaaaa;             /* BULLET CHARACTER COLOR */
+    font-size: 9px;
+  }
+
+  /* ── PATENT / NOTE ITEMS ── */
+  .pat {
+    font-size: 9.5px;
+    color: #555555;
+    padding-left: 13px;
+    position: relative;
+    margin-bottom: 3px;
+    line-height: 1.4;
+  }
+
+  .pat::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: #bbbbbb;
+  }
+
+  /* ── SKILL TAGS (right column) ── */
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 2px;
+  }
+
+  .skill-tag {
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 0.5px solid #dddddd;
+    background: #f7f7f7;        /* SKILL TAG BACKGROUND */
+    color: #333333;
+  }
+
+  /* ── METRIC BOXES (right column) ── */
+  .metric-row {
+    display: flex;
+    gap: 8px;
+    margin: 6px 0 10px;
+  }
+
+  .metric-box {
+    background: #f5f5f3;        /* METRIC BOX BACKGROUND */
+    border-radius: 5px;
+    padding: 7px 8px;
+    text-align: center;
+    flex: 1;
+  }
+
+  .metric-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 15px;
+    font-weight: 500;
+    color: #111111;
+    line-height: 1;
+  }
+
+  .metric-lbl {
+    font-size: 8px;
+    color: #888888;
+    margin-top: 3px;
+  }
+
+  /* ── PRINT STYLES ── */
+  @media print {
+    body {
+      background: white;
+      padding: 0;
+    }
+    .page {
+      box-shadow: none;
+      margin: 0;
+      width: 100%;
+      padding: 28px 36px;
+    }
+    @page {
+      margin: 0;
+      size: letter;
+    }
+  }
+
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ============================================================
+       HEADER — Name, subtitle, badges, contact info
+       ============================================================ -->
+  <div class="header">
+    <div>
+
+      <!-- YOUR NAME -->
+      <h1>Azmal Chowdhury</h1>
+
+      <!-- TAGLINE / SUBTITLE -->
+      <div class="subtitle">
+        Semiconductor Process Engineer &nbsp;·&nbsp;
+        Thin Films &nbsp;·&nbsp;
+        Microfabrication &nbsp;·&nbsp;
+        Yield Optimization
+      </div>
+
+      <!-- CREDENTIAL BADGES — add/remove <span> elements as needed -->
+      <!-- Use class="badge blue" for highlighted, class="badge" for muted -->
+      <div class="badges">
+        <span class="badge blue">2 U.S. Patents</span>
+        <span class="badge blue">10+ Publications</span>
+        <span class="badge blue">Class 100 Cleanroom</span>
+        <span class="badge">Ph.D. Materials Science</span>
+        <span class="badge">10 Yrs Engineering</span>
+      </div>
+
+    </div>
+
+    <!-- CONTACT INFO (top right) -->
+    <div class="contact">
+      azmalchowdhury93@gmail.com<br>
+      achow030@fiu.edu<br>
+      Miami, FL<br>
+      <a href="https://azmalchowdhury.github.io">azmalchowdhury.github.io</a>
+    </div>
+  </div><!-- /header -->
+
+
+  <!-- ============================================================
+       SUMMARY PARAGRAPH
+       ============================================================ -->
+  <p class="summary">
+    Process engineer with 10 years of experience spanning semiconductor cleanroom fabrication,
+    materials characterization, and high-volume industrial manufacturing. Expertise in PVD/CVD
+    thin-film deposition, photolithography, plasma etching, and full process integration from
+    mask design to functional device. Proven track record of DOE-driven yield optimization, SPC
+    implementation, and SOP authorship. Distinctive background in shift operations (steel + gas
+    transmission) brings a production discipline rarely found in R&amp;D engineers.
+  </p>
+
+
+  <!-- ============================================================
+       BODY — Two-column grid (left: experience | right: skills)
+       ============================================================ -->
+  <div class="body">
+
+
+    <!-- ========================
+         LEFT COLUMN — Experience
+         ======================== -->
+    <div>
+
+      <div class="sec">Experience</div>
+
+      <!-- JOB BLOCK TEMPLATE:
+           Copy the entire <div class="job">...</div> block to add a new role.
+           Edit job-title, job-date, job-org, and bullet <li> items. -->
+
+      <!-- ROLE 1 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Postdoctoral Associate — Process Engineer</span>
+          <span class="job-date">2024 – Present</span>
+        </div>
+        <div class="job-org">Florida International University — AMERI &nbsp;|&nbsp; Miami, FL</div>
+        <ul class="bullets">
+          <li>Own end-to-end micro-nanofabrication flow: photomask design (LayoutEditor), PVD metallization (Cr/Au, Ag), RIE plasma etch, and functional device characterization.</li>
+          <li>Qualified novel E-beam evaporation processes including tool-matching protocols and vendor co-development documentation.</li>
+          <li>Established AFM nanoindentation benchmarking protocols adopted as lab standard for cardiac tissue stiffness measurement.</li>
+          <li>Maintain Class 100 cleanroom equipment (mask aligner, spin coater, E-beam evaporator, plasma etcher) and enforce safety/yield protocols across team.</li>
+          <li>Lead multi-PI NSF CELL-MET cross-functional R&amp;D program spanning materials science, device physics, and biomedical engineering.</li>
+        </ul>
+      </div>
+
+      <!-- ROLE 2 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Graduate Research Engineer (Ph.D.)</span>
+          <span class="job-date">2020 – 2024</span>
+        </div>
+        <div class="job-org">Florida International University — MSE &nbsp;|&nbsp; Miami, FL</div>
+        <ul class="bullets">
+          <li>Developed and optimized thin-film fabrication processes (PVD, CVD, E-beam evaporation) on Si, SiO₂, PDMS, ceramic, and glass substrates; authored SOPs and runcards.</li>
+          <li>Applied DOE to solve critical photoresist delamination on PDMS — optimized O₂ plasma (100 W, 400 mTorr, 60 sccm, 90 s) transforming complete failure into clean, reproducible patterning.</li>
+          <li>Achieved 19.8 kPa⁻¹ piezoresistive sensitivity and 2.85 kPa⁻¹ capacitive sensitivity in first-ever dual-mode pressure sensor (patent pending).</li>
+          <li>Designed COMSOL FEA simulation framework establishing design rules for piezoresistive MEMS sensors; published in <em>Micromachines</em>.</li>
+        </ul>
+      </div>
+
+      <!-- ROLE 3 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Graduate Teaching Assistant</span>
+          <span class="job-date">2019 – 2020</span>
+        </div>
+        <div class="job-org">Florida International University — Mechanical &amp; Materials Engineering &nbsp;|&nbsp; Miami, FL</div>
+        <ul class="bullets">
+          <li>Instructed Intro to Nanofabrication (EGN5013C) and Materials Science Lab — teaching cleanroom protocols, photolithography, and thin-film deposition to graduate cohorts.</li>
+          <li>Developed laboratory manuals and grading rubrics for hands-on microfabrication coursework.</li>
+        </ul>
+      </div>
+
+      <!-- ROLE 4 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Lead Shift Engineer (Mechanical &amp; Operations)</span>
+          <span class="job-date">2016 – 2019</span>
+        </div>
+        <div class="job-org">GTCL / Abul Khair Steel — Bangladesh</div>
+        <ul class="bullets">
+          <li>Supervised 15+ technicians in continuous 24/7 operations for national gas transmission grid; reduced unplanned downtime 30% through RCA and predictive maintenance.</li>
+          <li>Managed 1600 °C furnace systems in steel plant; implemented RCM strategies cutting equipment downtime 25% and optimizing spare-parts inventory spend.</li>
+          <li>Analyzed SCADA operational data to identify gas flow inefficiencies, improving grid pressure stability and distribution efficiency across compressor stations.</li>
+        </ul>
+      </div>
+
+      <!-- PATENTS SECTION -->
+      <!-- Add/edit <div class="pat"> items below -->
+      <div class="sec">Patents</div>
+      <div class="pat">U.S. Patent — Dual-mode supercapacitive/piezoresistive pressure sensor for cardiovascular monitoring (filed Apr 2023, pending)</div>
+      <div class="pat">U.S. Patent — Additional granted patent; 2+ provisional disclosures filed during Ph.D.</div>
+
+    </div><!-- /left column -->
+
+
+    <!-- ========================
+         RIGHT COLUMN — Skills, metrics, education, leadership
+         ======================== -->
+    <div>
+
+      <!-- IMPACT METRICS — edit metric-num and metric-lbl text -->
+      <div class="sec" style="margin-top:0;">Impact Metrics</div>
+      <div class="metric-row">
+        <div class="metric-box">
+          <div class="metric-num">2</div>
+          <div class="metric-lbl">U.S. Patents</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-num">10+</div>
+          <div class="metric-lbl">Publications</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-num">30%</div>
+          <div class="metric-lbl">Downtime cut</div>
+        </div>
+      </div>
+
+      <!-- SKILL TAGS — add/remove <span class="skill-tag"> as needed -->
+
+      <div class="sec">Fabrication</div>
+      <div class="skill-tags">
+        <span class="skill-tag">PVD / Sputtering</span>
+        <span class="skill-tag">CVD / PECVD</span>
+        <span class="skill-tag">E-beam Evaporation</span>
+        <span class="skill-tag">RIE / DRIE Etch</span>
+        <span class="skill-tag">Photolithography</span>
+        <span class="skill-tag">Lift-Off</span>
+        <span class="skill-tag">Spin Coating</span>
+        <span class="skill-tag">Mask Design (LayoutEditor)</span>
+        <span class="skill-tag">MEMS Fabrication</span>
+        <span class="skill-tag">Flexible Electronics</span>
+      </div>
+
+      <div class="sec">Characterization</div>
+      <div class="skill-tags">
+        <span class="skill-tag">SEM / EDS</span>
+        <span class="skill-tag">AFM / Nanoindentation</span>
+        <span class="skill-tag">Raman / FTIR</span>
+        <span class="skill-tag">Profilometry</span>
+        <span class="skill-tag">EIS / Potentiostat</span>
+      </div>
+
+      <div class="sec">Process Engineering</div>
+      <div class="skill-tags">
+        <span class="skill-tag">DOE</span>
+        <span class="skill-tag">SPC / JMP / Minitab</span>
+        <span class="skill-tag">Root-Cause Analysis</span>
+        <span class="skill-tag">SOP / Runcard Authorship</span>
+        <span class="skill-tag">Failure Analysis</span>
+        <span class="skill-tag">Yield Optimization</span>
+        <span class="skill-tag">RCM / Preventive Maint.</span>
+      </div>
+
+      <div class="sec">Software &amp; Simulation</div>
+      <div class="skill-tags">
+        <span class="skill-tag">COMSOL (FEA)</span>
+        <span class="skill-tag">LabVIEW / DAQ</span>
+        <span class="skill-tag">Python / ML</span>
+        <span class="skill-tag">SolidWorks</span>
+        <span class="skill-tag">Abaqus</span>
+        <span class="skill-tag">Git</span>
+      </div>
+
+      <!-- EDUCATION — edit degree, year, institution -->
+      <div class="sec">Education</div>
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Ph.D., Materials Science &amp; Engineering</span>
+          <span class="job-date">2024</span>
+        </div>
+        <div class="job-org">Florida International University</div>
+      </div>
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">B.Sc., Mechanical Engineering</span>
+          <span class="job-date">2016</span>
+        </div>
+        <div class="job-org">Bangladesh Univ. of Engineering &amp; Technology (BUET)</div>
+      </div>
+
+      <!-- LEADERSHIP -->
+      <div class="sec">Leadership</div>
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">President, ECS Student Chapter @ FIU</span>
+          <span class="job-date">2021 – 2024</span>
+        </div>
+        <div class="job-org">Grew chapter 40% · 30+ members · industry seminar series</div>
+      </div>
+
+    </div><!-- /right column -->
+
+  </div><!-- /body -->
+
+</div><!-- /page -->
+</body>
+</html>
