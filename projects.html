@@ -12,228 +12,174 @@
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   
   <style>
-/* ============================================ */
-/* IMAGE CAROUSEL / SLIDESHOW STYLES */
-/* ============================================ */
-
-/* 🔥 MAIN CONTAINER (COMMON FOR BOTH CASES) */
-.project-image {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;   /* keep 16:9 ALWAYS */
-  overflow: hidden;
-  background: #000;
-  border-radius: 6px;
-}
-
-/* ============================================ */
-/* ✅ CAROUSEL (MULTIPLE IMAGES) */
-/* ============================================ */
-
-.slideshow-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.7s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-/* 🔥 CAROUSEL IMAGES → FULL FIGURE */
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: #000;
-}
-
-/* ❌ REMOVE old animation (conflicts with transition) */
-
-/* Counter */
-.image-counter {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background: rgba(0,0,0,0.6);
-  color: white;
-  padding: 3px 8px;
-  border-radius: 12px;
-  font-size: 0.7rem;
-  z-index: 10;
-}
-
-/* Dots */
-.slide-dots {
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-  z-index: 10;
-}
-
-.dot {
-  height: 6px;
-  width: 6px;
-  margin: 0 3px;
-  background-color: rgba(255,255,255,0.5);
-  border-radius: 50%;
-  display: inline-block;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: #18bfef;
-  width: 14px;
-  border-radius: 3px;
-}
-
-/* Arrows */
-.slide-control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 20;
-}
-
-.project-image:hover .slide-control {
-  opacity: 1;
-}
-
-.slide-prev { left: 8px; }
-.slide-next { right: 8px; }
-
-/* ============================================ */
-/* ✅ SINGLE IMAGE CASE */
-/* ============================================ */
-
-/* 🔥 ONLY applied when class="single-image" */
-.project-image img.single-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* fills nicely */
-}
-
-/* ❌ IMPORTANT: REMOVE THIS OLD RULE */
-/* .project-image img { object-fit: cover; } */
-
-
-/* ============================================ */
-/* OTHER UI (UNCHANGED) */
-/* ============================================ */
-
-.project-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.project-card {
-  flex: 1 1 calc(33.333% - 2rem);
-  min-width: 280px;
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.project-image-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #1e252d 0%, #2a3a4a 100%);
-  color: white;
-}
-
-.project-image-placeholder i {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-content {
-  padding: 1.5rem;
-}
-
-.project-content h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.25rem;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0;
-}
-
-.project-tag {
-  background: #f0f0f0;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 600;
-  color: #555;
-}
-
-.project-content p {
-  font-size: 0.9rem;
-  margin: 0 0 1rem 0;
-  text-align: left;
-}
-
-.project-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.project-links a {
-  font-size: 0.85rem;
-  border-bottom: none;
-}
-
-.subsection-header {
-  margin: 2.5rem 0 1.5rem 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 3px solid #18bfef;
-  display: inline-block;
-}
-
-@media screen and (max-width: 736px) {
-  .project-card {
-    flex: 1 1 100%;
-  }
-}
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .project-card {
+      flex: 1 1 calc(33.333% - 2rem);
+      min-width: 280px;
+      background: #ffffff;
+      border: 1px solid #eeeeee;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .project-image {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #000;
+      border-radius: 6px 6px 0 0;
+    }
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.7s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #1e252d;
+    }
+    .image-counter {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      z-index: 10;
+    }
+    .slide-dots {
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      z-index: 10;
+    }
+    .dot {
+      height: 6px;
+      width: 6px;
+      margin: 0 3px;
+      background-color: rgba(255,255,255,0.5);
+      border-radius: 50%;
+      display: inline-block;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .dot.active {
+      background-color: #18bfef;
+      width: 14px;
+      border-radius: 3px;
+    }
+    .slide-control {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 20;
+    }
+    .project-image:hover .slide-control {
+      opacity: 1;
+    }
+    .slide-prev { left: 8px; }
+    .slide-next { right: 8px; }
+    .project-image-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1e252d 0%, #2a3a4a 100%);
+      color: white;
+    }
+    .project-image-placeholder i {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .project-content {
+      padding: 1.5rem;
+    }
+    .project-content h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.25rem;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    .project-tag {
+      background: #f0f0f0;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+      font-weight: 600;
+      color: #555;
+    }
+    .project-content p {
+      font-size: 0.9rem;
+      margin: 0 0 1rem 0;
+      text-align: left;
+    }
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .project-links a {
+      font-size: 0.85rem;
+      border-bottom: none;
+    }
+    .subsection-header {
+      margin: 2.5rem 0 1.5rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid #18bfef;
+      display: inline-block;
+    }
+    .subsection-description {
+      margin-top: -1rem;
+      margin-bottom: 1.5rem;
+      color: #666;
+    }
+    @media screen and (max-width: 736px) {
+      .project-card {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
 
@@ -254,7 +200,6 @@
       <li><a href="about.html">About</a></li>
       <li><a href="experience.html">Experience</a></li>
       <li class="active"><a href="projects.html">Projects</a></li>
-      <li><a href="education.html">Education</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="hobby.html">Hobby</a></li>
     </ul>
@@ -280,472 +225,74 @@
     <section class="post">
       <header class="major">
         <h1>Engineering Projects</h1>
-        <p>Microfabrication | MEMS Sensors | Data Analytics | Simulation | Embedded Systems</p>
+        <p>Microfabrication | MEMS Sensors | Thin Films | Process Development</p>
       </header>
     </section>
 
-   <!-- ==================== PROCESS DEVELOPMENT & THIN FILMS ==================== -->
-<h2 class="subsection-header">
-  <i class="fas fa-layer-group" style="margin-right: 0.5rem;"></i> 
-  Process Development & Thin Films
-</h2>
-<p style="margin-top: -1rem;">
-Focused on thin film deposition, adhesion engineering, and scalable process development.
-</p>
-
-<div class="project-grid">
-  
-     <div class="project-card"> 
-      <div class="project-image" id="wrinkle-carousel"></div>
-  <div class="project-content">
-    <h3>Tunable Wrinkling of Gold on PDMS</h3>
-    <div class="project-tags">
-      <span class="project-tag">PDMS</span>
-      <span class="project-tag">E-beam Evaporation</span>
-      <span class="project-tag">Negative Resist</span>
-      <span class="project-tag">Lift-Off</span>
-      <span class="project-tag">2020-2021</span>
-    </div>
-    <p>
-Engineered controlled wrinkling in Cr/Au thin films on PDMS via thermal mismatch. 
-Enabled tunable surface morphologies for stretchable electronics and sensors.
-</p>
-    <div class="project-links">
-      <a href="projects/tunable-wrinkling-pdms/" class="button small">View Project →</a>
-    </div>
-  </div>
-</div>
-
-      <div class="project-card">
-  <div class="project-image" id="plasma-carousel"></div>
-  <div class="project-content">
-    <h3>Plasma-Treated PDMS: Wrinkle-Free Metal Films</h3>
-    <div class="project-tags">
-      <span class="project-tag">O₂ Plasma</span>
-      <span class="project-tag">Surface Modification</span>
-      <span class="project-tag">PDMS</span>
-      <span class="project-tag">Failure Analysis</span>
-      <span class="project-tag">Process Development</span>
-    </div>
-    <p>
-Applied O₂ plasma treatment to modify PDMS surface properties before metal deposition. 
-Eliminated cracking and enabled reliable thin film patterning on flexible substrates.
-</p>
-    <div class="project-links">
-      <a href="projects/plasma-treated-wrinkle-free-pdms/" class="button small">View Project →</a>
-    </div>
-  </div>
-</div>
-<div class="project-card">      
-<div class="project-image" id="pvd-carousel"></div>
-  <div class="project-content">
-    <h3>Thin Film Process Development: E-beam vs. Sputtering</h3>
-    <div class="project-tags">
-      <span class="project-tag">E-beam Evaporation</span>
-      <span class="project-tag">DC Sputtering</span>
-      <span class="project-tag">Cr/Au</span>
-      <span class="project-tag">Ni/Au</span>
-      <span class="project-tag">Ti/Au</span>
-      <span class="project-tag">Process Runcards</span>
-    </div>
-    <p>
-Developed thin film deposition processes using e-beam evaporation and DC sputtering. 
-Optimized adhesion, thickness control, and reproducibility across multiple substrates.
-</p>
-    <div class="project-links">
-      <a href="projects/thin-film-process-development/" class="button small">View Project →</a>
-    </div>
-  </div>
-</div>
-
-</div>
-
-
-<!-- ==================== LITHOGRAPHY & PATTERNING ==================== -->
-<h2 class="subsection-header">
-  <i class="fas fa-ruler-combined" style="margin-right: 0.5rem;"></i> 
-  Lithography & Patterning
-</h2>
-<p style="margin-top: -1rem;">
-Photolithography, mask design, and surface-process interactions for reliable pattern transfer.
-</p>
-
-<div class="project-grid">
-  <!-- Photomask -->
-  <!-- KEEP -->
-
-  <!-- PR Adhesion -->
-  <!-- KEEP -->
-
-  <!-- Ceramic -->
-  <!-- KEEP -->
-
-  <!-- C-MEMS -->
-  <!-- MOVE FROM TOP -->
-</div>
-
-
-<!-- ==================== DEVICE FABRICATION & INTEGRATION ==================== -->
-<h2 class="subsection-header">
-  <i class="fas fa-microchip" style="margin-right: 0.5rem;"></i> 
-  Device Fabrication & Integration
-</h2>
-<p style="margin-top: -1rem;">
-End-to-end fabrication integrating deposition, lithography, and device-level implementation.
-</p>
-
-<div class="project-grid">
-  <!-- MEMS -->
-  <!-- MOVE -->
-
-  <!-- Microsupercapacitor -->
-  <!-- KEEP -->
-</div>
-
-
-<!-- ==================== SENSORS & SYSTEMS ==================== -->
-<h2 class="subsection-header">
-  <i class="fas fa-heartbeat" style="margin-right: 0.5rem;"></i> 
-  Sensors & Systems
-</h2>
-<p style="margin-top: -1rem;">
-Application-driven sensor systems integrating hardware, signal acquisition, and real-world validation.
-</p>
-
-<div class="project-grid">
-  <!-- ALL sensor cards STAY HERE EXCEPT cold spray -->
-</div>
-
-
-<!-- ==================== CHARACTERIZATION & FAILURE ANALYSIS ==================== -->
-<h2 class="subsection-header">
-  <i class="fas fa-microscope" style="margin-right: 0.5rem;"></i> 
-  Characterization & Failure Analysis
-</h2>
-<p style="margin-top: -1rem;">
-Material characterization and failure analysis for process validation and optimization.
-</p>
-
-<div class="project-grid">
-  <!-- SEM -->
-  <!-- Raman -->
-</div>
-
-
-<!-- ==================== MODELING & SIMULATION ==================== -->
-<h2 class="subsection-header">
-  <i class="fas fa-cubes" style="margin-right: 0.5rem;"></i> 
-  Modeling & Simulation
-</h2>
-
-<div class="project-grid">
-  <!-- FEA -->
-</div>
-
-
-<!-- ==================== SOFTWARE & AUTOMATION ==================== -->
-<h2 class="subsection-header">
-  <i class="fas fa-chart-bar" style="margin-right: 0.5rem;"></i> 
-  Software & Automation
-</h2>
-
-<div class="project-grid">
-  <!-- LabVIEW -->
-  <!-- Python -->
-  <!-- SolidWorks (optional) -->
-</div>
-    
-
-
-
-
-
-
-
-
-
-    
-    
-    <!-- ==================== MICRO-NANOFABRICATION PROJECTS ==================== -->
-        <!-- ==================== MICRO-NANOFABRICATION PROJECTS ==================== -->
+    <!-- ==================== PROCESS DEVELOPMENT & THIN FILMS ==================== -->
     <h2 class="subsection-header">
-      <i class="fas fa-microchip" style="margin-right: 0.5rem;"></i> 
-      Micro-Nanofabrication Projects
-    </h2>
-
-    <!-- MEMS Group -->
-    <h3 style="margin: 1rem 0 1rem 0; color: #18bfef;">
-      <i class="fas fa-tachometer-alt" style="margin-right: 0.5rem;"></i> 
-      MEMS (Micro-Electromechanical Systems)
-    </h3>
-    <div class="project-grid">
-      
-      <div class="project-card">
-  <div class="project-image" id="wheatstone-carousel"></div>
-
-  <div class="project-content">
-    <h3>Wheatstone Bridge MEMS Pressure Sensor</h3>
-
-    <div class="project-tags">
-      <span class="project-tag">MEMS</span>
-      <span class="project-tag">Wheatstone Bridge</span>
-      <span class="project-tag">Piezoresistive</span>
-      <span class="project-tag">Cleanroom</span>
-    </div>
-
-    <p>
-Designed and fabricated a MEMS pressure sensor using a piezoresistive Wheatstone bridge configuration. 
-Enabled precise pressure sensing through diaphragm-based strain detection.
-</p>
-
-    <div class="project-links">
-      <a href="projects/mems-pressure-sensor/" class="button small">
-        View Project →
-      </a>
-    </div>
-  </div>
-</div>
-
-  <!-- 🔥 CAROUSEL CONTAINER -->
-
-  <div class="project-card">    
-  <div class="project-image" id="cmems-carousel"></div>
-
-  <div class="project-content">
-    <h3>C-MEMS: Carbon Microelectromechanical Systems</h3>
-
-    <div class="project-tags">
-      <span class="project-tag">Training</span>
-      <span class="project-tag">Photolithography</span>
-      <span class="project-tag">Pyrolysis</span>
-      <span class="project-tag">SU-8</span>
-      <span class="project-tag">2019-2021</span>
-    </div>
-
-    <p>
-Fabricated carbon MEMS structures using SU-8 lithography and high-temperature pyrolysis. 
-Developed 2D/3D microstructures for energy storage and sensing applications.
-</p>
-
-    <div class="project-links">
-      <a href="projects/c-mems-training/" class="button small">
-        View Training →
-      </a>
-    </div>
-  </div>
-
-</div>
-
-      <div class="project-card">
-  <div class="project-image" id="msc-carousel"></div>
-  <div class="project-content">
-    <h3>Microsupercapacitor Fabrication Training</h3>
-    <div class="project-tags">
-      <span class="project-tag">Training</span>
-      <span class="project-tag">Energy Storage</span>
-      <span class="project-tag">Interdigitated Electrodes</span>
-      <span class="project-tag">BPE Graphene</span>
-      <span class="project-tag">2019-2021</span>
-    </div>
-    <p>
-Fabricated interdigitated microsupercapacitors using photolithography and rGO deposition. 
-Achieved high capacitance and long-term cycling stability for on-chip energy storage.
-</p>
-    <div class="project-links">
-      <a href="projects/microsupercapacitor-training/" class="button small">View Training →</a>
-    </div>
-  </div>
-</div>
-
-    <!-- Thin Film Process Optimization (formerly PVD/CVD Group) -->
-    <h3 style="margin: 2rem 0 1rem 0; color: #18bfef;">
       <i class="fas fa-layer-group" style="margin-right: 0.5rem;"></i> 
-      Thin Film Process Optimization
-    </h3>
-    
-    <!-- Photolithography Projects (formerly Mask Design) -->
-    <h3 style="margin: 2rem 0 1rem 0; color: #18bfef;">
-      <i class="fas fa-ruler-combined" style="margin-right: 0.5rem;"></i> 
-      Photolithography Projects
-    </h3>
-    <div class="project-grid">
-
-      <div class="project-card">
-  <div class="project-image" id="mask-carousel"></div>
-  <div class="project-content">
-    <h3>Photomask Design & Fabrication</h3>
-    <div class="project-tags">
-      <span class="project-tag">LayoutEditor</span>
-      <span class="project-tag">Laser Lithography</span>
-      <span class="project-tag">Multi-Project</span>
-      <span class="project-tag">MEMS</span>
-    </div>
-    <p>
-Designed and fabricated photomasks for MEMS, sensors, and microdevices using laser lithography. 
-Enabled multi-project fabrication including IDEs, strain sensors, and microstructures.
-</p>
-    <div class="project-links">
-      <a href="projects/photomask-design-fabrication/" class="button small">View Project →</a>
-    </div>
-  </div>
-</div>
-
-  <div class="project-card">    
-<div class="project-image" id="pr-adhesion-carousel"></div>
-  <div class="project-content">
-    <h3>Photoresist Adhesion Optimization on Hydrophobic PDMS</h3>
-    <div class="project-tags">
-      <span class="project-tag">DOE</span>
-      <span class="project-tag">O₂ Plasma</span>
-      <span class="project-tag">Failure Analysis</span>
-      <span class="project-tag">Process Development</span>
-    </div>
-    <p>
-Optimized photoresist adhesion on hydrophobic PDMS using DOE-based plasma treatment. 
-Transformed pattern failure into reliable lithography for flexible electronics.
-</p>
-    <div class="project-links">
-      <a href="projects/resist-adhesion-pdms/" class="button small">View Project →</a>
-    </div>
-  </div>
-</div>
-    
-      <div class="project-card">
-  <div class="project-image" id="ceramic-carousel"></div>
-  <div class="project-content">
-    <h3>Photolithography Optimization on Ceramic</h3>
-    <div class="project-tags">
-      <span class="project-tag">Ceramic</span>
-      <span class="project-tag">High Temperature</span>
-      <span class="project-tag">SOFC</span>
-      <span class="project-tag">Published</span>
-    </div>
-    <p>
-Developed photolithography processes for high-temperature ceramic substrates. 
-Enabled patterned electrode fabrication for SOFC applications.
-</p>
-    <div class="project-links">
-      <a href="projects/photolithography-ceramic/" class="button small">View Project →</a>
-    </div>
-  </div>
-</div>
-
-      
-    </div>
-
-    <!-- ==================== SENSOR PROJECTS ==================== -->
-    <h2 class="subsection-header">
-      <i class="fas fa-heartbeat" style="margin-right: 0.5rem;"></i> 
-      Sensor Projects
+      Process Development & Thin Films
     </h2>
+    <div class="subsection-description">Thin film deposition, adhesion engineering, and scalable process development</div>
     <div class="project-grid">
-      
-      <div class="project-card">
-  <div class="project-image" id="paper-sensor-carousel"></div>
-  <div class="project-content">
-    <h3>Paper-Based Supercapacitive Pressure Sensor</h3>
-    <div class="project-tags">
-      <span class="project-tag">ACS AMI</span>
-      <span class="project-tag">First Author</span>
-      <span class="project-tag">Wearable</span>
-      <span class="project-tag">Pulse Waveform</span>
-    </div>
-    <p>
-Developed a tissue-paper-based supercapacitive pressure sensor for wearable monitoring. 
-Achieved high sensitivity and stable pulse waveform detection.
-</p>
-    <div class="project-links">
-      <a href="projects/paper-based-supercapacitive-sensor/" class="button small">View Project →</a>
-      <a href="https://doi.org/10.1021/acsami.3c08720" class="button small" target="_blank">Paper</a>
-    </div>
-  </div>
-</div>
 
-      <div class="project-card">
-  <div class="project-image" id="mwcnd-pdms-carousel"></div>
-  <div class="project-content">
-    <h3>Wearable Capacitive Pressure Sensor</h3>
-    <div class="project-tags">
-      <span class="project-tag">Molecules</span>
-      <span class="project-tag">First Author</span>
-      <span class="project-tag">Capacitive</span>
-      <span class="project-tag">Proximity</span>
-    </div>
-    <p>
-Built a porous PDMS-MWCNT capacitive sensor with dual-mode sensing capability. 
-Enabled both contact pressure sensing and non-contact proximity detection.
-</p>
-    <div class="project-links">
-      <a href="projects/wearable-capacitive-pressure-sensor/" class="button small">View Project →</a>
-      <a href="https://doi.org/10.3390/molecules27206872" class="button small" target="_blank">Paper</a>
-    </div>
-  </div>
-</div>
-      
-      <div class="project-card">
-  <div class="project-image" id="dualmode-carousel"></div>
-  <div class="project-content">
-    <h3>Dual-Mode Pressure Sensor for Cardiovascular Monitoring</h3>
-    <div class="project-tags">
-      <span class="project-tag">Piezoresistive</span>
-      <span class="project-tag">Supercapacitive</span>
-      <span class="project-tag">Cardiovascular</span>
-      <span class="project-tag">First-Author</span>
-      <span class="project-tag">Patent Pending</span>
-    </div>
-    <p>
-Designed a dual-mode pressure sensor combining piezoresistive and capacitive mechanisms. 
-Enabled simultaneous multimodal cardiovascular signal acquisition.
-</p>
-    <div class="project-links">
-      <a href="projects/dual-mode-pressure-sensor/" class="button small">View Project →</a>
-    </div>
-  </div>
-</div>
+      <!-- Tunable Wrinkling of Gold on PDMS -->
+      <div class="project-card"> 
+        <div class="project-image" id="wrinkle-carousel"></div>
+        <div class="project-content">
+          <h3>Tunable Wrinkling of Gold on PDMS</h3>
+          <div class="project-tags">
+            <span class="project-tag">PDMS</span>
+            <span class="project-tag">E-beam Evaporation</span>
+            <span class="project-tag">Negative Resist</span>
+            <span class="project-tag">Lift-Off</span>
+          </div>
+          <p>Engineered controlled wrinkling in Cr/Au thin films on PDMS via thermal mismatch. Enabled tunable surface morphologies for stretchable electronics and sensors.</p>
+          <div class="project-links">
+            <a href="projects/tunable-wrinkling-pdms/" class="button small">View Project →</a>
+          </div>
+        </div>
+      </div>
 
-<div class="project-card">
-  <div class="project-image" id="dualppg-carousel"></div>
-  <div class="project-content">
-    <h3>Dual Piezoresistive Sensor with PPG Integration</h3>
-    <div class="project-tags">
-      <span class="project-tag">ACS AMI</span>
-      <span class="project-tag">Co-Author</span>
-      <span class="project-tag">Wearable</span>
-      <span class="project-tag">Pulse Wave</span>
-      <span class="project-tag">BLE</span>
-    </div>
-    <p>
-Integrated piezoresistive sensors with PPG for wearable pulse monitoring systems. 
-Enabled cross-validated physiological signal acquisition.
-</p>
-    <div class="project-links">
-      <a href="projects/dual-piezoresistive-sensor-system/" class="button small">View Project →</a>
-      <a href="https://doi.org/10.1021/acsami.4c17710" class="button small" target="_blank">Paper</a>
-    </div>
-  </div>
-</div>
+      <!-- Plasma-Treated PDMS: Wrinkle-Free Metal Films -->
+      <div class="project-card">
+        <div class="project-image" id="plasma-carousel"></div>
+        <div class="project-content">
+          <h3>Plasma-Treated PDMS: Wrinkle-Free Metal Films</h3>
+          <div class="project-tags">
+            <span class="project-tag">O₂ Plasma</span>
+            <span class="project-tag">Surface Modification</span>
+            <span class="project-tag">PDMS</span>
+            <span class="project-tag">Failure Analysis</span>
+          </div>
+          <p>Applied O₂ plasma treatment to modify PDMS surface properties before metal deposition. Eliminated cracking and enabled reliable thin film patterning on flexible substrates.</p>
+          <div class="project-links">
+            <a href="projects/plasma-treated-wrinkle-free-pdms/" class="button small">View Project →</a>
+          </div>
+        </div>
+      </div>
 
-<div class="project-card">
-  <div class="project-image" id="testbed-carousel"></div>
-  <div class="project-content">
-    <h3>Piezoresistive Pressure Sensor Testbed</h3>
-    <div class="project-tags">
-      <span class="project-tag">IEEE Sensors</span>
-      <span class="project-tag">Hardware</span>
-      <span class="project-tag">Arduino</span>
-      <span class="project-tag">Characterization</span>
-    </div>
-    <p>
-Developed a programmable testbed for pressure sensor characterization. 
-Enabled controlled testing of sensitivity, response time, and durability.
-</p>
-    <div class="project-links">
-      <a href="projects/piezoresistive-sensor-testbed/" class="button small">View Project →</a>
-      <a href="https://doi.org/10.1109/LSENS.2023.3300407" class="button small" target="_blank">Paper</a>
-    </div>
-  </div>
-</div>
-      
+      <!-- Thin Film Process Development: E-beam vs. Sputtering -->
+      <div class="project-card">      
+        <div class="project-image" id="pvd-carousel"></div>
+        <div class="project-content">
+          <h3>Thin Film Process Development: E-beam vs. Sputtering</h3>
+          <div class="project-tags">
+            <span class="project-tag">E-beam Evaporation</span>
+            <span class="project-tag">DC Sputtering</span>
+            <span class="project-tag">Cr/Au</span>
+            <span class="project-tag">Ni/Au</span>
+            <span class="project-tag">Ti/Au</span>
+          </div>
+          <p>Developed thin film deposition processes using e-beam evaporation and DC sputtering. Optimized adhesion, thickness control, and reproducibility across multiple substrates.</p>
+          <div class="project-links">
+            <a href="projects/thin-film-process-development/" class="button small">View Project →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cold Spray Graphene Flexible Sensor -->
       <div class="project-card">
         <div class="project-image" id="coldspray-carousel"></div>
         <div class="project-content">
@@ -755,84 +302,271 @@ Enabled controlled testing of sensitivity, response time, and durability.
             <span class="project-tag">Cold Spray</span>
             <span class="project-tag">PDMS</span>
           </div>
-          <p>
-Developed a cold spray process to deposit graphene on flexible PDMS substrates. 
-Enabled scalable fabrication of wearable sensors (ACS AMI submission).
-</p>
+          <p>Developed a cold spray process to deposit graphene on flexible PDMS substrates. Enabled scalable fabrication of wearable sensors.</p>
           <div class="project-links">
-            <a href="projects/Cold-spray" class="button small">View Details</a>
+            <a href="projects/Cold-spray" class="button small">View Project →</a>
           </div>
         </div>
       </div>
     </div>
 
- <!-- ==================== FEA / SIMULATION PROJECTS ==================== -->
+    <!-- ==================== LITHOGRAPHY & PATTERNING ==================== -->
     <h2 class="subsection-header">
-      <i class="fas fa-cubes" style="margin-right: 0.5rem;"></i> 
-      FEA & Simulation Projects
+      <i class="fas fa-ruler-combined" style="margin-right: 0.5rem;"></i> 
+      Lithography & Patterning
     </h2>
+    <div class="subsection-description">Photolithography, mask design, and surface-process interactions for reliable pattern transfer</div>
     <div class="project-grid">
-      
+
+      <!-- Photomask Design & Fabrication -->
       <div class="project-card">
-   <div class="project-image" id="fea-carousel"></div>
-    <div class="project-content">
-      <h3>Design Rules for Micro-Fabricated Piezoresistive Sensors</h3>
-      <div class="project-tags">
-        <span class="project-tag">COMSOL</span>
-        <span class="project-tag">FEA</span>
-        <span class="project-tag">Optimization</span>
-        <span class="project-tag">Micromachines</span>
+        <div class="project-image" id="mask-carousel"></div>
+        <div class="project-content">
+          <h3>Photomask Design & Fabrication</h3>
+          <div class="project-tags">
+            <span class="project-tag">LayoutEditor</span>
+            <span class="project-tag">Laser Lithography</span>
+            <span class="project-tag">Multi-Project</span>
+            <span class="project-tag">MEMS</span>
+          </div>
+          <p>Designed and fabricated photomasks for MEMS, sensors, and microdevices using laser lithography. Enabled multi-project fabrication including IDEs, strain sensors, and microstructures.</p>
+          <div class="project-links">
+            <a href="projects/photomask-design-fabrication/" class="button small">View Project →</a>
+          </div>
+        </div>
       </div>
-      <p>
-Performed FEA-based optimization of piezoresistive sensor microstructures. 
-Established design rules for high sensitivity and signal output.
-</p>
-      <div class="project-links">
-        <a href="projects/piezoresistive-sensor-design-rules/" class="button small">View Project →</a>
-        <a href="https://doi.org/10.3390/mi13060838" class="button small" target="_blank">Paper</a>
+
+      <!-- Photoresist Adhesion Optimization on Hydrophobic PDMS -->
+      <div class="project-card">    
+        <div class="project-image" id="pr-adhesion-carousel"></div>
+        <div class="project-content">
+          <h3>Photoresist Adhesion Optimization on Hydrophobic PDMS</h3>
+          <div class="project-tags">
+            <span class="project-tag">DOE</span>
+            <span class="project-tag">O₂ Plasma</span>
+            <span class="project-tag">Failure Analysis</span>
+            <span class="project-tag">Process Development</span>
+          </div>
+          <p>Optimized photoresist adhesion on hydrophobic PDMS using DOE-based plasma treatment. Transformed pattern failure into reliable lithography for flexible electronics.</p>
+          <div class="project-links">
+            <a href="projects/resist-adhesion-pdms/" class="button small">View Project →</a>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Photolithography Optimization on Ceramic -->
+      <div class="project-card">
+        <div class="project-image" id="ceramic-carousel"></div>
+        <div class="project-content">
+          <h3>Photolithography Optimization on Ceramic</h3>
+          <div class="project-tags">
+            <span class="project-tag">Ceramic</span>
+            <span class="project-tag">High Temperature</span>
+            <span class="project-tag">SOFC</span>
+            <span class="project-tag">Published</span>
+          </div>
+          <p>Developed photolithography processes for high-temperature ceramic substrates. Enabled patterned electrode fabrication for SOFC applications.</p>
+          <div class="project-links">
+            <a href="projects/photolithography-ceramic/" class="button small">View Project →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- C-MEMS: Carbon Microelectromechanical Systems -->
+      <div class="project-card">    
+        <div class="project-image" id="cmems-carousel"></div>
+        <div class="project-content">
+          <h3>C-MEMS: Carbon Microelectromechanical Systems</h3>
+          <div class="project-tags">
+            <span class="project-tag">Training</span>
+            <span class="project-tag">Photolithography</span>
+            <span class="project-tag">Pyrolysis</span>
+            <span class="project-tag">SU-8</span>
+          </div>
+          <p>Fabricated carbon MEMS structures using SU-8 lithography and high-temperature pyrolysis. Developed 2D/3D microstructures for energy storage and sensing applications.</p>
+          <div class="project-links">
+            <a href="projects/c-mems-training/" class="button small">View Training →</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-</div>
+    <!-- ==================== DEVICE FABRICATION & INTEGRATION ==================== -->
+    <h2 class="subsection-header">
+      <i class="fas fa-microchip" style="margin-right: 0.5rem;"></i> 
+      Device Fabrication & Integration
+    </h2>
+    <div class="subsection-description">End-to-end fabrication integrating deposition, lithography, and device-level implementation</div>
+    <div class="project-grid">
 
+      <!-- Wheatstone Bridge MEMS Pressure Sensor -->
+      <div class="project-card">
+        <div class="project-image" id="wheatstone-carousel"></div>
+        <div class="project-content">
+          <h3>Wheatstone Bridge MEMS Pressure Sensor</h3>
+          <div class="project-tags">
+            <span class="project-tag">MEMS</span>
+            <span class="project-tag">Wheatstone Bridge</span>
+            <span class="project-tag">Piezoresistive</span>
+            <span class="project-tag">Cleanroom</span>
+          </div>
+          <p>Designed and fabricated a MEMS pressure sensor using a piezoresistive Wheatstone bridge configuration. Enabled precise pressure sensing through diaphragm-based strain detection.</p>
+          <div class="project-links">
+            <a href="projects/mems-pressure-sensor/" class="button small">View Project →</a>
+          </div>
+        </div>
+      </div>
 
+      <!-- Microsupercapacitor Fabrication Training -->
+      <div class="project-card">
+        <div class="project-image" id="msc-carousel"></div>
+        <div class="project-content">
+          <h3>Microsupercapacitor Fabrication Training</h3>
+          <div class="project-tags">
+            <span class="project-tag">Training</span>
+            <span class="project-tag">Energy Storage</span>
+            <span class="project-tag">Interdigitated Electrodes</span>
+            <span class="project-tag">BPE Graphene</span>
+          </div>
+          <p>Fabricated interdigitated microsupercapacitors using photolithography and rGO deposition. Achieved high capacitance and long-term cycling stability for on-chip energy storage.</p>
+          <div class="project-links">
+            <a href="projects/microsupercapacitor-training/" class="button small">View Training →</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- ==================== SENSORS & SYSTEMS ==================== -->
+    <h2 class="subsection-header">
+      <i class="fas fa-heartbeat" style="margin-right: 0.5rem;"></i> 
+      Sensors & Systems
+    </h2>
+    <div class="subsection-description">Application-driven sensor systems integrating hardware, signal acquisition, and real-world validation</div>
+    <div class="project-grid">
+
+      <!-- Paper-Based Supercapacitive Pressure Sensor -->
+      <div class="project-card">
+        <div class="project-image" id="paper-sensor-carousel"></div>
+        <div class="project-content">
+          <h3>Paper-Based Supercapacitive Pressure Sensor</h3>
+          <div class="project-tags">
+            <span class="project-tag">ACS AMI</span>
+            <span class="project-tag">First Author</span>
+            <span class="project-tag">Wearable</span>
+            <span class="project-tag">Pulse Waveform</span>
+          </div>
+          <p>Developed a tissue-paper-based supercapacitive pressure sensor for wearable monitoring. Achieved high sensitivity and stable pulse waveform detection.</p>
+          <div class="project-links">
+            <a href="projects/paper-based-supercapacitive-sensor/" class="button small">View Project →</a>
+            <a href="https://doi.org/10.1021/acsami.3c08720" class="button small" target="_blank">Paper</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wearable Capacitive Pressure Sensor -->
+      <div class="project-card">
+        <div class="project-image" id="mwcnt-carousel"></div>
+        <div class="project-content">
+          <h3>Wearable Capacitive Pressure Sensor</h3>
+          <div class="project-tags">
+            <span class="project-tag">Molecules</span>
+            <span class="project-tag">First Author</span>
+            <span class="project-tag">Capacitive</span>
+            <span class="project-tag">Proximity</span>
+          </div>
+          <p>Built a porous PDMS-MWCNT capacitive sensor with dual-mode sensing capability. Enabled both contact pressure sensing and non-contact proximity detection.</p>
+          <div class="project-links">
+            <a href="projects/wearable-capacitive-pressure-sensor/" class="button small">View Project →</a>
+            <a href="https://doi.org/10.3390/molecules27206872" class="button small" target="_blank">Paper</a>
+          </div>
+        </div>
+      </div>
       
-    <!-- ==================== CHARACTERIZATION PROJECTS ==================== -->
+      <!-- Dual-Mode Pressure Sensor -->
+      <div class="project-card">
+        <div class="project-image" id="dualmode-carousel"></div>
+        <div class="project-content">
+          <h3>Dual-Mode Pressure Sensor for Cardiovascular Monitoring</h3>
+          <div class="project-tags">
+            <span class="project-tag">Piezoresistive</span>
+            <span class="project-tag">Supercapacitive</span>
+            <span class="project-tag">Cardiovascular</span>
+            <span class="project-tag">First-Author</span>
+          </div>
+          <p>Designed a dual-mode pressure sensor combining piezoresistive and capacitive mechanisms. Enabled simultaneous multimodal cardiovascular signal acquisition.</p>
+          <div class="project-links">
+            <a href="projects/dual-mode-pressure-sensor/" class="button small">View Project →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dual Piezoresistive Sensor with PPG Integration -->
+      <div class="project-card">
+        <div class="project-image" id="dualppg-carousel"></div>
+        <div class="project-content">
+          <h3>Dual Piezoresistive Sensor with PPG Integration</h3>
+          <div class="project-tags">
+            <span class="project-tag">ACS AMI</span>
+            <span class="project-tag">Co-Author</span>
+            <span class="project-tag">Wearable</span>
+            <span class="project-tag">Pulse Wave</span>
+            <span class="project-tag">BLE</span>
+          </div>
+          <p>Integrated piezoresistive sensors with PPG for wearable pulse monitoring systems. Enabled cross-validated physiological signal acquisition.</p>
+          <div class="project-links">
+            <a href="projects/dual-piezoresistive-sensor-system/" class="button small">View Project →</a>
+            <a href="https://doi.org/10.1021/acsami.4c17710" class="button small" target="_blank">Paper</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Piezoresistive Pressure Sensor Testbed -->
+      <div class="project-card">
+        <div class="project-image" id="testbed-carousel"></div>
+        <div class="project-content">
+          <h3>Piezoresistive Pressure Sensor Testbed</h3>
+          <div class="project-tags">
+            <span class="project-tag">IEEE Sensors</span>
+            <span class="project-tag">Hardware</span>
+            <span class="project-tag">Arduino</span>
+            <span class="project-tag">Characterization</span>
+          </div>
+          <p>Developed a programmable testbed for pressure sensor characterization. Enabled controlled testing of sensitivity, response time, and durability.</p>
+          <div class="project-links">
+            <a href="projects/piezoresistive-sensor-testbed/" class="button small">View Project →</a>
+            <a href="https://doi.org/10.1109/LSENS.2023.3300407" class="button small" target="_blank">Paper</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== CHARACTERIZATION & FAILURE ANALYSIS ==================== -->
     <h2 class="subsection-header">
       <i class="fas fa-microscope" style="margin-right: 0.5rem;"></i> 
-      Characterization Projects
+      Characterization & Failure Analysis
     </h2>
+    <div class="subsection-description">Material characterization and failure analysis for process validation and optimization</div>
     <div class="project-grid">
-      
+
+      <!-- SEM Characterization of Functional Materials -->
       <div class="project-card">
+        <div class="project-image" id="sem-carousel"></div>
+        <div class="project-content">
+          <h3>SEM Characterization of Functional Materials</h3>
+          <div class="project-tags">
+            <span class="project-tag">SEM</span>
+            <span class="project-tag">Morphology</span>
+            <span class="project-tag">Microstructure</span>
+            <span class="project-tag">Materials</span>
+          </div>
+          <p>Performed SEM analysis of functional materials including PDMS, graphene, and carbon cloth. Revealed microstructure and morphology critical for device performance.</p>
+          <div class="project-links">
+            <a href="projects/Characterization_SEM/" class="button small">View SEM Gallery →</a>
+          </div>
+        </div>
+      </div>
 
-  <div class="project-image" id="sem-carousel"></div>
-
-  <div class="project-content">
-    <h3>SEM Characterization of Functional Materials</h3>
-
-    <div class="project-tags">
-      <span class="project-tag">SEM</span>
-      <span class="project-tag">Morphology</span>
-      <span class="project-tag">Microstructure</span>
-      <span class="project-tag">Materials</span>
-    </div>
-
-    <p>
-Performed SEM analysis of functional materials including PDMS, graphene, and carbon cloth. 
-Revealed microstructure and morphology critical for device performance.
-</p>
-
-    <div class="project-links">
-      <a href="projects/Characterization_SEM/" class="button small">
-        View SEM Gallery →
-      </a>
-    </div>
-  </div>
-
-</div>
+      <!-- Raman & FTIR Spectroscopy -->
       <div class="project-card">
         <div class="project-image" id="raman-carousel"></div>
         <div class="project-content">
@@ -842,69 +576,71 @@ Revealed microstructure and morphology critical for device performance.
             <span class="project-tag">FTIR</span>
             <span class="project-tag">Material ID</span>
           </div>
-          <p>
-Used Raman and FTIR spectroscopy for material identification and defect analysis. 
-Characterized bonding and structural properties of fabricated materials.
-</p>
+          <p>Used Raman and FTIR spectroscopy for material identification and defect analysis. Characterized bonding and structural properties of fabricated materials.</p>
           <div class="project-links">
-            <a href="projects/Characterization_FTIR_RAMAN" class="button small">View Spectra</a>
+            <a href="projects/Characterization_FTIR_RAMAN" class="button small">View Spectra →</a>
           </div>
         </div>
       </div>
-
-      
-      
     </div>
 
-    <!-- ==================== COMPUTER LITERACY ==================== -->
+    <!-- ==================== MODELING & SIMULATION ==================== -->
     <h2 class="subsection-header">
-      <i class="fas fa-chart-bar" style="margin-right: 0.5rem;"></i> 
-      Software/Programming & Automation
+      <i class="fas fa-cubes" style="margin-right: 0.5rem;"></i> 
+      Modeling & Simulation
     </h2>
+    <div class="subsection-description">Finite element analysis and design optimization for sensor performance prediction</div>
     <div class="project-grid">
 
+      <!-- Design Rules for Micro-Fabricated Piezoresistive Sensors -->
       <div class="project-card">
-        <div class="project-image">
-          <div class="project-image-placeholder">
-            <i class="fas fa-cube"></i>
-            <span>SolidWorks</span>
-          </div>
-        </div>
+        <div class="project-image" id="fea-carousel"></div>
         <div class="project-content">
-          <h3>SolidWorks Projects</h3>
+          <h3>Design Rules for Micro-Fabricated Piezoresistive Sensors</h3>
           <div class="project-tags">
-            <span class="project-tag">SolidWorks</span>
-            <span class="project-tag">3D Printing</span>
+            <span class="project-tag">COMSOL</span>
+            <span class="project-tag">FEA</span>
+            <span class="project-tag">Optimization</span>
+            <span class="project-tag">Micromachines</span>
           </div>
-          <p>Designed custom housing for wearable pressure sensors using SolidWorks, optimized for comfort and signal quality during pulse waveform monitoring.</p>
+          <p>Performed FEA-based optimization of piezoresistive sensor microstructures. Established design rules for high sensitivity and signal output.</p>
           <div class="project-links">
-            <a href="#" class="button small">View STL</a>
+            <a href="projects/piezoresistive-sensor-design-rules/" class="button small">View Project →</a>
+            <a href="https://doi.org/10.3390/mi13060838" class="button small" target="_blank">Paper</a>
           </div>
         </div>
       </div>
-      
-      <div class="project-card">
-  <div class="project-image" id="labview-carousel"></div>
-  <div class="project-content">
-    <h3>LabVIEW Automation: Instrument Control & Data Acquisition</h3>
-    <div class="project-tags">
-      <span class="project-tag">LabVIEW</span>
-      <span class="project-tag">GPIB</span>
-      <span class="project-tag">RS-232</span>
-      <span class="project-tag">I2C</span>
-      <span class="project-tag">Real-Time Plotting</span>
     </div>
-    <p>
-Developed LabVIEW-based automation for instrument control and data acquisition. 
-Enabled real-time visualization and multimodal sensor testing.
-</p>
-    <div class="project-links">
-      <a href="projects/labview-automation-projects/" class="button small">View Project →</a>
-    </div>
-  </div>
-</div>
 
-<div class="project-card">
+    <!-- ==================== SOFTWARE & AUTOMATION ==================== -->
+    <h2 class="subsection-header">
+      <i class="fas fa-chart-bar" style="margin-right: 0.5rem;"></i> 
+      Software & Automation
+    </h2>
+    <div class="subsection-description">Data acquisition, instrument control, and automation for research workflows</div>
+    <div class="project-grid">
+
+      <!-- LabVIEW Automation -->
+      <div class="project-card">
+        <div class="project-image" id="labview-carousel"></div>
+        <div class="project-content">
+          <h3>LabVIEW Automation: Instrument Control & Data Acquisition</h3>
+          <div class="project-tags">
+            <span class="project-tag">LabVIEW</span>
+            <span class="project-tag">GPIB</span>
+            <span class="project-tag">RS-232</span>
+            <span class="project-tag">I2C</span>
+            <span class="project-tag">Real-Time Plotting</span>
+          </div>
+          <p>Developed LabVIEW-based automation for instrument control and data acquisition. Enabled real-time visualization and multimodal sensor testing.</p>
+          <div class="project-links">
+            <a href="projects/labview-automation-projects/" class="button small">View Project →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Python / Machine Learning -->
+      <div class="project-card">
         <div class="project-image">
           <div class="project-image-placeholder">
             <i class="fas fa-brain"></i>
@@ -918,10 +654,7 @@ Enabled real-time visualization and multimodal sensor testing.
             <span class="project-tag">Scikit-learn</span>
             <span class="project-tag">TensorFlow</span>
           </div>
-          <p>
-Applied machine learning to analyze pulse waveform data for health monitoring. 
-Enabled classification of physiological signals using Python-based models.
-</p>
+          <p>Applied machine learning to analyze pulse waveform data for health monitoring. Enabled classification of physiological signals using Python-based models.</p>
           <div class="project-links">
             <a href="#" class="button small">GitHub</a>
             <a href="#" class="button small">Paper</a>
@@ -929,153 +662,115 @@ Enabled classification of physiological signals using Python-based models.
         </div>
       </div>
 
-      
-      
+      <!-- SolidWorks CAD -->
+      <div class="project-card">
+        <div class="project-image">
+          <div class="project-image-placeholder">
+            <i class="fas fa-cube"></i>
+            <span>SolidWorks</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>CAD Design: SolidWorks Projects</h3>
+          <div class="project-tags">
+            <span class="project-tag">SolidWorks</span>
+            <span class="project-tag">3D Printing</span>
+          </div>
+          <p>Designed custom housing for wearable pressure sensors using SolidWorks, optimized for comfort and signal quality during pulse waveform monitoring.</p>
+          <div class="project-links">
+            <a href="#" class="button small">View STL</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-
-
-   
-
-    
-
-    
     <!-- ==================== UNDERGRADUATE PROJECTS ==================== -->
     <h2 class="subsection-header">
       <i class="fas fa-graduation-cap" style="margin-right: 0.5rem;"></i> 
       Undergraduate Projects
     </h2>
+    <div class="subsection-description">Early engineering work from bachelor's degree at BUET</div>
     <div class="project-grid">
-      
-<div class="project-card">
 
-  <div class="project-image" id="robot-carousel"></div>
+      <!-- Glass Climbing Robot -->
+      <div class="project-card">
+        <div class="project-image" id="robot-carousel"></div>
+        <div class="project-content">
+          <h3>Glass Climbing Robot</h3>
+          <div class="project-tags">
+            <span class="project-tag">Robotics</span>
+            <span class="project-tag">Embedded Systems</span>
+            <span class="project-tag">ATMEGA32</span>
+            <span class="project-tag">Mechatronics</span>
+          </div>
+          <p>Designed and built a glass-climbing robot using vacuum suction and embedded control. Achieved stable vertical motion on smooth surfaces.</p>
+          <div class="project-links">
+            <a href="projects/glass-climbing-robot/" class="button small">View Project →</a>
+          </div>
+        </div>
+      </div>
 
-  <div class="project-content">
-    <h3>Glass Climbing Robot</h3>
-
-    <div class="project-tags">
-      <span class="project-tag">Robotics</span>
-      <span class="project-tag">Embedded Systems</span>
-      <span class="project-tag">ATMEGA32</span>
-      <span class="project-tag">Mechatronics</span>
+      <!-- Hammer Mill Corn Grinder -->
+      <div class="project-card">
+        <div class="project-image" id="hammer-carousel"></div>
+        <div class="project-content">
+          <h3>Hammer Mill Corn Grinder</h3>
+          <div class="project-tags">
+            <span class="project-tag">BUET Thesis</span>
+            <span class="project-tag">Mechanical Design</span>
+            <span class="project-tag">Fabrication</span>
+          </div>
+          <p>Designed and fabricated a hammer mill corn grinder using local materials. Achieved high crushing efficiency for rural agricultural processing.</p>
+          <div class="project-links">
+            <a href="projects/hammer-mill-corn-grinder/" class="button small">View Project →</a>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <p>
-Designed and built a glass-climbing robot using vacuum suction and embedded control. 
-Achieved stable vertical motion on smooth surfaces.
-</p>
-
-    <div class="project-links">
-      <a href="projects/glass-climbing-robot/" class="button small">
-        View Project →
-      </a>
-    </div>
-
-  </div>
-
-</div>
-<div class="project-card">
-
-  <!-- CAROUSEL -->
-  <div class="project-image" id="hammer-carousel"></div>
-
-  <div class="project-content">
-    <h3>Hammer Mill Corn Grinder</h3>
-
-    <div class="project-tags">
-      <span class="project-tag">BUET Thesis</span>
-      <span class="project-tag">Mechanical Design</span>
-      <span class="project-tag">Fabrication</span>
-      <span class="project-tag">2016</span>
-    </div>
-
-    <p>
-Designed and fabricated a hammer mill corn grinder using local materials. 
-Achieved high crushing efficiency for rural agricultural processing.
-</p>
-
-    <div class="project-links">
-      <a href="projects/hammer-mill-corn-grinder/" class="button small">
-        View Project →
-      </a>
-    </div>
-
-  </div>
-
-</div>
-
-      
-</div>
 
     <!-- ==================== INDUSTRY PROJECTS ==================== -->
     <h2 class="subsection-header">
       <i class="fas fa-industry" style="margin-right: 0.5rem;"></i> 
       Industry Projects
     </h2>
+    <div class="subsection-description">Industrial engineering experience from prior to Ph.D.</div>
     <div class="project-grid">
-      
+
+      <!-- Electric Arc Furnace Operations -->
       <div class="project-card">
+        <div class="project-image" id="eaf-carousel"></div>
+        <div class="project-content">
+          <h3>Electric Arc Furnace (EAF) Operations & Reliability Engineering</h3>
+          <div class="project-tags">
+            <span class="project-tag">Process Engineering</span>
+            <span class="project-tag">Heavy Industry</span>
+            <span class="project-tag">Maintenance</span>
+            <span class="project-tag">Root Cause Analysis</span>
+          </div>
+          <p>Led maintenance and process optimization for Electric Arc Furnace operations. Improved reliability through troubleshooting, planning, and retrofit design.</p>
+          <div class="project-links">
+            <a href="projects/eaf-operations/" class="button small">View Project →</a>
+          </div>
+        </div>
+      </div>
 
-  <div class="project-image" id="eaf-carousel"></div>
-
-  <div class="project-content">
-    <h3>Electric Arc Furnace (EAF) Operations & Reliability Engineering</h3>
-
-    <div class="project-tags">
-      <span class="project-tag">Process Engineering</span>
-      <span class="project-tag">Heavy Industry</span>
-      <span class="project-tag">Maintenance</span>
-      <span class="project-tag">CAD</span>
-      <span class="project-tag">Root Cause Analysis</span>
-    </div>
-
-    <p>
-Led maintenance and process optimization for Electric Arc Furnace operations. 
-Improved reliability through troubleshooting, planning, and retrofit design.
-</p>
-
-    <div class="project-links">
-      <a href="projects/eaf-operations/" class="button small">
-        View Project →
-      </a>
-    </div>
-
-  </div>
-
-</div>
-
+      <!-- Gas Transmission Plant Operations -->
       <div class="project-card">
-
-  <!-- IMAGE (carousel placeholder like your other projects) -->
-  <div class="project-image" id="gtcl-carousel"></div>
-
-  <!-- CONTENT -->
-  <div class="project-content">
-    <h3>Gas Transmission & Process Plant Operations</h3>
-
-    <div class="project-tags">
-      <span class="project-tag">Process Engineering</span>
-      <span class="project-tag">Reliability</span>
-      <span class="project-tag">High-Pressure Systems</span>
-      <span class="project-tag">RCA</span>
-      <span class="project-tag">Leadership</span>
-    </div>
-
-    <p>
-Managed operations and maintenance in a high-pressure gas transmission plant. 
-Improved system reliability and ensured stable 24/7 process operation.
-</p>
-
-    <div class="project-links">
-      <a href="projects/gtcl-operations/" class="button small">
-        View Project →
-      </a>
-    </div>
-
-  </div>
-
-</div>
+        <div class="project-image" id="gtcl-carousel"></div>
+        <div class="project-content">
+          <h3>Gas Transmission & Process Plant Operations</h3>
+          <div class="project-tags">
+            <span class="project-tag">Process Engineering</span>
+            <span class="project-tag">Reliability</span>
+            <span class="project-tag">High-Pressure Systems</span>
+            <span class="project-tag">Leadership</span>
+          </div>
+          <p>Managed operations and maintenance in a high-pressure gas transmission plant. Improved system reliability and ensured stable 24/7 process operation.</p>
+          <div class="project-links">
+            <a href="projects/gtcl-operations/" class="button small">View Project →</a>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -1099,417 +794,4 @@ Improved system reliability and ensured stable 24/7 process operation.
           <a href="https://github.com/azmalchowdhury" target="_blank">
             <i class="fab fa-github"></i>
           </a>
-        </li>
-      </ul>
-    </section>
-  </footer>
-
-</div>
-
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-  <script>
-// ============================================
-// SECTION 2: IMAGE CAROUSEL CONTROLLER
-// ============================================
-
-class ImageCarousel {
-  constructor(container, images, interval = 3000) {
-    this.container = container;      // HTML element that will hold the carousel
-    this.images = images;            // Array of image paths
-    this.interval = interval;        // Time between slides (ms)
-    this.currentIndex = 0;           // Currently visible slide (0 = first)
-    this.intervalId = null;          // Stores the autoplay timer
-    this.isPlaying = true;           // Autoplay status
-    
-    this.init();                     // Build the carousel
-  }
-  
-  // Build the entire carousel HTML structure
-  init() {
-    // Create main slideshow container
-    const slideshowDiv = document.createElement('div');
-    slideshowDiv.className = 'slideshow-container';
-    
-    // Create individual slides
-    this.images.forEach((img, idx) => {
-      const slide = document.createElement('div');
-      slide.className = 'slide' + (idx === 0 ? ' active' : '');
-      const imgElement = document.createElement('img');
-      imgElement.src = img;
-      imgElement.alt = `Slide ${idx + 1}`;
-      slide.appendChild(imgElement);
-      slideshowDiv.appendChild(slide);
-    });
-    
-    // Add image counter (e.g., "1/3")
-    const counter = document.createElement('div');
-    counter.className = 'image-counter';
-    counter.textContent = `1/${this.images.length}`;
-    slideshowDiv.appendChild(counter);
-    
-    // Add navigation dots
-    const dotsDiv = document.createElement('div');
-    dotsDiv.className = 'slide-dots';
-    this.images.forEach((_, idx) => {
-      const dot = document.createElement('span');
-      dot.className = 'dot' + (idx === 0 ? ' active' : '');
-      dot.addEventListener('click', () => this.goToSlide(idx));
-      dotsDiv.appendChild(dot);
-    });
-    slideshowDiv.appendChild(dotsDiv);
-    
-    // Add Previous button
-    const prevBtn = document.createElement('button');
-    prevBtn.className = 'slide-control slide-prev';
-    prevBtn.innerHTML = '‹';
-    prevBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      this.prevSlide();
-    });
-    
-    // Add Next button
-    const nextBtn = document.createElement('button');
-    nextBtn.className = 'slide-control slide-next';
-    nextBtn.innerHTML = '›';
-    nextBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      this.nextSlide();
-    });
-    
-    slideshowDiv.appendChild(prevBtn);
-    slideshowDiv.appendChild(nextBtn);
-    
-    // Replace container content with our carousel
-    this.container.innerHTML = '';
-    this.container.appendChild(slideshowDiv);
-    
-    // Store references to elements we'll need to update
-    this.slides = slideshowDiv.querySelectorAll('.slide');
-    this.dots = slideshowDiv.querySelectorAll('.dot');
-    this.counter = counter;
-    
-    // Start automatic slideshow
-    this.startAutoplay();
-    
-    // Pause autoplay when mouse enters, resume when leaves
-    this.container.addEventListener('mouseenter', () => this.pauseAutoplay());
-    this.container.addEventListener('mouseleave', () => this.resumeAutoplay());
-  }
-  
-  // Update UI to show current slide
-  updateUI() {
-    // Update which slide is visible
-    this.slides.forEach((slide, idx) => {
-      slide.classList.toggle('active', idx === this.currentIndex);
-    });
-    
-    // Update which dot is active
-    this.dots.forEach((dot, idx) => {
-      dot.classList.toggle('active', idx === this.currentIndex);
-    });
-    
-    // Update the image counter text
-    this.counter.textContent = `${this.currentIndex + 1}/${this.images.length}`;
-  }
-  
-  // Jump to a specific slide
-  goToSlide(index) {
-    this.currentIndex = index;
-    this.updateUI();
-  }
-  
-  // Go to next slide
-  nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.images.length;
-    this.updateUI();
-  }
-  
-  // Go to previous slide
-  prevSlide() {
-    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
-    this.updateUI();
-  }
-  
-  // Start automatic slideshow
-  startAutoplay() {
-    if (this.intervalId) clearInterval(this.intervalId);
-    this.intervalId = setInterval(() => this.nextSlide(), this.interval);
-  }
-  
-  // Pause automatic slideshow
-  pauseAutoplay() {
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
-      this.intervalId = null;
-    }
-  }
-  
-  // Resume automatic slideshow
-  resumeAutoplay() {
-    this.startAutoplay();
-  }
-}
-
-// ============================================
-// SECTION 2b: INITIALIZE ALL CAROUSELS
-// ============================================
-
-document.addEventListener('DOMContentLoaded', function() {
-  
-  // EXAMPLE 1: Wheatstone Bridge Sensor (3 images, 4 second interval)
-  const wheatstoneContainer = document.querySelector('#wheatstone-carousel');
-  if (wheatstoneContainer) {
-    new ImageCarousel(wheatstoneContainer, [
-      'projects/mems-pressure-sensor/images/cross-section.png',
-      'projects/mems-pressure-sensor/images/frontside-mask.png',
-      'projects/mems-pressure-sensor/images/wheatstone-bridge-membrane.png'
-    ], 4000);
-  }
-
-  const cmemsContainer = document.getElementById('cmems-carousel');
-
-if (cmemsContainer) {
-  new ImageCarousel(cmemsContainer, [
-    'projects/c-mems-training/images/c-mems-chip.png',
-    'projects/c-mems-training/images/bpe-rgo-deposition.png',
-    'projects/c-mems-training/images/c-mems-fabrication.png'
-  ], 3500);
-}
-const wrinkleContainer = document.getElementById('wrinkle-carousel');
-
-if (wrinkleContainer) {
-  new ImageCarousel(wrinkleContainer, [
-    'projects/tunable-wrinkling-pdms/images/wrinkle-pattern1.jpg',
-    'projects/tunable-wrinkling-pdms/images/fabricated-device.jpg',
-    'projects/tunable-wrinkling-pdms/images/patterned-device-30um.jpg'
-  ], 3500);
-}
-
-const maskContainer = document.getElementById('mask-carousel');
-
-if (maskContainer) {
-  new ImageCarousel(maskContainer, [
-    'projects/photomask-design-fabrication/images/mask1-wheatstone-front.png',
-    'projects/photomask-design-fabrication/images/Mask_Spatial_Strain.png',
-    'projects/photomask-design-fabrication/images/Mask_Strain_Sensor_1D.png'
-  ], 3500);
-}
-
-  const mscContainer = document.getElementById('msc-carousel');
-
-if (mscContainer) {
-  new ImageCarousel(mscContainer, [
-    'projects/microsupercapacitor-training/images/Fabrication.png',
-    'projects/microsupercapacitor-training/images/IDE.png'
-  ], 3500);
-}
-const plasmaContainer = document.getElementById('plasma-carousel');
-
-if (plasmaContainer) {
-  new ImageCarousel(plasmaContainer, [
-    'projects/plasma-treated-wrinkle-free-pdms/images/Picture2.jpg',
-    'projects/plasma-treated-wrinkle-free-pdms/images/patterned1.png',
-    'projects/plasma-treated-wrinkle-free-pdms/images/patterned3.png'
-  ], 3500);
-}
-const pvdContainer = document.getElementById('pvd-carousel');
-
-if (pvdContainer) {
-  new ImageCarousel(pvdContainer, [
-    'projects/thin-film-process-development/images/NegativePR.png',
-    'projects/thin-film-process-development/images/PositivePR.png',
-    'projects/thin-film-process-development/images/Ni-Ti thin film.png'
-  ], 3500);
-}
-
-const prAdhesionContainer = document.getElementById('pr-adhesion-carousel');
-
-if (prAdhesionContainer) {
-  new ImageCarousel(prAdhesionContainer, [
-    'projects/resist-adhesion-pdms/images/over-treatment1.jpg',
-    'projects/resist-adhesion-pdms/images/over-treatment3.jpg',
-    'projects/resist-adhesion-pdms/images/optimized1.jpg'
-  ], 3500);
-}
-
-const ceramicContainer = document.getElementById('ceramic-carousel');
-
-if (ceramicContainer) {
-  new ImageCarousel(ceramicContainer, [
-    'projects/photolithography-ceramic/images/mask-design.png',
-    'projects/photolithography-ceramic/images/patterned-resist.png',
-    'projects/photolithography-ceramic/images/fabricated-electrode.png'
-  ], 3500);
-}
-
-const paperSensorContainer = document.getElementById('paper-sensor-carousel');
-
-if (paperSensorContainer) {
-  new ImageCarousel(paperSensorContainer, [
-    'projects/paper-based-supercapacitive-sensor/images/Schematic.png',
-    'projects/paper-based-supercapacitive-sensor/images/Picture1.jpg',
-    'projects/paper-based-supercapacitive-sensor/images/sensor-photo.png',
-    'projects/paper-based-supercapacitive-sensor/images/Pregnancy.png'
-  ], 3500);
-}
-  
-  const mwcntContainer = document.getElementById('mwcnd-pdms-carousel');
-
-if (mwcntContainer) {
-  new ImageCarousel(mwcntContainer, [
-    'projects/wearable-capacitive-pressure-sensor/images/sensor-schematic.png',
-    'projects/wearable-capacitive-pressure-sensor/images/sensor-photo.jpg',
-    'projects/wearable-capacitive-pressure-sensor/images/sensitivity-graph.png'
-  ], 3500);
-}
-
-const dualModeContainer = document.getElementById('dualmode-carousel');
-
-if (dualModeContainer) {
-  new ImageCarousel(dualModeContainer, [
-    'projects/dual-mode-pressure-sensor/images/Picture1.png',
-    'projects/dual-mode-pressure-sensor/images/Picture2.png',
-    'projects/dual-mode-pressure-sensor/images/Picture3.png'
-  ], 3500);
-}
-
-
-  const dualPPGContainer = document.getElementById('dualppg-carousel');
-
-if (dualPPGContainer) {
-  new ImageCarousel(dualPPGContainer, [
-    'projects/dual-piezoresistive-sensor-system/images/sensor-schematic.png',
-    'projects/dual-piezoresistive-sensor-system/images/wearable-prototype.png',
-    'projects/dual-piezoresistive-sensor-system/images/pulse-waveform.png'
-  ], 3500);
-}
-  const testbedContainer = document.getElementById('testbed-carousel');
-
-if (testbedContainer) {
-  new ImageCarousel(testbedContainer, [
-    'projects/piezoresistive-sensor-testbed/images/testbed-hardware.png',
-    'projects/piezoresistive-sensor-testbed/images/response-time-measurement.png'
-  ], 3500);
-}
-
-const feaContainer = document.getElementById('fea-carousel');
-
-if (feaContainer) {
-  new ImageCarousel(feaContainer, [
-    'projects/piezoresistive-sensor-design-rules/images/sensor-schematic.png',
-    'projects/piezoresistive-sensor-design-rules/images/microfeature-shapes.png',
-    'projects/piezoresistive-sensor-design-rules/images/spatial-density.png'
-  ], 3500);
-}
-
-  const semContainer = document.getElementById('sem-carousel');
-
-if (semContainer) {
-  new ImageCarousel(semContainer, [
-    'projects/Characterization_SEM/images/carbon cloth 100um.png',
-    'projects/Characterization_SEM/images/Cu_GNP CS on PDMS_9.png',
-    'projects/Characterization_SEM/images/TISSUE_PAPER.png'
-  ], 3500);
-}
-  const ramanContainer = document.getElementById('raman-carousel');
-
-if (ramanContainer) {
-  new ImageCarousel(ramanContainer, [
-    'projects/Characterization_FTIR_RAMAN/images/Picture1.jpg',
-    'projects/Characterization_FTIR_RAMAN/images/Picture2.jpg',
-    'projects/Characterization_FTIR_RAMAN/images/Porous PDMS.png'
-  ], 3500);
-}
-
-const labviewContainer = document.getElementById('labview-carousel');
-
-if (labviewContainer) {
-  new ImageCarousel(labviewContainer, [
-    'projects/labview-automation-projects/images/Block Diagram keithley.png',
-    'projects/labview-automation-projects/images/Front End keithley.png',
-    'projects/labview-automation-projects/images/Block Diagram mk_lcr.png',
-    'projects/labview-automation-projects/images/Front Panel  mk_lcr.png',
-    'projects/labview-automation-projects/images/Block Diagram3.png',
-    'projects/labview-automation-projects/images/Front Panel3.png'
-  ], 3500);
-}
-
-const coldSprayContainer = document.getElementById('coldspray-carousel');
-
-if (coldSprayContainer) {
-  new ImageCarousel(coldSprayContainer, [
-    'projects/Cold-spray/images/Deposit.png',
-    'projects/Cold-spray/images/SEM.png',
-    'projects/Cold-spray/images/SEM2.png',
-    'projects/Cold-spray/images/Wearable_Sensor.png',
-    'projects/Cold-spray/images/Characterization.png'
-  ], 3500);
-}
-
-const robotContainer = document.getElementById('robot-carousel');
-
-if (robotContainer) {
-  new ImageCarousel(robotContainer, [
-    'projects/glass-climbing-robot/images/robot-full-view.jpg',
-    'projects/glass-climbing-robot/images/circuit-diagram.jpg',
-    'projects/glass-climbing-robot/images/vacuum-pump.jpg',
-    'projects/glass-climbing-robot/images/gear-motor.jpg',
-    'projects/glass-climbing-robot/images/circuit-schematic.png'
-  ], 3500);
-}
-
-const eafContainer = document.getElementById('eaf-carousel');
-
-if (eafContainer) {
-  new ImageCarousel(eafContainer, [
-    'projects/eaf-operations/images/eaf-furnace.png',
-    'projects/eaf-operations/images/eaf-plant-aerial.png',
-    'projects/eaf-operations/images/eaf-machine.png'
-  ], 3500);
-}
-
-  const gtclContainer = document.getElementById('gtcl-carousel');
-
-if (gtclContainer) {
-  new ImageCarousel(gtclContainer, [
-    'projects/gtcl-operations/images/plant-overview.jpg',
-    'projects/gtcl-operations/images/pipeline.jpg',
-    'projects/gtcl-operations/images/scrubber.jpg',
-    'projects/gtcl-operations/images/Compressor_turbine.jpg'
-  ], 3500);
-}
-
-const hammerContainer = document.getElementById('hammer-carousel');
-
-if (hammerContainer) {
-  new ImageCarousel(hammerContainer, [
-    'projects/hammer-mill-corn-grinder/images/3.jpg',
-    'projects/hammer-mill-corn-grinder/images/4.jpg',
-    'projects/hammer-mill-corn-grinder/images/hammer-mill-assembly.jpg',
-    'projects/hammer-mill-corn-grinder/images/rotor-assembly.jpg'
-  ], 3500);
-}
-  
-  // EXAMPLE 2: Add another carousel for a different project
-  // const anotherContainer = document.querySelector('#another-carousel-target');
-  // if (anotherContainer) {
-  //   new ImageCarousel(anotherContainer, [
-  //     'images/projects/another/image1.jpg',
-  //     'images/projects/another/image2.jpg'
-  //   ], 3000);
-  // }
-  
-  // You can add more carousels here as needed
-  
-});
-</script>
-
-</body>
-</html>
+        </li
